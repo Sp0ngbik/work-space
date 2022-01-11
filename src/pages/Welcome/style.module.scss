@@ -1,14 +1,27 @@
+.page {
+  background-image: url("https://www.unoosa.org/images/hlf/Comet-Lovejoy_ISS.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  padding: 350px 0 0 0;
+}
 .mainBlock {
-  font-size: 18px;
+  align-items: center;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  font-size: 22px;
   display: flex;
   flex-direction: column;
-  margin: 220px auto;
   width: 20%;
   padding: 20px;
   border: 5px red solid;
   animation-name: borderAnim;
   animation-duration: 3s;
   animation-iteration-count: infinite;
+}
+.mainBlock > button {
+  margin: 20px 0 0 0;
 }
 
 @keyframes borderAnim {
