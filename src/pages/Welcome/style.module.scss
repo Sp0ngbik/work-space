@@ -1,0 +1,27 @@
+.mainBlock {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  margin: 220px auto;
+  width: 20%;
+  padding: 20px;
+  border: 5px red solid;
+  animation-name: borderAnim;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes borderAnim {
+  0% {
+    border: 5px red solid;
+  }
+  25% {
+    border: 5px green solid;
+  }
+  75% {
+    border: 5px blue solid;
+  }
+  100% {
+    border: 5px red solid;
+  }
+}

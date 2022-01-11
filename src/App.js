@@ -1,5 +1,11 @@
+import Welcome from "./pages/Welcome/Welcome";
+
 function App() {
-  return <div>s</div>;
+  return (
+    <>
+      <Welcome />
+    </>
+  );
 }
 
 export default App;
