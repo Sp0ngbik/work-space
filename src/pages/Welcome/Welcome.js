@@ -2,6 +2,7 @@ import { Button } from "antd";
 import style from "./style.module.scss";
 
 const Welcome = () => {
+  console.log("hello");
   return (
     <div className={style.page}>
       <div className={style.mainBlock}>
