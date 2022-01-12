@@ -1,4 +1,5 @@
 import { Button } from "antd";
+import { Link } from "react-router-dom";
 import style from "./style.module.scss";
 
 const Welcome = () => {
@@ -12,7 +13,9 @@ const Welcome = () => {
           practice and learn some stuff, you can enjoy my process by clicking on
           this button bellow
         </div>
-        <Button>Click!</Button>
+        <Link to="/about">
+          <Button>Click!</Button>
+        </Link>
       </div>
     </div>
   );
