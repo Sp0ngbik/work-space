@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import style from "./style.module.scss";
 
 const Welcome = () => {
-  console.log("hello");
   return (
-    <div className={style.page}>
+    <div className={style.bodyOfMain}>
       <div className={style.mainBlock}>
         <div>Hello my name is Vlad</div>
         <div>

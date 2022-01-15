@@ -1,17 +1,11 @@
-.page {
-  background-image: url("https://www.unoosa.org/images/hlf/Comet-Lovejoy_ISS.jpg");
-  background-size: cover;
-
-  height: 100vh;
-  padding: 350px 0 0 0;
+.bodyOfMain {
+  padding: 300px 0 0px 0;
 }
 .mainBlock {
-  align-items: center;
   margin: 0 auto;
   color: white;
   text-align: center;
   font-size: 22px;
-  display: flex;
   flex-direction: column;
   width: 20%;
   padding: 20px;
