@@ -1,8 +1,18 @@
 .arrayBody {
   text-align: center;
-  color: white;
   font-size: 24px;
+  padding: 350px 0 0 0;
+}
+.formLined {
+  margin: 5px 10px 0 10px;
+  display: flex;
 }
 .array {
-  padding: 280px 0 0 0;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 0px 0 350px;
+}
+.array input {
+  width: 200px;
 }

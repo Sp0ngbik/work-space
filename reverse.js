@@ -56,4 +56,4 @@ const funcArr = (arr) => {
 
 console.log(funcArr(arrForFunc));
 
-console.log(true + false);
+console.log("ssss" - 0);

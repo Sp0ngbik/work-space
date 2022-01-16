@@ -1,5 +1,8 @@
 @import "antd/dist/antd.css";
-
+* {
+  color: rgb(255, 0, 0);
+  text-shadow: 1px 0 6px;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
