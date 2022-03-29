@@ -1,18 +1,29 @@
 .arrayBody {
   text-align: center;
   font-size: 24px;
-  padding: 350px 0 0 0;
+  padding: 150px 0 0 0;
 }
 .formLined {
-  margin: 5px 10px 0 10px;
+  margin: 0 10px 20px 10px;
   display: flex;
+}
+.formLined button span {
+  width: 100px;
 }
 .array {
   text-align: left;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 0px 0 350px;
+  grid-gap: 20px;
 }
 .array input {
   width: 200px;
+}
+.points {
+  display: flex;
+}
+.value {
+  font-size: 20px;
+  margin: -30px 15px;
 }

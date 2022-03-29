@@ -56,4 +56,25 @@ const funcArr = (arr) => {
 
 console.log(funcArr(arrForFunc));
 
-console.log("ssss" - 0);
+let h = "222,koaskoko,2200,sdkoas,000".split(",");
+let bufferArr = [];
+for (let i = 0; i < h.length; i++) {
+  bufferArr.push(h[i]);
+}
+console.log(bufferArr);
+console.log(parseFloat(h));
+const arrssadsd = [1, 23, 4, 4].reduce((total, el) => {
+  return (total += el);
+});
+console.log(arrssadsd);
+
+const funcUser = (name) => {
+  let userName = name;
+  return (funcName = (lastName) => {
+    return `Имя ${userName} фамилия ${lastName}`;
+  });
+};
+
+const user = funcUser("Vlad");
+console.log(user("Остапук"));
+console.log(user("Павловский"));
