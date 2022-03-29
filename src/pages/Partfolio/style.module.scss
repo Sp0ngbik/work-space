@@ -1,0 +1,17 @@
+.partfolioBody {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  top: 50%;
+  width: 100%;
+}
+.partfolioBody button {
+  justify-content: space-between;
+  width: 400px;
+  height: 80px;
+  margin: 0 10px;
+}
