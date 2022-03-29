@@ -4,6 +4,8 @@ import style from "./style.module.scss";
 //СДЕЛАТЬ НА РЕДАКСЕ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 const TypeOfJs = () => {
   const [answer, setAnswer] = useState();
+  const [secAnswer, setSecAnswer] = useState();
+  const [thrdAnswer, setThrdAnswer] = useState();
   const typeFunc = () => {
     return (
       <div className={style.test}>
@@ -33,7 +35,7 @@ const TypeOfJs = () => {
             </Form.Item>
           </div>
         </Form>
-        <div className={answer === 2 ? style.trueAns : null}>
+        <div className={secAnswer === 2 ? style.trueAns : null}>
           What is type of "this" =
         </div>
 
@@ -41,7 +43,7 @@ const TypeOfJs = () => {
           onFinish={(output) => {
             let result = "";
             if (output.second === typeof result) {
-              setAnswer(2);
+              setSecAnswer(2);
               alert("you right, good job");
             } else {
               alert("try again");
@@ -59,7 +61,7 @@ const TypeOfJs = () => {
             </Form.Item>
           </div>
         </Form>
-        <div className={answer === 3 ? style.trueAns : null}>
+        <div className={thrdAnswer === 3 ? style.trueAns : null}>
           true + false =
         </div>
 
@@ -67,7 +69,7 @@ const TypeOfJs = () => {
           onFinish={(output) => {
             let result = true + false;
             if (output.third === result.toString()) {
-              setAnswer(3);
+              setThrdAnswer(3);
               alert("you right, good job");
             } else {
               alert("try again");
