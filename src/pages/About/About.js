@@ -25,6 +25,12 @@ const About = () => {
         <Link to="/about/tryes-text">
           <Button>Tryes</Button>
         </Link>
+        <Link to="/about/partfolio">
+          <Button>Partfolio</Button>
+        </Link>
+        <Link to="/redux">
+          <Button>Redux</Button>
+        </Link>
         <Button
           onClick={() => {
             alert(
