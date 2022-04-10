@@ -1,7 +1,6 @@
 import { Spin } from "antd";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import style from "./style.module.scss";
 
 const TryesText = () => {
   const [baseState, setBaseState] = useState();
