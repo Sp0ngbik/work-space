@@ -1,4 +1,4 @@
-import { ADD_ELEMENT } from "../actions/actions";
+import { ADD_ELEMENT } from "../types/types";
 
 const initialState = [];
 

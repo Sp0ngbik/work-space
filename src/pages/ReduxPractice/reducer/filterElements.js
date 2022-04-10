@@ -1,4 +1,4 @@
-import { FILTER_ELEMENTS } from "../actions/actions";
+import { FILTER_ELEMENTS } from "../types/types";
 
 const initialState = "";
 
