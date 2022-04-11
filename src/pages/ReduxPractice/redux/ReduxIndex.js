@@ -2,6 +2,7 @@ import axios from "axios";
 import { Component } from "react";
 import { connect } from "react-redux";
 import { ADD_ELEMENT, AXIOS_ADD, FILTER_ELEMENTS } from "../types/types";
+import RemoteDispatch from "./RemoteDispatch";
 class ReduxIndex extends Component {
   addElement() {
     if (this.addElementInput.value.trim() === "") {
@@ -39,6 +40,7 @@ class ReduxIndex extends Component {
             })}
           </ul>
         </div>
+        <RemoteDispatch />
         <div>
           {this.props.axiosElements.map((el) => {
             return (
