@@ -4,19 +4,27 @@ import { REMOTE_DISPATCH } from "../types/types";
 const RemoteDispatch = () => {
   const dispatch = useDispatch();
   const posts = useSelector((state) => {
-    return state.addElement;
+    return state.filterElements;
+  });
+  const remoteDispatcher = useSelector((state) => {
+    return state.remoteDispatch;
   });
   function loadFunc() {
     return dispatch({ type: REMOTE_DISPATCH, payload: posts });
   }
   return (
-    <button
-      onClick={() => {
-        loadFunc();
-      }}
-    >
-      Удаленный диспатчер
-    </button>
+    <div>
+      <button
+        onClick={() => {
+          loadFunc();
+        }}
+      >
+        Check filter Value
+      </button>
+      <div>
+        This is my remote 'Dispatcher', also filter value = {remoteDispatcher}
+      </div>
+    </div>
   );
 };
 

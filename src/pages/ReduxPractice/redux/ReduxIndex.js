@@ -1,7 +1,6 @@
-import axios from "axios";
 import { Component } from "react";
 import { connect } from "react-redux";
-import { ADD_ELEMENT, AXIOS_ADD, FILTER_ELEMENTS } from "../types/types";
+import { asyncPosts, onAddElement, onFilterElements } from "../actions/actions";
 import RemoteDispatch from "./RemoteDispatch";
 class ReduxIndex extends Component {
   addElement() {
@@ -69,27 +68,13 @@ export default connect(
         id: Date.now().toString(),
         inputValue,
       };
-      dispatch({ type: ADD_ELEMENT, payload: payload });
+      dispatch(onAddElement(payload));
     },
     onFilterElements: (filterValue) => {
-      dispatch({
-        type: FILTER_ELEMENTS,
-        payload: filterValue,
-      });
+      dispatch(onFilterElements(filterValue));
     },
     onAddAxios: () => {
-      async function asyncRequest() {
-        try {
-          const response = await axios.get(
-            "https://jsonplaceholder.typicode.com/posts?_limit=5"
-          );
-          const dataTabs = await response.data;
-          dispatch({ type: AXIOS_ADD, payload: dataTabs });
-        } catch (e) {
-          alert("Something wrong");
-        }
-      }
-      asyncRequest();
+      dispatch(asyncPosts());
     },
   })
 )(ReduxIndex);

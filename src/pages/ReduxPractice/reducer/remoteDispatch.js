@@ -5,7 +5,7 @@ const initialState = [];
 export function remoteDispatch(state = initialState, action) {
   switch (action.type) {
     case REMOTE_DISPATCH:
-      return action.payload;
+      return [action.payload];
     default:
       return state;
   }
