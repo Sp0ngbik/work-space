@@ -2,3 +2,5 @@ export const ADD_ELEMENT = "ADD_ELEMENT";
 export const FILTER_ELEMENTS = "FILTER_ELEMENTS";
 export const AXIOS_ADD = "AXIOS_ADD";
 export const REMOTE_DISPATCH = "REMOTE_DISPATCH";
+export const LOADER_ACTIVE = "LOADER_ACTIVE";
+export const LOADER_DIACTIVE = "LOADER_DIACTIVE";

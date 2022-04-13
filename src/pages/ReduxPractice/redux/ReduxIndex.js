@@ -1,7 +1,9 @@
 import { Component } from "react";
 import { connect } from "react-redux";
-import { asyncPosts, onAddElement, onFilterElements } from "../actions/actions";
+import { onAddElement, onFilterElements } from "../actions/actions";
+import AxiosPost from "./AxiosPost";
 import RemoteDispatch from "./RemoteDispatch";
+import style from "../style.module.scss";
 class ReduxIndex extends Component {
   addElement() {
     if (this.addElementInput.value.trim() === "") {
@@ -17,11 +19,10 @@ class ReduxIndex extends Component {
 
   render() {
     return (
-      <div>
+      <div className={style.reduxContainer}>
         <div>
           <input type="text" ref={(input) => (this.addElementInput = input)} />
           <button onClick={this.addElement.bind(this)}>Add element</button>
-          <button onClick={this.props.onAddAxios}>Add api</button>
         </div>
         <div>
           <input
@@ -39,16 +40,9 @@ class ReduxIndex extends Component {
             })}
           </ul>
         </div>
-        <RemoteDispatch />
         <div>
-          {this.props.axiosElements.map((el) => {
-            return (
-              <div key={el.id}>
-                <div>This is title - {el.title}</div>
-                <div>This is body - {el.body}</div>
-              </div>
-            );
-          })}
+          <RemoteDispatch />
+          <AxiosPost />
         </div>
       </div>
     );
@@ -72,9 +66,6 @@ export default connect(
     },
     onFilterElements: (filterValue) => {
       dispatch(onFilterElements(filterValue));
-    },
-    onAddAxios: () => {
-      dispatch(asyncPosts());
     },
   })
 )(ReduxIndex);
