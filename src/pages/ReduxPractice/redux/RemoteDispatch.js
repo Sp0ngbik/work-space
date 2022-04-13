@@ -22,7 +22,8 @@ const RemoteDispatch = () => {
         Check filter Value
       </button>
       <div>
-        This is my remote 'Dispatcher', also filter value = {remoteDispatcher}
+        This is my remote 'Dispatcher', also filter value =
+        {remoteDispatcher === "" ? "Empty" : remoteDispatcher}
       </div>
     </div>
   );
