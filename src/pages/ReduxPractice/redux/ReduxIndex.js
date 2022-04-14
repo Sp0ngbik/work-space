@@ -1,7 +1,15 @@
-import axios from "axios";
 import { Component } from "react";
 import { connect } from "react-redux";
-import { ADD_ELEMENT, AXIOS_ADD, FILTER_ELEMENTS } from "../types/types";
+import {
+  asyncDecrementAction,
+  asyncGetSagaUsers,
+  asyncIncrementAction,
+  onAddElement,
+  onFilterElements,
+} from "../actions/actions";
+import AxiosPost from "./AxiosPost";
+import RemoteDispatch from "./RemoteDispatch";
+import style from "../style.module.scss";
 class ReduxIndex extends Component {
   addElement() {
     if (this.addElementInput.value.trim() === "") {
@@ -17,11 +25,10 @@ class ReduxIndex extends Component {
 
   render() {
     return (
-      <div>
+      <div className={style.reduxContainer}>
         <div>
           <input type="text" ref={(input) => (this.addElementInput = input)} />
           <button onClick={this.addElement.bind(this)}>Add element</button>
-          <button onClick={this.props.onAddAxios}>Add api</button>
         </div>
         <div>
           <input
@@ -40,14 +47,43 @@ class ReduxIndex extends Component {
           </ul>
         </div>
         <div>
-          {this.props.axiosElements.map((el) => {
-            return (
+          <RemoteDispatch />
+          <AxiosPost />
+        </div>
+        <div>
+          <button
+            onClick={() => {
+              this.props.onIncrementElement();
+            }}
+          >
+            Increment++
+          </button>
+          <button
+            onClick={() => {
+              this.props.onDecrementElement();
+            }}
+          >
+            Dicrement--
+          </button>
+          <div>{this.props.sagaReducer}</div>
+          <div>
+            <button
+              onClick={() => {
+                this.props.onSagaUsers();
+              }}
+            >
+              Get saga Users
+            </button>
+          </div>
+          <div>
+            {this.props.sagaUserTitle.map((el) => (
               <div key={el.id}>
-                <div>This is title - {el.title}</div>
-                <div>This is body - {el.body}</div>
+                <div>
+                  Name - {el.name} Email - {el.email}
+                </div>
               </div>
-            );
-          })}
+            ))}
+          </div>
         </div>
       </div>
     );
@@ -60,6 +96,8 @@ export default connect(
       word.inputValue.includes(state.filterElements)
     ),
     axiosElements: state.axiosRequest,
+    sagaReducer: state.sagaReducer,
+    sagaUserTitle: state.sagaUserReducer,
   }),
   (dispatch) => ({
     onAddElement: (inputValue) => {
@@ -67,27 +105,19 @@ export default connect(
         id: Date.now().toString(),
         inputValue,
       };
-      dispatch({ type: ADD_ELEMENT, payload: payload });
+      dispatch(onAddElement(payload));
     },
     onFilterElements: (filterValue) => {
-      dispatch({
-        type: FILTER_ELEMENTS,
-        payload: filterValue,
-      });
+      dispatch(onFilterElements(filterValue));
     },
-    onAddAxios: () => {
-      async function asyncRequest() {
-        try {
-          const response = await axios.get(
-            "https://jsonplaceholder.typicode.com/posts?_limit=5"
-          );
-          const dataTabs = await response.data;
-          dispatch({ type: AXIOS_ADD, payload: dataTabs });
-        } catch (e) {
-          alert("Something wrong");
-        }
-      }
-      asyncRequest();
+    onIncrementElement: () => {
+      dispatch(asyncIncrementAction());
+    },
+    onDecrementElement: () => {
+      dispatch(asyncDecrementAction());
+    },
+    onSagaUsers: () => {
+      dispatch(asyncGetSagaUsers());
     },
   })
 )(ReduxIndex);

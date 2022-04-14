@@ -1,13 +1,8 @@
-.postContainer{
-    width: 100%;
-    border: 1px solid black;
-    margin: 10px 0 ;
+.reduxContainer{
+    display: flex; 
+    padding: 20px 0 0 40%;
+    flex-direction: column;
 }
-.container{
-    display: grid;
-    justify-content: center;
-    padding: 0 0 0 400px
-    ;grid-template-columns: 1fr 1fr;
-    padding: 0 50px;
-}   
-
+.reduxContainer button{
+    width: 200px;
+}
