@@ -1,6 +1,12 @@
 import { Component } from "react";
 import { connect } from "react-redux";
-import { onAddElement, onFilterElements } from "../actions/actions";
+import {
+  asyncDecrementAction,
+  asyncGetSagaUsers,
+  asyncIncrementAction,
+  onAddElement,
+  onFilterElements,
+} from "../actions/actions";
 import AxiosPost from "./AxiosPost";
 import RemoteDispatch from "./RemoteDispatch";
 import style from "../style.module.scss";
@@ -44,6 +50,41 @@ class ReduxIndex extends Component {
           <RemoteDispatch />
           <AxiosPost />
         </div>
+        <div>
+          <button
+            onClick={() => {
+              this.props.onIncrementElement();
+            }}
+          >
+            Increment++
+          </button>
+          <button
+            onClick={() => {
+              this.props.onDecrementElement();
+            }}
+          >
+            Dicrement--
+          </button>
+          <div>{this.props.sagaReducer}</div>
+          <div>
+            <button
+              onClick={() => {
+                this.props.onSagaUsers();
+              }}
+            >
+              Get saga Users
+            </button>
+          </div>
+          <div>
+            {this.props.sagaUserTitle.map((el) => (
+              <div key={el.id}>
+                <div>
+                  Name - {el.name} Email - {el.email}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     );
   }
@@ -55,6 +96,8 @@ export default connect(
       word.inputValue.includes(state.filterElements)
     ),
     axiosElements: state.axiosRequest,
+    sagaReducer: state.sagaReducer,
+    sagaUserTitle: state.sagaUserReducer,
   }),
   (dispatch) => ({
     onAddElement: (inputValue) => {
@@ -66,6 +109,15 @@ export default connect(
     },
     onFilterElements: (filterValue) => {
       dispatch(onFilterElements(filterValue));
+    },
+    onIncrementElement: () => {
+      dispatch(asyncIncrementAction());
+    },
+    onDecrementElement: () => {
+      dispatch(asyncDecrementAction());
+    },
+    onSagaUsers: () => {
+      dispatch(asyncGetSagaUsers());
     },
   })
 )(ReduxIndex);

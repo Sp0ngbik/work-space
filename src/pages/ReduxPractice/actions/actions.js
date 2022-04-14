@@ -1,9 +1,15 @@
 import axios from "axios";
 import {
   ADD_ELEMENT,
+  ASYNC_SAGA_DECREMENT,
+  ASYNC_SAGA_INCREMENT,
+  ASYNC_SAGA_USERS,
   AXIOS_ADD,
   FILTER_ELEMENTS,
   LOADER_DIACTIVE,
+  SAGA_DECREMENT,
+  SAGA_INCREMENT,
+  SAGA_USERS,
 } from "../types/types";
 
 export function onAddElement(payload) {
@@ -36,4 +42,31 @@ export function turnOffLoading() {
   return {
     type: LOADER_DIACTIVE,
   };
+}
+
+export function asyncIncrementAction() {
+  return { type: ASYNC_SAGA_INCREMENT };
+}
+
+export function incrementAction() {
+  return {
+    type: SAGA_INCREMENT,
+  };
+}
+
+export function decrementAction() {
+  return {
+    type: SAGA_DECREMENT,
+  };
+}
+export function asyncDecrementAction() {
+  return { type: ASYNC_SAGA_DECREMENT };
+}
+
+export function getSagaUsers(payload) {
+  return { type: SAGA_USERS, payload };
+}
+
+export function asyncGetSagaUsers() {
+  return { type: ASYNC_SAGA_USERS };
 }
