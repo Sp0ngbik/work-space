@@ -10,7 +10,7 @@ import {
   ASYNC_SAGA_INCREMENT,
   ASYNC_SAGA_USERS,
 } from "../types/types";
-//put своего рода диспатд для синхронных экшн
+//put своего рода диспатч для синхронных экшн
 //call возвращает данные которые прилетают в промисе(подобие async,await)
 const delay = (ms) => {
   return new Promise((res) => setTimeout(res, ms));
