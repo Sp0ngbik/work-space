@@ -7,13 +7,14 @@ import {
   ASYNC_SAGA_USERS,
   AXIOS_ADD,
   FILTER_ELEMENTS,
+  HIDE_SLIDER_IMAGE,
   LOADER_DIACTIVE,
-  NEXT_SLIDER_IMAGE,
   SAGA_DECREMENT,
   SAGA_INCREMENT,
   SAGA_SLIDER_DECREMENT,
   SAGA_SLIDER_INCREMENT,
   SAGA_USERS,
+  SHOW_SLIDER_IMAGE,
 } from "../types/types";
 
 export function onAddElement(payload) {
@@ -75,12 +76,15 @@ export function asyncGetSagaUsers() {
   return { type: ASYNC_SAGA_USERS };
 }
 
-export function nextSliderAction() {
+export function showSliderAction() {
   return { type: ASYNC_SAGA_SLIDER };
 }
 
 export function sliderAction(payload) {
-  return { type: NEXT_SLIDER_IMAGE, payload };
+  return { type: SHOW_SLIDER_IMAGE, payload };
+}
+export function hideSliderAction() {
+  return { type: HIDE_SLIDER_IMAGE };
 }
 
 export function sliderIncrement() {

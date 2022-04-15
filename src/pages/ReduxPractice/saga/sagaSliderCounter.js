@@ -6,7 +6,11 @@ export const sagaSliderCounter = (state = initialState, action) => {
     case SAGA_SLIDER_INCREMENT:
       return (state += 1);
     case SAGA_SLIDER_DECREMENT:
-      return (state -= 1);
+      if (state === 0) {
+        return state;
+      } else {
+        return (state -= 1);
+      }
     default:
       return state;
   }

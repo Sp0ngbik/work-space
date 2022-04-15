@@ -4,9 +4,10 @@ import {
   asyncDecrementAction,
   asyncGetSagaUsers,
   asyncIncrementAction,
-  nextSliderAction,
+  hideSliderAction,
   onAddElement,
   onFilterElements,
+  showSliderAction,
   sliderDecrement,
   sliderIncrement,
 } from "../actions/actions";
@@ -142,6 +143,13 @@ class ReduxIndex extends Component {
             >
               Show slider image
             </button>
+            <button
+              onClick={() => {
+                this.props.onHideSlider();
+              }}
+            >
+              Hide slider image
+            </button>
           </div>
         </div>
       </div>
@@ -187,7 +195,10 @@ export default connect(
       dispatch(asyncGetSagaUsers());
     },
     onShowSlider: () => {
-      dispatch(nextSliderAction());
+      dispatch(showSliderAction());
+    },
+    onHideSlider: () => {
+      dispatch(hideSliderAction());
     },
   })
 )(ReduxIndex);
