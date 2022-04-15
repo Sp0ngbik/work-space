@@ -3,10 +3,12 @@ import {
   ADD_ELEMENT,
   ASYNC_SAGA_DECREMENT,
   ASYNC_SAGA_INCREMENT,
+  ASYNC_SAGA_SLIDER,
   ASYNC_SAGA_USERS,
   AXIOS_ADD,
   FILTER_ELEMENTS,
   LOADER_DIACTIVE,
+  NEXT_SLIDER_IMAGE,
   SAGA_DECREMENT,
   SAGA_INCREMENT,
   SAGA_USERS,
@@ -69,4 +71,12 @@ export function getSagaUsers(payload) {
 
 export function asyncGetSagaUsers() {
   return { type: ASYNC_SAGA_USERS };
+}
+
+export function nextSliderAction() {
+  return { type: ASYNC_SAGA_SLIDER };
+}
+
+export function sliderAction(payload) {
+  return { type: NEXT_SLIDER_IMAGE, payload };
 }

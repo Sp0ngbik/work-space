@@ -4,6 +4,7 @@ import {
   asyncDecrementAction,
   asyncGetSagaUsers,
   asyncIncrementAction,
+  nextSliderAction,
   onAddElement,
   onFilterElements,
 } from "../actions/actions";
@@ -84,6 +85,16 @@ class ReduxIndex extends Component {
               </div>
             ))}
           </div>
+          <div>
+            <img alt={"sadas"} />
+            <button
+              onClick={() => {
+                this.props.onNextSlider();
+              }}
+            >
+              Next
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -98,6 +109,7 @@ export default connect(
     axiosElements: state.axiosRequest,
     sagaReducer: state.sagaReducer,
     sagaUserTitle: state.sagaUserReducer,
+    sliderState: state.sagaSliderReducer,
   }),
   (dispatch) => ({
     onAddElement: (inputValue) => {
@@ -118,6 +130,9 @@ export default connect(
     },
     onSagaUsers: () => {
       dispatch(asyncGetSagaUsers());
+    },
+    onNextSlider: () => {
+      dispatch(nextSliderAction());
     },
   })
 )(ReduxIndex);

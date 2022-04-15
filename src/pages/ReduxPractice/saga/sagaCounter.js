@@ -4,11 +4,13 @@ import {
   decrementAction,
   getSagaUsers,
   incrementAction,
+  sliderAction,
 } from "../actions/actions";
 import {
   ASYNC_SAGA_DECREMENT,
   ASYNC_SAGA_INCREMENT,
   ASYNC_SAGA_USERS,
+  ASYNC_SAGA_SLIDER,
 } from "../types/types";
 //put своего рода диспатч для синхронных экшн
 //call возвращает данные которые прилетают в промисе(подобие async,await)
@@ -31,13 +33,24 @@ function* axiosUserWorker() {
     return axios.get("https://jsonplaceholder.typicode.com/users");
   };
   let data = yield call(serverRequest); //call ждет выполнение промиса
-  console.log(data);
   yield put(getSagaUsers(data.data));
 }
 
+function* sagaSliderWorker() {
+  const payload = [
+    "../images/istockphoto-1221584952-612x612.jpg",
+    "../images/istockphoto-1300858577-612x612.jpg",
+    "../images/istockphoto-872657646-612x612.jpg",
+  ];
+  yield put(sliderAction(payload));
+}
 export function* sagaWatcher() {
   yield takeEvery(ASYNC_SAGA_INCREMENT, incrementWorker);
   yield takeEvery(ASYNC_SAGA_DECREMENT, decrementWorker);
+}
+
+export function* sliderWatcher() {
+  yield takeEvery(ASYNC_SAGA_SLIDER, sagaSliderWorker);
 }
 
 export function* userWatcher() {

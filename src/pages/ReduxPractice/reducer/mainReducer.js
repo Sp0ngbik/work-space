@@ -6,7 +6,7 @@ import { remoteDispatch } from "./remoteDispatch";
 import { appReducer } from "./appReducer";
 import { sagaReducer } from "../saga/sagaReducer";
 import { sagaUserReducer } from "../saga/sagaUserReducer";
-
+import { sagaSliderReducer } from "../saga/sagaSliderReducer";
 export const reducer = combineReducers({
   addElement,
   filterElements,
@@ -15,4 +15,5 @@ export const reducer = combineReducers({
   appReducer,
   sagaReducer,
   sagaUserReducer,
+  sagaSliderReducer,
 });
