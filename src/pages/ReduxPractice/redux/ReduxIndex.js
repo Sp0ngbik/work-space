@@ -4,8 +4,12 @@ import {
   asyncDecrementAction,
   asyncGetSagaUsers,
   asyncIncrementAction,
+  hideSliderAction,
   onAddElement,
   onFilterElements,
+  showSliderAction,
+  sliderDecrement,
+  sliderIncrement,
 } from "../actions/actions";
 import AxiosPost from "./AxiosPost";
 import RemoteDispatch from "./RemoteDispatch";
@@ -84,6 +88,69 @@ class ReduxIndex extends Component {
               </div>
             ))}
           </div>
+          <div>
+            <div>
+              {this.props.sliderState.length >= 1 ? (
+                this.props.sliderState.length <= this.props.sliderCounter ||
+                this.props.sliderCounter < 0 ? (
+                  <div>
+                    <button
+                      onClick={() => {
+                        this.props.onNextSlider();
+                      }}
+                    >
+                      Next
+                    </button>
+                    <button
+                      onClick={() => {
+                        this.props.onPrevSlider();
+                      }}
+                    >
+                      Prev
+                    </button>
+                    <div>Dont have so much images:D</div>
+                  </div>
+                ) : (
+                  <div>
+                    <div>
+                      <button
+                        onClick={() => {
+                          this.props.onNextSlider();
+                        }}
+                      >
+                        Next
+                      </button>
+                      <button
+                        onClick={() => {
+                          this.props.onPrevSlider();
+                        }}
+                      >
+                        Prev
+                      </button>
+                    </div>
+                    <img
+                      alt={"sadas"}
+                      src={this.props.sliderState[this.props.sliderCounter]}
+                    />
+                  </div>
+                )
+              ) : null}
+            </div>
+            <button
+              onClick={() => {
+                this.props.onShowSlider();
+              }}
+            >
+              Show slider image
+            </button>
+            <button
+              onClick={() => {
+                this.props.onHideSlider();
+              }}
+            >
+              Hide slider image
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -98,6 +165,8 @@ export default connect(
     axiosElements: state.axiosRequest,
     sagaReducer: state.sagaReducer,
     sagaUserTitle: state.sagaUserReducer,
+    sliderState: state.sagaSliderReducer,
+    sliderCounter: state.sagaSliderCounter,
   }),
   (dispatch) => ({
     onAddElement: (inputValue) => {
@@ -116,8 +185,20 @@ export default connect(
     onDecrementElement: () => {
       dispatch(asyncDecrementAction());
     },
+    onNextSlider: () => {
+      dispatch(sliderIncrement());
+    },
+    onPrevSlider: () => {
+      dispatch(sliderDecrement());
+    },
     onSagaUsers: () => {
       dispatch(asyncGetSagaUsers());
+    },
+    onShowSlider: () => {
+      dispatch(showSliderAction());
+    },
+    onHideSlider: () => {
+      dispatch(hideSliderAction());
     },
   })
 )(ReduxIndex);
