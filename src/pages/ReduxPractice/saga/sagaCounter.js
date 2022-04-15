@@ -19,12 +19,12 @@ const delay = (ms) => {
 };
 
 export function* incrementWorker() {
-  yield delay(2000);
+  yield delay(1000);
   yield put(incrementAction());
 }
 
 function* decrementWorker() {
-  yield delay(2000);
+  yield delay(1000);
   yield put(decrementAction());
 }
 
@@ -38,9 +38,9 @@ function* axiosUserWorker() {
 
 function* sagaSliderWorker() {
   const payload = [
-    "../images/istockphoto-1221584952-612x612.jpg",
-    "../images/istockphoto-1300858577-612x612.jpg",
-    "../images/istockphoto-872657646-612x612.jpg",
+    "https://cdn3.iconfinder.com/data/icons/feather-5/24/file-text-512.png",
+    "https://cdn3.iconfinder.com/data/icons/feather-5/24/chrome-256.png",
+    "https://cdn3.iconfinder.com/data/icons/feather-5/24/repeat-128.png",
   ];
   yield put(sliderAction(payload));
 }

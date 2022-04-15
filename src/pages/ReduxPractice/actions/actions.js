@@ -11,6 +11,8 @@ import {
   NEXT_SLIDER_IMAGE,
   SAGA_DECREMENT,
   SAGA_INCREMENT,
+  SAGA_SLIDER_DECREMENT,
+  SAGA_SLIDER_INCREMENT,
   SAGA_USERS,
 } from "../types/types";
 
@@ -79,4 +81,11 @@ export function nextSliderAction() {
 
 export function sliderAction(payload) {
   return { type: NEXT_SLIDER_IMAGE, payload };
+}
+
+export function sliderIncrement() {
+  return { type: SAGA_SLIDER_INCREMENT };
+}
+export function sliderDecrement() {
+  return { type: SAGA_SLIDER_DECREMENT };
 }

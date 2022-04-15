@@ -7,6 +7,8 @@ import {
   nextSliderAction,
   onAddElement,
   onFilterElements,
+  sliderDecrement,
+  sliderIncrement,
 } from "../actions/actions";
 import AxiosPost from "./AxiosPost";
 import RemoteDispatch from "./RemoteDispatch";
@@ -86,13 +88,59 @@ class ReduxIndex extends Component {
             ))}
           </div>
           <div>
-            <img alt={"sadas"} />
+            <div>
+              {this.props.sliderState.length >= 1 ? (
+                this.props.sliderState.length <= this.props.sliderCounter ||
+                this.props.sliderCounter < 0 ? (
+                  <div>
+                    <button
+                      onClick={() => {
+                        this.props.onNextSlider();
+                      }}
+                    >
+                      Next
+                    </button>
+                    <button
+                      onClick={() => {
+                        this.props.onPrevSlider();
+                      }}
+                    >
+                      Prev
+                    </button>
+                    <div>Dont have so much images:D</div>
+                  </div>
+                ) : (
+                  <div>
+                    <div>
+                      <button
+                        onClick={() => {
+                          this.props.onNextSlider();
+                        }}
+                      >
+                        Next
+                      </button>
+                      <button
+                        onClick={() => {
+                          this.props.onPrevSlider();
+                        }}
+                      >
+                        Prev
+                      </button>
+                    </div>
+                    <img
+                      alt={"sadas"}
+                      src={this.props.sliderState[this.props.sliderCounter]}
+                    />
+                  </div>
+                )
+              ) : null}
+            </div>
             <button
               onClick={() => {
-                this.props.onNextSlider();
+                this.props.onShowSlider();
               }}
             >
-              Next
+              Show slider image
             </button>
           </div>
         </div>
@@ -110,6 +158,7 @@ export default connect(
     sagaReducer: state.sagaReducer,
     sagaUserTitle: state.sagaUserReducer,
     sliderState: state.sagaSliderReducer,
+    sliderCounter: state.sagaSliderCounter,
   }),
   (dispatch) => ({
     onAddElement: (inputValue) => {
@@ -128,10 +177,16 @@ export default connect(
     onDecrementElement: () => {
       dispatch(asyncDecrementAction());
     },
+    onNextSlider: () => {
+      dispatch(sliderIncrement());
+    },
+    onPrevSlider: () => {
+      dispatch(sliderDecrement());
+    },
     onSagaUsers: () => {
       dispatch(asyncGetSagaUsers());
     },
-    onNextSlider: () => {
+    onShowSlider: () => {
       dispatch(nextSliderAction());
     },
   })
