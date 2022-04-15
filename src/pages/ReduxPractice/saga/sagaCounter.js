@@ -32,7 +32,7 @@ function* axiosUserWorker() {
   const serverRequest = () => {
     return axios.get("https://jsonplaceholder.typicode.com/users");
   };
-  let data = yield call(serverRequest); //call ждет выполнение промиса
+  let data = yield call(serverRequest); //call ждет выполнение промиса.
   yield put(getSagaUsers(data.data));
 }
 
