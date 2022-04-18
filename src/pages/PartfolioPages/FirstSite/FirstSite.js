@@ -12,6 +12,11 @@ import blockImg1 from "./firstSiteImages/block1.svg";
 import blockImg2 from "./firstSiteImages/block2.svg";
 import blockImg3 from "./firstSiteImages/block3.svg";
 import blockImg4 from "./firstSiteImages/block4.svg";
+import teamImage1 from "./firstSiteImages/IMAGE.png";
+import teamImage2 from "./firstSiteImages/IMAGE2.png";
+import teamImage3 from "./firstSiteImages/IMAGE3.png";
+import bigLogo from "./firstSiteImages/imageBig_logo.svg";
+
 import { Button } from "antd";
 const FirstSite = () => {
   return (
@@ -210,8 +215,41 @@ const FirstSite = () => {
               </div>
               <button>Meet the team</button>
             </div>
-            <div>fsf</div>
+            <div className={style.teamImages}>
+              <div className={style.teamImageFirstBlock}>
+                <img src={teamImage1} alt="teamImage1 not found" />
+                <img src={teamImage2} alt="teamImage2 not found" />
+              </div>
+              <div className={style.teamImageSecondBlock}>
+                <img src={teamImage3} alt="teamImage3 not found" />
+              </div>
+            </div>
           </div>
+        </section>
+        <section className={style.buyRequest}>
+          <div>
+            <img src={bigLogo} alt="bitLogo not found" />
+            <h2>Think you've seen enough?</h2>
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique.
+            </h3>
+            <div className={style.buyRequest_buttonBlock}>
+              <button>Buy molecule</button>
+              <button>Read more</button>
+            </div>
+          </div>
+        </section>
+        <section className={style.stepsToBuild}>
+          <div className={style.stepsToBuild_leftBlock}>
+            <div>Process</div>
+            <span>
+              What steps are required to build a SaaS marketing site using the
+              molecule template?
+            </span>
+            <button>Get molecule</button>
+          </div>
+          <div></div>
         </section>
       </main>
     </div>

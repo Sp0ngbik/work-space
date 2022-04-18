@@ -248,9 +248,16 @@
   max-width: 1280px;
   height: 592px;
 }
+.teamInfoLeftBlock{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
 .teamInfoLeftBlock h4 {
   display: inline-block;
   padding: 0 26px;
+  color: white;
+  width: 93px;
   border-radius: 100px;
   background-color: rgba(121, 78, 255, 0.8);
   margin: 0 0 29px 0;
@@ -265,4 +272,114 @@
 .teamInfoLeftBlock div {
   font-size: 18px;
   padding: 0 0 29px 0;
+}
+.teamInfoLeftBlock button{
+  width: 141px;
+  color: white;
+  border: none;
+  height: 42px;
+  background-color: #794eff;
+  border-radius: 6px;
+}
+.teamImages{
+  display: grid;
+  grid-template-columns: 288px 288px;
+  grid-template-rows: 288px 288px;
+  grid-gap: 16px;
+}
+.teamImageFirstBlock{
+  max-width: 288px;
+  width: 100%;
+}
+.teamImageFirstBlock img{
+  padding: 0 0 16px;
+}
+.teamImageSecondBlock{
+ display: flex;
+ align-items: center;
+ grid-row: 1/3;
+ grid-column: 2/3;
+}
+.buyRequest{
+  background-color: #1e313b;
+  width: 100%;
+  height: 615px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+text-align: center;
+}
+
+.buyRequest > div{
+  width:100%;
+  max-width: 768px;
+}
+.buyRequest img{
+  padding: 0 0 20px 0;
+}
+.buyRequest h2{
+  font-size: 32px;
+  color: #fff;
+}
+.buyRequest h3{
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  padding: 0 0 29px 0;
+}
+.buyRequest_buttonBlock button:first-child{
+  width: 132px;
+  height: 42px;
+  color: #fff;
+  background-color: #794eff;
+  border-radius: 6px;
+  margin: 0 16px 0 0;
+  border: none;
+}
+.buyRequest_buttonBlock button:last-child{
+  width: 112px;
+  height: 42px;
+  border-radius: 6px;
+  border: none;
+}
+.stepsToBuild{
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  padding: 128px 0;
+  width: 100%;
+  grid-gap: 115px;
+  max-width: 1280px;
+  height: 764px;
+}
+.stepsToBuild_leftBlock{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.stepsToBuild_leftBlock div{
+  font-size: 16px;
+  margin: 0 0 30px 0;
+  background-color: rgba(255, 193, 71, 0.6);
+  padding: 0 26px;
+  width: 112px;
+  border: 2px solid #ffc147;
+  border-radius: 100px;
+}
+
+.stepsToBuild_leftBlock span{
+  font-size: 32px;
+  color: #1e313b;
+  line-height: 35px;
+  padding: 0 0 48px;
+}
+
+.stepsToBuild_leftBlock button{
+  width: 132px;
+  height: 42px;
+  background-color: #1e313b;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
 }
