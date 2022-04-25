@@ -1,28 +1,11 @@
 import style from "./style.module.scss";
-import logoImg from "./firstSiteImages/logo-img.svg";
-import mainBlockImg1 from "./firstSiteImages/img1.svg";
-import mainBlockImg2 from "./firstSiteImages/img2.svg";
-import mainBlockImg3 from "./firstSiteImages/img3.svg";
-import mainBlockImg4 from "./firstSiteImages/img4.svg";
-import mainBlockImg5 from "./firstSiteImages/img5.svg";
-import mainBlockImg6 from "./firstSiteImages/img6.svg";
-import secondBlockImg from "./firstSiteImages/secondBlock.png";
-import frame from "./firstSiteImages/Frame.png";
-import blockImg1 from "./firstSiteImages/block1.svg";
-import blockImg2 from "./firstSiteImages/block2.svg";
-import blockImg3 from "./firstSiteImages/block3.svg";
-import blockImg4 from "./firstSiteImages/block4.svg";
-import teamImage1 from "./firstSiteImages/IMAGE.png";
-import teamImage2 from "./firstSiteImages/IMAGE2.png";
-import teamImage3 from "./firstSiteImages/IMAGE3.png";
-import bigLogo from "./firstSiteImages/imageBig_logo.svg";
-
 import { Button } from "antd";
+import { firstSiteConfig } from "./firstSiteConfig";
 const FirstSite = () => {
   return (
     <div className={style.bodyFirstSite}>
       <header className={style.headerFirstSite}>
-        <img src={logoImg} alt="logoImg not found"></img>
+        <img src={firstSiteConfig.logoImg} alt="logoImg not found"></img>
         <div>
           <div className={style.headerLinks}>
             <h2>Home</h2>
@@ -63,7 +46,7 @@ const FirstSite = () => {
               </div>
               <img
                 className={style.mainContentRightBlock}
-                src={frame}
+                src={firstSiteConfig.frame}
                 alt="frame not found"
               />
             </div>
@@ -72,12 +55,30 @@ const FirstSite = () => {
             Used by the leading SaaS companies of tomorrow.
           </div>
           <div className={style.sponsorImgBlock}>
-            <img src={mainBlockImg1} alt="mainBlockImg1 not found" />
-            <img src={mainBlockImg2} alt="mainBlockImg2 not found" />
-            <img src={mainBlockImg3} alt="mainBlockImg3 not found" />
-            <img src={mainBlockImg4} alt="mainBlockImg4 not found" />
-            <img src={mainBlockImg5} alt="mainBlockImg5 not found" />
-            <img src={mainBlockImg6} alt="mainBlockImg6 not found" />
+            <img
+              src={firstSiteConfig.mainBlockImg1}
+              alt="mainBlockImg1 not found"
+            />
+            <img
+              src={firstSiteConfig.mainBlockImg2}
+              alt="mainBlockImg2 not found"
+            />
+            <img
+              src={firstSiteConfig.mainBlockImg3}
+              alt="mainBlockImg3 not found"
+            />
+            <img
+              src={firstSiteConfig.mainBlockImg4}
+              alt="mainBlockImg4 not found"
+            />
+            <img
+              src={firstSiteConfig.mainBlockImg5}
+              alt="mainBlockImg5 not found"
+            />
+            <img
+              src={firstSiteConfig.mainBlockImg6}
+              alt="mainBlockImg6 not found"
+            />
           </div>
         </section>
         <section className={style.secondContentBlock}>
@@ -85,7 +86,7 @@ const FirstSite = () => {
             <div>
               <img
                 className={style.secondContLeftBlock}
-                src={secondBlockImg}
+                src={firstSiteConfig.secondBlockImg}
                 alt="secondBlock png not found"
               />
             </div>
@@ -108,7 +109,7 @@ const FirstSite = () => {
                   <div className={style.titleBottomBlock}>
                     <img
                       className={style.rightBottonImage}
-                      src={blockImg1}
+                      src={firstSiteConfig.blockImg1}
                       alt="blockimg1 not found"
                     />
                     <span>Pages you'll use</span>
@@ -123,7 +124,7 @@ const FirstSite = () => {
                   <div className={style.titleBottomBlock}>
                     <img
                       className={style.rightBottonImage}
-                      src={blockImg2}
+                      src={firstSiteConfig.blockImg2}
                       alt="blockimg2 not found"
                     />
                     <span>Native image effects</span>
@@ -138,7 +139,7 @@ const FirstSite = () => {
                   <div className={style.titleBottomBlock}>
                     <img
                       className={style.rightBottonImage}
-                      src={blockImg3}
+                      src={firstSiteConfig.blockImg3}
                       alt="blockimg3 not found"
                     />
                     <span>Global typography</span>
@@ -152,7 +153,7 @@ const FirstSite = () => {
                   <div className={style.titleBottomBlock}>
                     <img
                       className={style.rightBottonImage}
-                      src={blockImg4}
+                      src={firstSiteConfig.blockImg4}
                       alt="blockimg4 not found"
                     />
                     <span>Global colors</span>
@@ -217,18 +218,27 @@ const FirstSite = () => {
             </div>
             <div className={style.teamImages}>
               <div className={style.teamImageFirstBlock}>
-                <img src={teamImage1} alt="teamImage1 not found" />
-                <img src={teamImage2} alt="teamImage2 not found" />
+                <img
+                  src={firstSiteConfig.teamImage1}
+                  alt="teamImage1 not found"
+                />
+                <img
+                  src={firstSiteConfig.teamImage2}
+                  alt="teamImage2 not found"
+                />
               </div>
               <div className={style.teamImageSecondBlock}>
-                <img src={teamImage3} alt="teamImage3 not found" />
+                <img
+                  src={firstSiteConfig.teamImage3}
+                  alt="teamImage3 not found"
+                />
               </div>
             </div>
           </div>
         </section>
         <section className={style.buyRequest}>
           <div>
-            <img src={bigLogo} alt="bitLogo not found" />
+            <img src={firstSiteConfig.bigLogo} alt="bitLogo not found" />
             <h2>Think you've seen enough?</h2>
             <h3>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -249,7 +259,72 @@ const FirstSite = () => {
             </span>
             <button>Get molecule</button>
           </div>
-          <div></div>
+          <div className={style.stepsToBuild_rightBlock}>
+            <div className={style.stepsRightBlockImages}>
+              <div className={style.rightBlockImage}>
+                <img
+                  src={firstSiteConfig.stepsImages1}
+                  alt="stepsImages1 not found"
+                />
+                <div>
+                  <h2>Get molecule</h2>
+                  <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique.
+                  </div>
+                </div>
+              </div>
+              <div className={style.rightBlockImage}>
+                <img
+                  src={firstSiteConfig.stepsImages2}
+                  alt="stepsImages2 not found"
+                />
+                <div>
+                  <h2>Edit fonts, colors, images & text</h2>
+                  <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique.
+                  </div>
+                </div>
+              </div>
+              <div className={style.rightBlockImage}>
+                <img
+                  src={firstSiteConfig.stepsImages3}
+                  alt="stepsImages3 not found"
+                />
+                <div>
+                  <h2>Publish!</h2>
+                  <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className={style.creators}>
+          <div className={style.creatorsDiscription}>
+            <div>
+              <img
+                className={style.slideLogoDiscr}
+                src={firstSiteConfig.chillIndImg}
+                alt="ChillInd not found"
+              />
+              <div className={style.slideMainDiscr}>
+                "Using molecule for our web was the best decision we made last
+                year — and we made a ton of great decisions, trust me!"
+              </div>
+              <img
+                src={firstSiteConfig.designerPhoto}
+                alt="designer not found"
+              />
+              <div className={style.memberName}>Mark Watney</div>
+              <div className={style.memberPosition}>
+                Marketing Director, Chill Industries
+              </div>
+            </div>
+          </div>
         </section>
       </main>
     </div>

@@ -248,10 +248,10 @@
   max-width: 1280px;
   height: 592px;
 }
-.teamInfoLeftBlock{
-display: flex;
-flex-direction: column;
-justify-content: center;
+.teamInfoLeftBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .teamInfoLeftBlock h4 {
   display: inline-block;
@@ -273,7 +273,7 @@ justify-content: center;
   font-size: 18px;
   padding: 0 0 29px 0;
 }
-.teamInfoLeftBlock button{
+.teamInfoLeftBlock button {
   width: 141px;
   color: white;
   border: none;
@@ -281,53 +281,53 @@ justify-content: center;
   background-color: #794eff;
   border-radius: 6px;
 }
-.teamImages{
+.teamImages {
   display: grid;
   grid-template-columns: 288px 288px;
   grid-template-rows: 288px 288px;
   grid-gap: 16px;
 }
-.teamImageFirstBlock{
+.teamImageFirstBlock {
   max-width: 288px;
   width: 100%;
 }
-.teamImageFirstBlock img{
+.teamImageFirstBlock img {
   padding: 0 0 16px;
 }
-.teamImageSecondBlock{
- display: flex;
- align-items: center;
- grid-row: 1/3;
- grid-column: 2/3;
+.teamImageSecondBlock {
+  display: flex;
+  align-items: center;
+  grid-row: 1/3;
+  grid-column: 2/3;
 }
-.buyRequest{
+.buyRequest {
   background-color: #1e313b;
   width: 100%;
   height: 615px;
   display: flex;
   justify-content: center;
   align-items: center;
-text-align: center;
+  text-align: center;
 }
 
-.buyRequest > div{
-  width:100%;
+.buyRequest > div {
+  width: 100%;
   max-width: 768px;
 }
-.buyRequest img{
+.buyRequest img {
   padding: 0 0 20px 0;
 }
-.buyRequest h2{
+.buyRequest h2 {
   font-size: 32px;
   color: #fff;
 }
-.buyRequest h3{
+.buyRequest h3 {
   font-size: 18px;
   font-weight: 400;
   color: #fff;
   padding: 0 0 29px 0;
 }
-.buyRequest_buttonBlock button:first-child{
+.buyRequest_buttonBlock button:first-child {
   width: 132px;
   height: 42px;
   color: #fff;
@@ -336,13 +336,13 @@ text-align: center;
   margin: 0 16px 0 0;
   border: none;
 }
-.buyRequest_buttonBlock button:last-child{
+.buyRequest_buttonBlock button:last-child {
   width: 112px;
   height: 42px;
   border-radius: 6px;
   border: none;
 }
-.stepsToBuild{
+.stepsToBuild {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -353,12 +353,13 @@ text-align: center;
   max-width: 1280px;
   height: 764px;
 }
-.stepsToBuild_leftBlock{
+
+.stepsToBuild_leftBlock {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.stepsToBuild_leftBlock div{
+.stepsToBuild_leftBlock div {
   font-size: 16px;
   margin: 0 0 30px 0;
   background-color: rgba(255, 193, 71, 0.6);
@@ -368,18 +369,84 @@ text-align: center;
   border-radius: 100px;
 }
 
-.stepsToBuild_leftBlock span{
+.stepsToBuild_leftBlock span {
   font-size: 32px;
   color: #1e313b;
   line-height: 35px;
   padding: 0 0 48px;
 }
 
-.stepsToBuild_leftBlock button{
+.stepsToBuild_leftBlock button {
   width: 132px;
   height: 42px;
   background-color: #1e313b;
   border-radius: 6px;
   border: none;
   color: #fff;
+}
+
+.stepsRightBlockImages {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+.rightBlockImage img {
+  box-sizing: border-box;
+  width: 62px;
+  padding: 23px 0 82px 0;
+}
+.rightBlockImage {
+  display: grid;
+  grid-template-columns: 62px 538px;
+}
+.stepsRightBlockImages::after {
+  content: "";
+  margin: 62px 0 0 31px;
+  z-index: -1;
+  position: absolute;
+  width: 2px;
+  display: flex;
+  height: 335px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.rightBlockImage > div {
+  margin: 37px 0 50px 40px;
+}
+.rightBlockImage h2 {
+  font-size: 18px;
+}
+.rightBlockImage div {
+  font-size: 16px;
+}
+.creators {
+  width: 100%;
+  height: 650px;
+  background-color: #f6f6f6;
+}
+.creatorsDiscription {
+  // display: flex; if i will add arrows
+  padding: 128px 0 192px;
+  text-align: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1260px;
+}
+.slideLogoDiscr {
+  margin: 0 0 34px 0;
+}
+.slideMainDiscr {
+  font-size: 24px;
+  font-weight: 500;
+  width: 727px;
+  margin: 0 auto 28px;
+}
+.memberName {
+  margin: 15px 0 10px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.memberPosition {
+  font-size: 16px;
+  font-weight: 500;
 }
