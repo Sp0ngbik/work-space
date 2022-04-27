@@ -450,14 +450,15 @@
   font-size: 16px;
   font-weight: 500;
 }
-.nonMissMessage{
+.nonMissMessage {
   display: flex;
   width: 100%;
-  height: 443px;justify-content: center;
+  height: 443px;
+  justify-content: center;
   align-items: center;
   background-color: #794eff;
 }
-.nonMissBlock{
+.nonMissBlock {
   padding: 0 96px;
   display: grid;
   align-items: center;
@@ -470,21 +471,20 @@
   grid-gap: 80px;
   background-color: #fff;
 }
-.leftMissBlock{
+.leftMissBlock {
   width: 540px;
   display: grid;
   grid-template-rows: 1fr 1fr;
-
 }
-.leftMissBlock h5{
+.leftMissBlock h5 {
   font-size: 32px;
   margin: 0 0 10px 0;
 }
-.leftMissBlock div{
+.leftMissBlock div {
   font-size: 16px;
   font-weight: 500;
 }
-.rightMissBlock input{
+.rightMissBlock input {
   padding: 10px 0 10px 21px;
   width: 364px;
   height: 44px;
@@ -492,10 +492,10 @@
   border: 1px solid #000;
   margin: 0 16px 16px 0;
 }
-.rightMissBlock input::-webkit-input-placeholder{
+.rightMissBlock input::-webkit-input-placeholder {
   color: black;
 }
-.rightMissBlock button{
+.rightMissBlock button {
   width: 88px;
   height: 44px;
   background-color: #1e313b;
@@ -503,15 +503,179 @@
   border: none;
   border-radius: 6px;
 }
-.rightMissBlock{
+.rightMissBlock {
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
-.rightMissDiscr > div{
+.rightMissDiscr > div {
   font-weight: 500;
   font-size: 12px;
 }
-.rightMissDiscr span{
+.rightMissDiscr span {
   margin: 0 0 0 5px;
   color: #794eff;
+}
+.blogSection {
+  width: 100%;
+  height: 914px;
+}
+.blogBody {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 128px 0;
+}
+.blogLabel {
+  align-items: center;
+  width: 86px;
+  background-color: rgba(121, 78, 255, 0.8);
+  color: #fff;
+  font-size: 16px;
+  border: 2px solid #794eff;
+  text-align: center;
+  border-radius: 100px;
+}
+
+.blogTitle h3 {
+  margin: 31px 0 11px 0;
+  font-size: 32px;
+}
+.blogTitle span {
+  color: #794eff;
+}
+
+.blockView{
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+}
+.blockView div{
+  font-size: 18px;
+  color:#1e313b
+}
+.blockView button{
+color: #fff;
+background-color: #1e313b;
+padding: 8px 15px 10px;
+border: 1px solid #1e313b;
+border-radius: 6px;
+}
+.blogMainInfo{
+  margin: 47px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(3,404px);
+  grid-gap: 32px;
+}
+.blogMainInfo h2{
+  margin: 43px 0 9px 0;
+  color:#1e313b;
+  font-weight: 400;
+  font-size: 24px;
+}
+.blogMainInfo span{
+  color:#1e313b;
+  font-size: 16px;
+  line-height: 24px;
+}
+.bloggerInfo{
+  display: flex;
+  margin: 16px 0 0 0;
+}
+.bloggerInfo div{
+  font-size: 14px;
+margin: 0 0 0 16px;
+}
+.blogerResponseStatus span{
+  margin: 0 0 0 22px;
+  font-size: 14px;
+}
+.blogerResponseStatus span::before{
+  content: "";
+  display: flex;
+  position: absolute;  
+  width: 3px;
+  border-radius: 100%;
+  margin: -18px 0px 0 115px;
+  height: 3px;
+  background-color: black;
+}
+.startDesigh{
+  background-color: #794eff;
+  height: 256px;
+  width: 100%;
+}
+.startDesigh > div{
+  display: flex;
+  padding: 91px 0 0;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1280px;
+
+}
+.startDesigh span{
+  color: #fff;
+  font-size: 18px;
+}
+.startDesigh h3{
+  color: #fff;
+  font-size: 56px;
+  margin: 0 0 14px 0;
+}
+.startDesigh button{
+  width: 154px;
+  height: 55px;
+  margin: 51px  0 21px 0;
+  border-radius: 6px;
+  border: none;
+  font-size: 18px;
+  color: #1e313b;
+}
+.footerSection{
+  height: 182px;
+  width: 100%;
+}
+.footerBody{
+  width: 1280px;
+  margin: 80px auto 0;
+
+}
+
+.footerBody > div{
+  display: flex;
+  justify-content: space-between;
+}
+.footerLinks{
+  display: flex;
+  align-items: center;
+}
+.footerLinks span{
+  font-size: 16px;
+  color: #794eff;
+  margin:0 24px 0 0;
+}
+.footerLinks span:last-child{
+  margin: 0;
+}
+.socialMediaIcons{
+  display: flex;
+  align-items: center;
+}
+.socialMediaIcons img{
+margin: 0 0 0 15px ;
+}
+.socialMediaIcons img:first-child{
+  margin: 0;
+}
+.footerBottom{
+  display: flex;
+  margin: 32px auto 0 ;
+}
+.footerBottom div{
+  font-size: 14px;
+}
+.footerBottom span{
+  margin: 0 0 0 20px;
+  color: #794eff;
+}
+.politicsEtc span{
+  margin: 0 0 0 16px;
 }
