@@ -349,7 +349,146 @@ const FirstSite = () => {
             </div>
           </div>
         </section>
+        <section className={style.blogSection}>
+          <div className={style.blogBody}>
+            <div className={style.blogLabel}>Blog</div>
+            <div className={style.blogTitle}>
+              <h3>
+                The <span>latest news</span> from Molecule.
+              </h3>
+              <div className={style.blockView}>
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+                <button>View all</button>
+              </div>
+              <div className={style.blogMainInfo}>
+                <div>
+                  <img
+                    src={firstSiteConfig.blogPhoto1}
+                    alt="blogPhoto1 not found"
+                  />
+                  <h2>How to drive sales in SaaS</h2>
+                  <span>
+                    Vestibulum sit amet urna turpis. Mauris euismod elit et nisi
+                    ultrices, ut faucibus orci tincidunt.
+                  </span>
+                  <div className={style.bloggerInfo}>
+                    <img
+                      src={firstSiteConfig.blogPerson1}
+                      alt="blogPerson1 not found"
+                    />
+                    <div>
+                      <div>Dwight Schrute</div>
+                      <div className={style.blogerResponseStatus}>
+                        January 25, 2022 <span>28 min read</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <img
+                    src={firstSiteConfig.blogPhoto2}
+                    alt="blogPhoto2 not found"
+                  />
+                  <h2>Hiring the right talent</h2>
+                  <span>
+                    Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex,
+                    condimentum dapibus congue et, vulputate ut ligula.
+                  </span>
+                  <div className={style.bloggerInfo}>
+                    <img
+                      src={firstSiteConfig.blogPerson2}
+                      alt="blogPerson2 not found"
+                    />
+                    <div>
+                      <div>Lexus Simonis</div>
+                      <div className={style.blogerResponseStatus}>
+                        January 25, 2022 <span>21 min read</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <img
+                    src={firstSiteConfig.blogPhoto3}
+                    alt="blogPhoto3 not found"
+                  />
+                  <h2>Is remote work for you? (Yes it is)</h2>
+                  <span>
+                    Duis tristique sed lorem a vestibulum. Cras commodo
+                    consequat orci, in convallis risus egestas non.
+                  </span>
+                  <div className={style.bloggerInfo}>
+                    <img
+                      src={firstSiteConfig.blogPerson3}
+                      alt="blogPerson3 not found"
+                    />
+                    <div>
+                      <div>Doug Howell</div>
+                      <div className={style.blogerResponseStatus}>
+                        January 25, 2022 <span>29 min read</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className={style.startDesigh}>
+          <div>
+            <div>
+              <h3>Ready to start designing?</h3>
+              <span>Molecule is available today!</span>
+            </div>
+            <button>Get Molecule</button>
+          </div>
+        </section>
       </main>
+      <footer className={style.footerSection}>
+        <div className={style.footerBody}>
+          <div>
+            <img
+              src={firstSiteConfig.footerLogo}
+              alt="footer logoImg not found"
+            />
+            <div className={style.footerLinks}>
+              <span>Home</span>
+              <span>About</span>
+              <span>Pricing</span>
+              <span>Open positions</span>
+              <span>Blog</span>
+            </div>
+            <div className={style.socialMediaIcons}>
+              <img
+                src={firstSiteConfig.instaIcon}
+                alt="instaIcon footer not found"
+              />
+              <img
+                src={firstSiteConfig.twitterIcon}
+                alt="twitterIcon footer not found"
+              />
+              <img
+                src={firstSiteConfig.linkedInIcon}
+                alt="linkedInIcon footer not found"
+              />
+            </div>
+          </div>
+          <div className={style.footerBottom}>
+            <div>
+              © Molecule, LLC. All rights reserved. Powered by
+              <span> Webflow .</span>
+            </div>
+            <div className={style.politicsEtc}>
+              <span>Licensing</span>
+              <span>Privacy Policy</span>
+              <span>Terms & conditions</span>
+              <span>Cookie policy</span>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

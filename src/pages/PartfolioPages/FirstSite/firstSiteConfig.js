@@ -20,7 +20,16 @@ import stepsImages2 from "./firstSiteImages/Frame2.svg";
 import stepsImages3 from "./firstSiteImages/Frame3.svg";
 import chillIndImg from "./firstSiteImages/ChillInd.svg";
 import designerPhoto from "./firstSiteImages/designerPhoto.png";
-
+import blogPhoto1 from "./firstSiteImages/IMAGEBlog1.png";
+import blogPhoto2 from "./firstSiteImages/IMAGEBlog2.png";
+import blogPhoto3 from "./firstSiteImages/IMAGEBlog3.png";
+import blogPerson1 from "./firstSiteImages/BlogIMAGE1.png";
+import blogPerson2 from "./firstSiteImages/BlogIMAGE2.png";
+import blogPerson3 from "./firstSiteImages/BlogIMAGE3.png";
+import instaIcon from "./firstSiteImages/InstaFrame.svg";
+import twitterIcon from "./firstSiteImages/TwitterFrame.svg";
+import linkedInIcon from "./firstSiteImages/LinkedInFrame.svg";
+import footerLogo from "./firstSiteImages/footerLogo.svg";
 export const firstSiteConfig = {
   logoImg,
   mainBlockImg1,
@@ -44,4 +53,14 @@ export const firstSiteConfig = {
   stepsImages3,
   chillIndImg,
   designerPhoto,
+  blogPhoto1,
+  blogPhoto2,
+  blogPhoto3,
+  blogPerson1,
+  blogPerson2,
+  blogPerson3,
+  instaIcon,
+  twitterIcon,
+  linkedInIcon,
+  footerLogo,
 };
