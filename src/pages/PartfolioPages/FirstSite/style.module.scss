@@ -436,12 +436,15 @@
   background-color: #f6f6f6;
 }
 .creatorsDiscription {
-  // display: flex; if i will add arrows
   padding: 128px 0 192px;
   text-align: center;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1260px;
+}
+.slideContentBlock{
+  display: flex;
+  justify-content: space-between;
 }
 .slideLogoDiscr {
   margin: 0 0 34px 0;

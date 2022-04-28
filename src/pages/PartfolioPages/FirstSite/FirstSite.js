@@ -314,10 +314,20 @@ const FirstSite = () => {
                 "Using molecule for our web was the best decision we made last
                 year — and we made a ton of great decisions, trust me!"
               </div>
-              <img
-                src={firstSiteConfig.designerPhoto}
-                alt="designer not found"
-              />
+              <div className={style.slideContentBlock}>
+                <img
+                  src={firstSiteConfig.leftArrowSlider}
+                  alt="left arrow slider not found"
+                />
+                <img
+                  src={firstSiteConfig.designerPhoto}
+                  alt="designer not found"
+                />
+                <img
+                  src={firstSiteConfig.rightArrowSlider}
+                  alt="right arrow slider not found"
+                />
+              </div>
               <div className={style.memberName}>Mark Watney</div>
               <div className={style.memberPosition}>
                 Marketing Director, Chill Industries

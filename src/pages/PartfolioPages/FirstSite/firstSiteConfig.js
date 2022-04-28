@@ -30,6 +30,9 @@ import instaIcon from "./firstSiteImages/InstaFrame.svg";
 import twitterIcon from "./firstSiteImages/TwitterFrame.svg";
 import linkedInIcon from "./firstSiteImages/LinkedInFrame.svg";
 import footerLogo from "./firstSiteImages/footerLogo.svg";
+import leftArrowSlider from "./firstSiteImages/LeftArrow.svg";
+import rightArrowSlider from "./firstSiteImages/RightArrow.svg";
+
 export const firstSiteConfig = {
   logoImg,
   mainBlockImg1,
@@ -63,4 +66,6 @@ export const firstSiteConfig = {
   twitterIcon,
   linkedInIcon,
   footerLogo,
+  leftArrowSlider,
+  rightArrowSlider,
 };
