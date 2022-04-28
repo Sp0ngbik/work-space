@@ -1,0 +1,25 @@
+@mixin labelConainer {
+  font-size: 16px;
+  margin: 0 0 30px 0;
+  padding: 0 26px;
+  border-radius: 100px;
+}
+@mixin darkButtonHover{
+    border: 1px solid black;
+    background-color: #ffffff;
+    cursor: pointer;
+    color: black;
+    transition: 0.2s linear;
+}
+@mixin lightButtonHover{
+    transition: 0.2s linear;
+    color: #794eff;
+    cursor: pointer;
+}
+@mixin purpleButtonHover{
+    transition: 0.2s linear;
+   color: black;
+   background-color: white;
+   border: 1px solid black;
+   cursor: pointer;
+}

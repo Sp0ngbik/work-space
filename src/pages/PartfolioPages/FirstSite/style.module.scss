@@ -1,3 +1,5 @@
+@import "../../../../variables/firstSiteMixin.scss" ;
+
 .bodyFirstSite {
   margin: 0;
   padding: 0;
@@ -29,13 +31,16 @@
   margin: 0;
 }
 .headerFirstSite button {
-  width: 100%;
+  width: 93px;
   font-size: 16px;
-  max-width: 93px;
   height: 42px;
   background-color: #1e313b;
   color: #fff;
+  border: none;
   border-radius: 6px;
+}
+.headerFirstSite button:hover{
+  @include darkButtonHover
 }
 .upContentBlock {
   background-color: #1e313b;
@@ -89,9 +94,14 @@
   color: black;
 }
 .leftBlockInput button {
+  color: black;
   width: 88px;
   height: 44px;
+  border: none;
   border-radius: 6px;
+}
+.leftBlockInput button:hover{
+  @include lightButtonHover;
 }
 .signDiscr div {
   font-family: Roboto;
@@ -146,12 +156,9 @@
   margin: 0 0 30px 0;
 }
 .secondRightUpBlock div {
-  font-size: 16px;
-  margin: 0 0 30px 0;
+  @include labelConainer;
   background-color: rgba(255, 193, 71, 0.6);
-  padding: 0 26px;
   border: 2px solid #ffc147;
-  border-radius: 100px;
 }
 .secondRightTitle {
   font-size: 32px;
@@ -208,12 +215,10 @@
   max-width: 1440px;
 }
 .statsLeftBlock > div {
+  @include labelConainer;
   display: inline-block;
-  padding: 0 26px;
   border: 2px solid #97e747;
-  border-radius: 100px;
   background-color: rgba(151, 231, 71, 0.6);
-  margin: 0 0 29px 0;
 }
 .statsLeftBlock h3 {
   font-size: 32px;
@@ -254,13 +259,10 @@
   justify-content: center;
 }
 .teamInfoLeftBlock h4 {
-  display: inline-block;
-  padding: 0 26px;
+  @include labelConainer;
   color: white;
   width: 93px;
-  border-radius: 100px;
   background-color: rgba(121, 78, 255, 0.8);
-  margin: 0 0 29px 0;
   border: 2px solid #794eff;
 }
 .teamInfoLeftBlock h3 {
@@ -280,6 +282,9 @@
   height: 42px;
   background-color: #794eff;
   border-radius: 6px;
+}
+.teamInfoLeftBlock button:hover{
+  @include purpleButtonHover;
 }
 .teamImages {
   display: grid;
@@ -336,11 +341,17 @@
   margin: 0 16px 0 0;
   border: none;
 }
+.buyRequest_buttonBlock button:first-child:hover{
+  @include purpleButtonHover;
+}
 .buyRequest_buttonBlock button:last-child {
   width: 112px;
   height: 42px;
   border-radius: 6px;
   border: none;
+}
+.buyRequest_buttonBlock button:last-child:hover{
+  @include lightButtonHover;
 }
 .stepsToBuild {
   box-sizing: border-box;
@@ -360,10 +371,8 @@
   justify-content: center;
 }
 .stepsToBuild_leftBlock div {
-  font-size: 16px;
-  margin: 0 0 30px 0;
+  @include labelConainer;
   background-color: rgba(255, 193, 71, 0.6);
-  padding: 0 26px;
   width: 112px;
   border: 2px solid #ffc147;
   border-radius: 100px;
@@ -384,7 +393,9 @@
   border: none;
   color: #fff;
 }
-
+.stepsToBuild_leftBlock button:hover{
+  @include darkButtonHover;
+}
 .stepsRightBlockImages {
   display: flex;
   flex-direction: column;
@@ -503,6 +514,9 @@
   border: none;
   border-radius: 6px;
 }
+.rightMissBlock button:hover{
+  @include darkButtonHover;
+}
 .rightMissBlock {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -525,14 +539,13 @@
   padding: 128px 0;
 }
 .blogLabel {
+  @include labelConainer;
+  display: inline-block;
   align-items: center;
-  width: 86px;
   background-color: rgba(121, 78, 255, 0.8);
   color: #fff;
-  font-size: 16px;
   border: 2px solid #794eff;
   text-align: center;
-  border-radius: 100px;
 }
 
 .blogTitle h3 {
@@ -558,6 +571,9 @@ background-color: #1e313b;
 padding: 8px 15px 10px;
 border: 1px solid #1e313b;
 border-radius: 6px;
+}
+.blockView button:hover{
+  @include darkButtonHover;
 }
 .blogMainInfo{
   margin: 47px 0 0 0;
@@ -628,6 +644,9 @@ margin: 0 0 0 16px;
   border: none;
   font-size: 18px;
   color: #1e313b;
+}
+.startDesigh button:hover{
+  @include lightButtonHover;
 }
 .footerSection{
   height: 182px;

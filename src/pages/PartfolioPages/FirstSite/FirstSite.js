@@ -1,5 +1,4 @@
 import style from "./style.module.scss";
-import { Button } from "antd";
 import { firstSiteConfig } from "./firstSiteConfig";
 const FirstSite = () => {
   return (
@@ -17,7 +16,7 @@ const FirstSite = () => {
           </div>
         </div>
         <div>
-          <Button>Buy now</Button>
+          <button>Buy now</button>
         </div>
       </header>
       <main>
@@ -37,7 +36,7 @@ const FirstSite = () => {
                 </div>
                 <div className={style.leftBlockInput}>
                   <input placeholder="Enter your email"></input>
-                  <Button>Sign up</Button>
+                  <button>Sign up</button>
                 </div>
                 <div className={style.signDiscr}>
                   By clicking Sign Up you're confirming that you agree with our
