@@ -32,6 +32,7 @@ import linkedInIcon from "./firstSiteImages/LinkedInFrame.svg";
 import footerLogo from "./firstSiteImages/footerLogo.svg";
 import leftArrowSlider from "./firstSiteImages/LeftArrow.svg";
 import rightArrowSlider from "./firstSiteImages/RightArrow.svg";
+import myPhoto from "./firstSiteImages/myPhoto.jpg";
 
 export const firstSiteConfig = {
   logoImg,
@@ -68,4 +69,5 @@ export const firstSiteConfig = {
   footerLogo,
   leftArrowSlider,
   rightArrowSlider,
+  myPhoto,
 };

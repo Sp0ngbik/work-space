@@ -8,6 +8,8 @@
   margin: 0 auto;
   display: flex;
   max-width: 1440px;
+  padding: 0 80px;
+  box-sizing: border-box;
   width: 100%;
   align-items: center;
   justify-items: center;
@@ -49,14 +51,15 @@
 }
 .mainBlock {
   background-color: #1e313b;
+  max-width: 1440px;
   margin: 0 auto;
 }
 .mainContent {
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 130px 0 100px;
+  padding: 130px 56px 100px 80px;
   display: grid;
-  max-width: 1280px;
+  max-width: 1440px;
   width: 100%;
   grid-template-columns: 1fr 1fr;
   height: 100%;
@@ -115,7 +118,8 @@
   object-fit: cover;
   width: 100%;
   max-width: 716px;
-  height: 100%;
+  // height: 100%;
+  
   margin: 0 0 0 10px;
   max-height: 618px;
 }
@@ -139,14 +143,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
+  align-items: center;
   max-width: 1440px;
   grid-gap: 80px;
   width: 100%;
-  max-height: 565px;
-  height: 100%;
+  padding: 0 80px;
+  // max-height: 565px;
+  // height: 100%;
 }
 .secondContLeftBlock {
   margin: 62px 0 62px 0;
+  width: 100%;
   object-fit: cover;
 }
 .secondRightUpBlock {
@@ -204,7 +211,7 @@
 .stats {
   background-color: #f6f6f6;
   width: 100%;
-  height: 490px;
+  // height: 490px;
 }
 .statsContent {
   padding: 128px 80px;
@@ -243,7 +250,6 @@
   color: #97e747;
 }
 .teamInfo {
-  box-sizing: content-box;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
@@ -251,7 +257,7 @@
   width: 100%;
   grid-gap: 115px;
   max-width: 1280px;
-  height: 592px;
+  // height: 592px;
 }
 .teamInfoLeftBlock {
   display: flex;
@@ -292,12 +298,14 @@
   grid-template-rows: 288px 288px;
   grid-gap: 16px;
 }
-.teamImageFirstBlock {
+.teamImageFirstBlock img{
   max-width: 288px;
+  object-fit: cover;
   width: 100%;
 }
 .teamImageFirstBlock img {
   padding: 0 0 16px;
+  width: 100%;
 }
 .teamImageSecondBlock {
   display: flex;
@@ -362,7 +370,7 @@
   width: 100%;
   grid-gap: 115px;
   max-width: 1280px;
-  height: 764px;
+  // height: 764px;
 }
 
 .stepsToBuild_leftBlock {
@@ -449,10 +457,33 @@
 .slideLogoDiscr {
   margin: 0 0 34px 0;
 }
+.arrowsSlider{
+  cursor: pointer;
+}
+.sliderPhoto{
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+.sliderDots{
+  display: flex;  
+  margin: 46px 0;
+  justify-content: center;
+}
+.sliderDots .dotActive{
+  background-color: #222;
+}
+.sliderDots div{
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: rgba(34, 34, 34, 0.4);
+  margin: 0 6px;
+}
 .slideMainDiscr {
   font-size: 24px;
   font-weight: 500;
-  width: 727px;
+  // width: 727px;
   margin: 0 auto 28px;
 }
 .memberName {
@@ -537,9 +568,9 @@
   height: 914px;
 }
 .blogBody {
+  box-sizing: content-box;
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 128px 0;
+  margin: 128px auto 113px;
 }
 .blogLabel {
   @include labelConainer;
@@ -581,8 +612,11 @@ border-radius: 6px;
 .blogMainInfo{
   margin: 47px 0 0 0;
   display: grid;
-  grid-template-columns: repeat(3,404px);
+  grid-template-columns: repeat(3,1fr);
   grid-gap: 32px;
+}
+.blogMainInfo .mainPhoto{
+  width: 100%;
 }
 .blogMainInfo h2{
   margin: 43px 0 9px 0;
@@ -656,7 +690,8 @@ margin: 0 0 0 16px;
   width: 100%;
 }
 .footerBody{
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
   margin: 80px auto 0;
 
 }
@@ -700,4 +735,48 @@ margin: 0 0 0 15px ;
 }
 .politicsEtc span{
   margin: 0 0 0 16px;
+}
+
+@media screen and (max-width: 1024px) {
+.mainContent{
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2,1fr);
+}
+.mainContentRightBlock{
+  grid-row: 1/1;
+}
+.sponsorImgBlock img{
+width: 100px;
+margin: 0 20px;
+}
+.secondBlockMainContent{
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.statsContent{
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.teamInfo{
+  box-sizing: border-box;
+  grid-gap: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.teamImages{
+  grid-row: 1/1;
+}
+.stepsToBuild{
+grid-template-columns: 1fr;
+grid-template-rows: 1fr;
+}
+  .nonMissBlock{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 540px) {
+.mainContentRightBlock{
+  width:50%;
+}
 }

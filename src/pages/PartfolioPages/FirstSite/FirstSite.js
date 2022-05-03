@@ -1,6 +1,102 @@
 import style from "./style.module.scss";
 import { firstSiteConfig } from "./firstSiteConfig";
+import { useState } from "react";
 const FirstSite = () => {
+  let [sliderState, setSliderState] = useState(1);
+  const sliderCounter = 2;
+  function sliderSelection() {
+    if (sliderState > sliderCounter) {
+      return setSliderState(1);
+    } else if (sliderState < 1) {
+      return setSliderState(sliderCounter);
+    }
+
+    if (sliderState === 1) {
+      return (
+        <div>
+          <img
+            className={style.slideLogoDiscr}
+            src={firstSiteConfig.chillIndImg}
+            alt="ChillInd not found"
+          />
+          <div className={style.slideMainDiscr}>
+            "Using molecule for our web was the best decision we made last year
+            — and we made a ton of great decisions, trust me!"
+          </div>
+
+          <div className={style.slideContentBlock}>
+            <img
+              onClick={() => {
+                setSliderState((sliderState -= 1));
+              }}
+              className={style.arrowsSlider}
+              src={firstSiteConfig.leftArrowSlider}
+              alt="left arrow slider not found"
+            />
+            <img
+              className={style.sliderPhoto}
+              src={firstSiteConfig.designerPhoto}
+              alt="designer not found"
+            />
+            <img
+              className={style.arrowsSlider}
+              onClick={() => {
+                setSliderState((sliderState += 1));
+              }}
+              src={firstSiteConfig.rightArrowSlider}
+              alt="right arrow slider not found"
+            />
+          </div>
+          <div className={style.memberName}>Mark Watney</div>
+          <div className={style.memberPosition}>
+            Marketing Director, Chill Industries
+          </div>
+        </div>
+      );
+    } else if (sliderState === 2) {
+      return (
+        <div>
+          <img
+            className={style.slideLogoDiscr}
+            src={firstSiteConfig.chillIndImg}
+            alt="ChillInd not found"
+          />
+          <div className={style.slideMainDiscr}>
+            "Hello, you found my easter egg, so thx for checking this
+            mini-slider"
+          </div>
+
+          <div className={style.slideContentBlock}>
+            <img
+              onClick={() => {
+                setSliderState((sliderState -= 1));
+              }}
+              className={style.arrowsSlider}
+              src={firstSiteConfig.leftArrowSlider}
+              alt="left arrow slider not found"
+            />
+            <img
+              className={style.sliderPhoto}
+              src={firstSiteConfig.myPhoto}
+              alt="myPhoto is lost :c"
+            />
+            <img
+              className={style.arrowsSlider}
+              onClick={() => {
+                setSliderState((sliderState += 1));
+              }}
+              src={firstSiteConfig.rightArrowSlider}
+              alt="right arrow slider not found"
+            />
+          </div>
+          <div className={style.memberName}>Vlad Ostapuk</div>
+          <div className={style.memberPosition}>
+            Frontend Developer, just made this slide
+          </div>
+        </div>
+      );
+    }
+  }
   return (
     <div className={style.bodyFirstSite}>
       <header className={style.headerFirstSite}>
@@ -304,34 +400,10 @@ const FirstSite = () => {
         </section>
         <section className={style.creators}>
           <div className={style.creatorsDiscription}>
-            <div>
-              <img
-                className={style.slideLogoDiscr}
-                src={firstSiteConfig.chillIndImg}
-                alt="ChillInd not found"
-              />
-              <div className={style.slideMainDiscr}>
-                "Using molecule for our web was the best decision we made last
-                year — and we made a ton of great decisions, trust me!"
-              </div>
-              <div className={style.slideContentBlock}>
-                <img
-                  src={firstSiteConfig.leftArrowSlider}
-                  alt="left arrow slider not found"
-                />
-                <img
-                  src={firstSiteConfig.designerPhoto}
-                  alt="designer not found"
-                />
-                <img
-                  src={firstSiteConfig.rightArrowSlider}
-                  alt="right arrow slider not found"
-                />
-              </div>
-              <div className={style.memberName}>Mark Watney</div>
-              <div className={style.memberPosition}>
-                Marketing Director, Chill Industries
-              </div>
+            {sliderSelection()}
+            <div className={style.sliderDots}>
+              <div className={sliderState === 1 ? style.dotActive : null}></div>
+              <div className={sliderState === 2 ? style.dotActive : null}></div>
             </div>
           </div>
         </section>
@@ -374,6 +446,7 @@ const FirstSite = () => {
               <div className={style.blogMainInfo}>
                 <div>
                   <img
+                    className={style.mainPhoto}
                     src={firstSiteConfig.blogPhoto1}
                     alt="blogPhoto1 not found"
                   />
@@ -397,6 +470,7 @@ const FirstSite = () => {
                 </div>
                 <div>
                   <img
+                    className={style.mainPhoto}
                     src={firstSiteConfig.blogPhoto2}
                     alt="blogPhoto2 not found"
                   />
@@ -420,6 +494,7 @@ const FirstSite = () => {
                 </div>
                 <div>
                   <img
+                    className={style.mainPhoto}
                     src={firstSiteConfig.blogPhoto3}
                     alt="blogPhoto3 not found"
                   />
