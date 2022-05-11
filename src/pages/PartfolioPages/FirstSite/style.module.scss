@@ -1,11 +1,10 @@
-@import "../../../../variables/firstSiteMixin.scss" ;
+@import "../../../../variables/firstSiteMixin.scss";
 
 .bodyFirstSite {
   margin: 0;
   padding: 0;
 }
 .headerFirstSite {
-
   margin: 0 auto;
   // display: flex;
   display: none;
@@ -43,18 +42,19 @@
   border: none;
   border-radius: 6px;
 }
-.headerFirstSite button:hover{
-  @include darkButtonHover
+.headerFirstSite button:hover {
+  @include darkButtonHover;
 }
 .upContentBlock {
   background-color: #1e313b;
   width: 100%;
-  height: 100%;display: table;
+  height: 100%;
 }
 .mainBlock {
   background-color: #1e313b;
   max-width: 1440px;
   margin: 0 auto;
+  display: inline-block;
 }
 .mainContent {
   box-sizing: border-box;
@@ -106,7 +106,7 @@
   border: none;
   border-radius: 6px;
 }
-.leftBlockInput button:hover{
+.leftBlockInput button:hover {
   @include lightButtonHover;
 }
 .signDiscr div {
@@ -122,7 +122,7 @@
   width: 100%;
   max-width: 716px;
   // height: 100%;
-  
+
   margin: 0 0 0 10px;
   max-height: 618px;
 }
@@ -293,7 +293,7 @@
   background-color: #794eff;
   border-radius: 6px;
 }
-.teamInfoLeftBlock button:hover{
+.teamInfoLeftBlock button:hover {
   @include purpleButtonHover;
 }
 .teamImages {
@@ -302,7 +302,7 @@
   grid-template-rows: 288px 288px;
   grid-gap: 16px;
 }
-.teamImageFirstBlock img{
+.teamImageFirstBlock img {
   max-width: 288px;
   object-fit: cover;
   width: 100%;
@@ -353,7 +353,7 @@
   margin: 0 16px 0 0;
   border: none;
 }
-.buyRequest_buttonBlock button:first-child:hover{
+.buyRequest_buttonBlock button:first-child:hover {
   @include purpleButtonHover;
 }
 .buyRequest_buttonBlock button:last-child {
@@ -362,7 +362,7 @@
   border-radius: 6px;
   border: none;
 }
-.buyRequest_buttonBlock button:last-child:hover{
+.buyRequest_buttonBlock button:last-child:hover {
   @include lightButtonHover;
 }
 .stepsToBuild {
@@ -405,7 +405,7 @@
   border: none;
   color: #fff;
 }
-.stepsToBuild_leftBlock button:hover{
+.stepsToBuild_leftBlock button:hover {
   @include darkButtonHover;
 }
 .stepsRightBlockImages {
@@ -454,30 +454,30 @@
   margin: 0 auto;
   max-width: 1260px;
 }
-.slideContentBlock{
+.slideContentBlock {
   display: flex;
   justify-content: space-between;
 }
 .slideLogoDiscr {
   margin: 0 0 34px 0;
 }
-.arrowsSlider{
+.arrowsSlider {
   cursor: pointer;
 }
-.sliderPhoto{
+.sliderPhoto {
   width: 80px;
   height: 80px;
   object-fit: cover;
 }
-.sliderDots{
-  display: flex;  
+.sliderDots {
+  display: flex;
   margin: 46px 0;
   justify-content: center;
 }
-.sliderDots .dotActive{
+.sliderDots .dotActive {
   background-color: #222;
 }
-.sliderDots div{
+.sliderDots div {
   content: "";
   width: 12px;
   height: 12px;
@@ -552,7 +552,7 @@
   border: none;
   border-radius: 6px;
 }
-.rightMissBlock button:hover{
+.rightMissBlock button:hover {
   @include darkButtonHover;
 }
 .rightMissBlock {
@@ -594,191 +594,197 @@
   color: #794eff;
 }
 
-.blockView{
+.blockView {
   width: 100%;
   justify-content: space-between;
   display: flex;
 }
-.blockView div{
+.blockView div {
   font-size: 18px;
-  color:#1e313b
+  color: #1e313b;
 }
-.blockView button{
-color: #fff;
-background-color: #1e313b;
-padding: 8px 15px 10px;
-border: 1px solid #1e313b;
-border-radius: 6px;
+.blockView button {
+  color: #fff;
+  background-color: #1e313b;
+  padding: 8px 15px 10px;
+  border: 1px solid #1e313b;
+  border-radius: 6px;
 }
-.blockView button:hover{
+.blockView button:hover {
   @include darkButtonHover;
 }
-.blogMainInfo{
+.blogMainInfo {
   margin: 47px 0 0 0;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 32px;
 }
-.blogMainInfo .mainPhoto{
+.blogMainInfo .mainPhoto {
   width: 100%;
 }
-.blogMainInfo h2{
+.blogMainInfo h2 {
   margin: 43px 0 9px 0;
-  color:#1e313b;
+  color: #1e313b;
   font-weight: 400;
   font-size: 24px;
 }
-.blogMainInfo span{
-  color:#1e313b;
+.blogMainInfo span {
+  color: #1e313b;
   font-size: 16px;
   line-height: 24px;
 }
-.bloggerInfo{
+.bloggerInfo {
   display: flex;
   margin: 16px 0 0 0;
 }
-.bloggerInfo div{
+.bloggerInfo div {
   font-size: 14px;
-margin: 0 0 0 16px;
+  margin: 0 0 0 16px;
 }
-.blogerResponseStatus span{
+.blogerResponseStatus span {
   margin: 0 0 0 22px;
   font-size: 14px;
 }
-.blogerResponseStatus span::before{
+.blogerResponseStatus span::before {
   content: "";
   display: flex;
-  position: absolute;  
+  position: absolute;
   width: 3px;
   border-radius: 100%;
   margin: -18px 0px 0 115px;
   height: 3px;
   background-color: black;
 }
-.startDesigh{
+.startDesigh {
   background-color: #794eff;
   height: 256px;
   width: 100%;
 }
-.startDesigh > div{
+.startDesigh > div {
   display: flex;
   padding: 91px 0 0;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1280px;
-
 }
-.startDesigh span{
+.startDesigh span {
   color: #fff;
   font-size: 18px;
 }
-.startDesigh h3{
+.startDesigh h3 {
   color: #fff;
   font-size: 56px;
   margin: 0 0 14px 0;
 }
-.startDesigh button{
+.startDesigh button {
   width: 154px;
   height: 55px;
-  margin: 51px  0 21px 0;
+  margin: 51px 0 21px 0;
   border-radius: 6px;
   border: none;
   font-size: 18px;
   color: #1e313b;
 }
-.startDesigh button:hover{
+.startDesigh button:hover {
   @include lightButtonHover;
 }
-.footerSection{
+.footerSection {
   height: 182px;
   width: 100%;
 }
-.footerBody{
+.footerBody {
   width: 100%;
   max-width: 1280px;
   margin: 80px auto 0;
-
 }
 
-.footerBody > div{
+.footerBody > div {
   display: flex;
   justify-content: space-between;
 }
-.footerLinks{
+.footerLinks {
   display: flex;
   align-items: center;
 }
-.footerLinks span{
+.footerLinks span {
   font-size: 16px;
   color: #794eff;
-  margin:0 24px 0 0;
+  margin: 0 24px 0 0;
 }
-.footerLinks span:last-child{
+.footerLinks span:last-child {
   margin: 0;
 }
-.socialMediaIcons{
+.socialMediaIcons {
   display: flex;
   align-items: center;
 }
-.socialMediaIcons img{
-margin: 0 0 0 15px ;
+.socialMediaIcons img {
+  margin: 0 0 0 15px;
 }
-.socialMediaIcons img:first-child{
+.socialMediaIcons img:first-child {
   margin: 0;
 }
-.footerBottom{
+.footerBottom {
   display: flex;
-  margin: 32px auto 0 ;
+  margin: 32px auto 0;
 }
-.footerBottom div{
+.footerBottom div {
   font-size: 14px;
 }
-.footerBottom span{
+.footerBottom span {
   margin: 0 0 0 20px;
   color: #794eff;
 }
-.politicsEtc span{
+.politicsEtc span {
   margin: 0 0 0 16px;
 }
 
 @media screen and (max-width: 1024px) {
-.mainContent{
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2,1fr);
-}
-.mainContentRightBlock{
-  grid-row: 1/1;
-}
-.sponsorImgBlock img{
-width: 100px;
-margin: 0 20px;
-}
-.secondBlockMainContent{
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-.statsContent{
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-.teamInfo{
-  box-sizing: border-box;
-  grid-gap: 0;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-.teamImages{
-  grid-row: 1/1;
-}
-.stepsToBuild{
-grid-template-columns: 1fr;
-grid-template-rows: 1fr;
-}
-  .nonMissBlock{
+  .mainContent {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .mainContentRightBlock {
+    grid-row: 1/1;
+  }
+  .sponsorImgBlock img {
+    width: 100px;
+    margin: 0 20px;
+  }
+
+  .upContentBlock{
+    display: table-row;
+  }
+  .sponsorImgBlock{
+    flex-direction: column;
+    align-items: center;
+  }
+  .sponsorImgBlock img{
+    margin: 10px 0;
+  }
+  .secondBlockMainContent {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   }
-}
-@media screen and (max-width: 540px) {
-
+  .statsContent {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .teamInfo {
+    box-sizing: border-box;
+    grid-gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .teamImages {
+    grid-row: 1/1;
+  }
+  .stepsToBuild {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .nonMissBlock {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }

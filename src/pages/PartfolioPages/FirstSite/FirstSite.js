@@ -146,34 +146,36 @@ const FirstSite = () => {
               />
             </div>
           </div>
-          <div className={style.usage}>
-            Used by the leading SaaS companies of tomorrow.
-          </div>
-          <div className={style.sponsorImgBlock}>
-            <img
-              src={firstSiteConfig.mainBlockImg1}
-              alt="mainBlockImg1 not found"
-            />
-            <img
-              src={firstSiteConfig.mainBlockImg2}
-              alt="mainBlockImg2 not found"
-            />
-            <img
-              src={firstSiteConfig.mainBlockImg3}
-              alt="mainBlockImg3 not found"
-            />
-            <img
-              src={firstSiteConfig.mainBlockImg4}
-              alt="mainBlockImg4 not found"
-            />
-            <img
-              src={firstSiteConfig.mainBlockImg5}
-              alt="mainBlockImg5 not found"
-            />
-            <img
-              src={firstSiteConfig.mainBlockImg6}
-              alt="mainBlockImg6 not found"
-            />
+          <div className={style.sponsorsSection}>
+            <div className={style.usage}>
+              Used by the leading SaaS companies of tomorrow.
+            </div>
+            <div className={style.sponsorImgBlock}>
+              <img
+                src={firstSiteConfig.mainBlockImg1}
+                alt="mainBlockImg1 not found"
+              />
+              <img
+                src={firstSiteConfig.mainBlockImg2}
+                alt="mainBlockImg2 not found"
+              />
+              <img
+                src={firstSiteConfig.mainBlockImg3}
+                alt="mainBlockImg3 not found"
+              />
+              <img
+                src={firstSiteConfig.mainBlockImg4}
+                alt="mainBlockImg4 not found"
+              />
+              <img
+                src={firstSiteConfig.mainBlockImg5}
+                alt="mainBlockImg5 not found"
+              />
+              <img
+                src={firstSiteConfig.mainBlockImg6}
+                alt="mainBlockImg6 not found"
+              />
+            </div>
           </div>
         </section>
         <section className={style.secondContentBlock}>
