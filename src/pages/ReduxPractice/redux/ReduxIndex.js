@@ -4,6 +4,7 @@ import {
   asyncDecrementAction,
   asyncGetSagaUsers,
   asyncIncrementAction,
+  checkKnowledge,
   onAddElement,
   onFilterElements,
 } from "../actions/actions";
@@ -11,6 +12,7 @@ import AxiosPost from "./AxiosPost";
 import RemoteDispatch from "./RemoteDispatch";
 import style from "../style.module.scss";
 import SliderSagas from "./SliderSagas";
+import { toHaveStyle } from "@testing-library/jest-dom/dist/matchers";
 class ReduxIndex extends Component {
   addElement() {
     if (this.addElementInput.value.trim() === "") {
@@ -87,6 +89,16 @@ class ReduxIndex extends Component {
           </div>
           <SliderSagas />
         </div>
+        <div>
+          <button
+            onClick={() => {
+              this.props.onCheckKnowledge();
+            }}
+          >
+            Check knowledge
+          </button>
+          <div>{this.props.knowledgeWords}</div>
+        </div>
       </div>
     );
   }
@@ -97,6 +109,7 @@ export default connect(
     elements: state.addElement.filter((word) =>
       word.inputValue.includes(state.filterElements)
     ),
+    knowledgeWords: state.knowledgeCheck,
     axiosElements: state.axiosRequest,
     sagaReducer: state.sagaReducer,
     sagaUserTitle: state.sagaUserReducer,
@@ -108,6 +121,9 @@ export default connect(
         inputValue,
       };
       dispatch(onAddElement(payload));
+    },
+    onCheckKnowledge: () => {
+      dispatch(checkKnowledge());
     },
     onFilterElements: (filterValue) => {
       dispatch(onFilterElements(filterValue));
