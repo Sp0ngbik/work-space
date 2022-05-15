@@ -16,6 +16,8 @@ async function mainConnection() {
 }
 
 mainConnection();
+
+//other method
 // const connection = mysql.createConnection(config);
 
 // connection.connect((err) => {

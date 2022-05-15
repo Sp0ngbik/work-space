@@ -532,7 +532,7 @@ const FirstSite = () => {
           </div>
         </section>
       </main>
-      <footer className={style.footerSection}>
+      {/* <footer className={style.footerSection}>
         <div className={style.footerBody}>
           <div>
             <img
@@ -574,7 +574,7 @@ const FirstSite = () => {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };
