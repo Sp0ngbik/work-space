@@ -430,7 +430,7 @@
   position: absolute;
   width: 2px;
   display: flex;
-  height: 335px;
+  height: 365px;
   background-color: rgba(0, 0, 0, 0.15);
 }
 .rightBlockImage > div {
@@ -699,7 +699,7 @@
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 90px 0 0 ;
+  padding: 90px 0 0;
 }
 
 .footerBody > div {
@@ -745,39 +745,139 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .mainContent{
+  .mainContent {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    padding: 0 20px;
   }
-  .sponsorImgBlock{
+  .leftBlocDiscr {
+    width: 50%;
+  }
+  .mainContentRightBlock {
+    grid-row: 1/1;
+    width: 100%;
+  }
+  .mainContentLeftBlock {
+    // align-items: center;
+  }
+  .sponsorImgBlock {
     flex-direction: column;
     align-items: center;
   }
-  .sponsorImgBlock img{
+  .sponsorImgBlock img {
     width: 100px;
     margin: 15px;
   }
-  .nonMissBlock {
+  .secondBlockMainContent {
     grid-template-columns: 1fr;
     padding: 0 20px;
     grid-template-rows: 1fr 1fr;
-    width: max-content;
+  }
+  .teamStats {
+    display: flex;
+    flex-direction: column;
+  }
+  .stats {
+    width: fit-content;
+    display: flex;
+  }
+  .statsContent {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 10px 20px;
+  }
+  .teamInfo{
+    padding: 0 20px;
+    margin: 40px 0;
+    grid-gap: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .stepsToBuild{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0;
+    padding: 0 20px;
+    margin: 40px 0;
+  }
+  .blogerResponseStatus span::before {
+    display: none;
   }
   .nonMissMessage{
-    width: fit-content;
+    padding: 0 20px;
   }
- .teamInfo{
-   grid-template-columns: 1fr;
-   grid-template-rows: 1fr 1fr;
- }
- .stepsToBuild{
-   grid-template-columns: 1fr;
-   grid-template-rows: 1fr 1fr;
- }
+  .nonMissBlock{
+    grid-template-columns: 1fr;
+    padding: 20px 20px;
+  }
+  .blogBody{
+    padding: 0 20px;
+  }
+  .startDesigh > div {
+  padding: 60px 20px;
+  }
+  .footerSection{
+    padding: 0 20px;
+  }
 }
 
-@media screen and (max-width: 768px) {
-  .buyRequest{
-    width: max-content;
-  }
+@media screen and (max-width: 540px) {
+.mainContentRightBlock{
+  width: 50%;
+  align-self: center;
+  margin: 0 auto;
+}
+.mainContentLeftBlock{
+  width: 100%;
+}
+.secondContentBlock{
+  padding: 0;
+}
+
+.secBlockRightBottom{
+  display: flex;
+  flex-direction: column;
+}
+.secondBlockMainContent{
+  grid-gap: 0;
+  grid-template-rows: 1fr;
+}
+.secondContRightBlock{
+  grid-template-rows: 1fr;
+  padding: 0 0 40px 0;
+}
+.teamImages{
+  display: flex;
+  flex-direction: column;
+}
+.teamInfoLeftBlock{
+  padding: 0 0 30px;
+}
+.teamInfo{
+  grid-template-rows: 1fr;
+}
+.stepsToBuild{
+  display: flex;
+  flex-direction: column;
+}
+.rightBlockImage{
+  grid-template-columns: 10% 90%;
+}
+.bloggerInfo img{
+  width: 100%;
+  object-fit: contain;
+}
+.footerBody > div{
+  flex-direction: column;
+}
+.footerBody  div{
+  margin: 10px 0;
+}
+.nonMissBlock{
+  height: 415px;
+}
+.leftMissBlock{
+  width: 100%;
+}
 }
