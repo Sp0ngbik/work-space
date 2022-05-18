@@ -1,15 +1,20 @@
+@import "../../../../variables/firstSiteMixin.scss";
+
 .bodyFirstSite {
   margin: 0;
+  display: flex;
+  flex-direction: column;
   padding: 0;
 }
 .headerFirstSite {
   margin: 0 auto;
-  display: flex;
+  display: none;
   max-width: 1440px;
+  padding: 0 80px;
   width: 100%;
-  align-items: center;
-  justify-items: center;
-  align-content: center;
+  // align-items: center;
+  // justify-items: center;
+  // align-content: center;
   height: 72px;
   justify-content: space-between;
 }
@@ -29,29 +34,35 @@
   margin: 0;
 }
 .headerFirstSite button {
-  width: 100%;
+  width: 93px;
   font-size: 16px;
-  max-width: 93px;
   height: 42px;
   background-color: #1e313b;
   color: #fff;
+  border: none;
   border-radius: 6px;
 }
+.headerFirstSite button:hover {
+  @include darkButtonHover;
+}
 .upContentBlock {
+  position: relative;
   background-color: #1e313b;
   width: 100%;
   height: 100%;
 }
 .mainBlock {
   background-color: #1e313b;
+  max-width: 1440px;
   margin: 0 auto;
 }
 .mainContent {
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 130px 0 100px;
+  padding: 130px 56px 100px 80px;
   display: grid;
-  max-width: 1280px;
+  justify-items: center;
+  max-width: 1440px;
   width: 100%;
   grid-template-columns: 1fr 1fr;
   height: 100%;
@@ -89,9 +100,14 @@
   color: black;
 }
 .leftBlockInput button {
+  color: black;
   width: 88px;
   height: 44px;
+  border: none;
   border-radius: 6px;
+}
+.leftBlockInput button:hover {
+  @include lightButtonHover;
 }
 .signDiscr div {
   font-family: Roboto;
@@ -105,7 +121,8 @@
   object-fit: cover;
   width: 100%;
   max-width: 716px;
-  height: 100%;
+  // height: 100%;
+
   margin: 0 0 0 10px;
   max-height: 618px;
 }
@@ -129,14 +146,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
+  align-items: center;
   max-width: 1440px;
   grid-gap: 80px;
   width: 100%;
-  max-height: 565px;
-  height: 100%;
+  padding: 0 80px;
+  // max-height: 565px;
+  // height: 100%;
 }
 .secondContLeftBlock {
   margin: 62px 0 62px 0;
+  width: 100%;
   object-fit: cover;
 }
 .secondRightUpBlock {
@@ -146,12 +166,9 @@
   margin: 0 0 30px 0;
 }
 .secondRightUpBlock div {
-  font-size: 16px;
-  margin: 0 0 30px 0;
+  @include labelConainer;
   background-color: rgba(255, 193, 71, 0.6);
-  padding: 0 26px;
   border: 2px solid #ffc147;
-  border-radius: 100px;
 }
 .secondRightTitle {
   font-size: 32px;
@@ -193,11 +210,12 @@
 .teamStats {
   width: 100%;
   height: 100%;
+  display: grid;
 }
 .stats {
   background-color: #f6f6f6;
   width: 100%;
-  height: 490px;
+  // height: 490px;
 }
 .statsContent {
   padding: 128px 80px;
@@ -208,12 +226,10 @@
   max-width: 1440px;
 }
 .statsLeftBlock > div {
+  @include labelConainer;
   display: inline-block;
-  padding: 0 26px;
   border: 2px solid #97e747;
-  border-radius: 100px;
   background-color: rgba(151, 231, 71, 0.6);
-  margin: 0 0 29px 0;
 }
 .statsLeftBlock h3 {
   font-size: 32px;
@@ -238,7 +254,6 @@
   color: #97e747;
 }
 .teamInfo {
-  box-sizing: content-box;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
@@ -246,7 +261,7 @@
   width: 100%;
   grid-gap: 115px;
   max-width: 1280px;
-  height: 592px;
+  // height: 592px;
 }
 .teamInfoLeftBlock {
   display: flex;
@@ -254,13 +269,10 @@
   justify-content: center;
 }
 .teamInfoLeftBlock h4 {
-  display: inline-block;
-  padding: 0 26px;
+  @include labelConainer;
   color: white;
   width: 93px;
-  border-radius: 100px;
   background-color: rgba(121, 78, 255, 0.8);
-  margin: 0 0 29px 0;
   border: 2px solid #794eff;
 }
 .teamInfoLeftBlock h3 {
@@ -281,18 +293,23 @@
   background-color: #794eff;
   border-radius: 6px;
 }
+.teamInfoLeftBlock button:hover {
+  @include purpleButtonHover;
+}
 .teamImages {
   display: grid;
   grid-template-columns: 288px 288px;
   grid-template-rows: 288px 288px;
   grid-gap: 16px;
 }
-.teamImageFirstBlock {
+.teamImageFirstBlock img {
   max-width: 288px;
+  object-fit: cover;
   width: 100%;
 }
 .teamImageFirstBlock img {
   padding: 0 0 16px;
+  width: 100%;
 }
 .teamImageSecondBlock {
   display: flex;
@@ -336,22 +353,28 @@
   margin: 0 16px 0 0;
   border: none;
 }
+.buyRequest_buttonBlock button:first-child:hover {
+  @include purpleButtonHover;
+}
 .buyRequest_buttonBlock button:last-child {
   width: 112px;
   height: 42px;
   border-radius: 6px;
   border: none;
 }
+.buyRequest_buttonBlock button:last-child:hover {
+  @include lightButtonHover;
+}
 .stepsToBuild {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
-  padding: 128px 0;
+  padding: 128px 80px;
   width: 100%;
   grid-gap: 115px;
   max-width: 1280px;
-  height: 764px;
+  // height: 764px;
 }
 
 .stepsToBuild_leftBlock {
@@ -360,10 +383,8 @@
   justify-content: center;
 }
 .stepsToBuild_leftBlock div {
-  font-size: 16px;
-  margin: 0 0 30px 0;
+  @include labelConainer;
   background-color: rgba(255, 193, 71, 0.6);
-  padding: 0 26px;
   width: 112px;
   border: 2px solid #ffc147;
   border-radius: 100px;
@@ -384,7 +405,9 @@
   border: none;
   color: #fff;
 }
-
+.stepsToBuild_leftBlock button:hover {
+  @include darkButtonHover;
+}
 .stepsRightBlockImages {
   display: flex;
   flex-direction: column;
@@ -407,7 +430,7 @@
   position: absolute;
   width: 2px;
   display: flex;
-  height: 335px;
+  height: 365px;
   background-color: rgba(0, 0, 0, 0.15);
 }
 .rightBlockImage > div {
@@ -420,25 +443,51 @@
   font-size: 16px;
 }
 .creators {
-  width: 100%;
-  height: 650px;
-  background-color: #f6f6f6;
+  // width: 100%;
+  // height: 650px;
+  // background-color: #f6f6f6;
 }
 .creatorsDiscription {
-  // display: flex; if i will add arrows
-  padding: 128px 0 192px;
+  padding: 128px 80px 192px;
   text-align: center;
+  // justify-content: space-between;
+  // margin: 0 auto;
+  // max-width: 1260px;
+}
+.slideContentBlock {
+  display: flex;
   justify-content: space-between;
-  margin: 0 auto;
-  max-width: 1260px;
 }
 .slideLogoDiscr {
   margin: 0 0 34px 0;
 }
+.arrowsSlider {
+  cursor: pointer;
+}
+.sliderPhoto {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+.sliderDots {
+  display: flex;
+  margin: 46px 0;
+  justify-content: center;
+}
+.sliderDots .dotActive {
+  background-color: #222;
+}
+.sliderDots div {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: rgba(34, 34, 34, 0.4);
+  margin: 0 6px;
+}
 .slideMainDiscr {
   font-size: 24px;
   font-weight: 500;
-  width: 727px;
+  // width: 727px;
   margin: 0 auto 28px;
 }
 .memberName {
@@ -452,6 +501,7 @@
 }
 .nonMissMessage {
   display: flex;
+  padding: 0 80px;
   width: 100%;
   height: 443px;
   justify-content: center;
@@ -503,6 +553,9 @@
   border: none;
   border-radius: 6px;
 }
+.rightMissBlock button:hover {
+  @include darkButtonHover;
+}
 .rightMissBlock {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -517,22 +570,23 @@
 }
 .blogSection {
   width: 100%;
-  height: 914px;
+  height: 1000px;
 }
 .blogBody {
+  padding: 0 80px;
+  box-sizing: content-box;
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 128px 0;
+  margin: 128px auto 113px;
 }
+
 .blogLabel {
+  @include labelConainer;
+  display: inline-block;
   align-items: center;
-  width: 86px;
   background-color: rgba(121, 78, 255, 0.8);
   color: #fff;
-  font-size: 16px;
   border: 2px solid #794eff;
   text-align: center;
-  border-radius: 100px;
 }
 
 .blogTitle h3 {
@@ -543,139 +597,325 @@
   color: #794eff;
 }
 
-.blockView{
+.blockView {
   width: 100%;
   justify-content: space-between;
   display: flex;
 }
-.blockView div{
+.blockView div {
   font-size: 18px;
-  color:#1e313b
+  color: #1e313b;
 }
-.blockView button{
-color: #fff;
-background-color: #1e313b;
-padding: 8px 15px 10px;
-border: 1px solid #1e313b;
-border-radius: 6px;
+.blockView button {
+  color: #fff;
+  background-color: #1e313b;
+  padding: 8px 15px 10px;
+  border: 1px solid #1e313b;
+  border-radius: 6px;
 }
-.blogMainInfo{
+.blockView button:hover {
+  @include darkButtonHover;
+}
+.blogMainInfo {
   margin: 47px 0 0 0;
   display: grid;
-  grid-template-columns: repeat(3,404px);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 32px;
 }
-.blogMainInfo h2{
+.blogMainInfo .mainPhoto {
+  width: 100%;
+}
+.blogMainInfo h2 {
   margin: 43px 0 9px 0;
-  color:#1e313b;
+  color: #1e313b;
   font-weight: 400;
   font-size: 24px;
 }
-.blogMainInfo span{
-  color:#1e313b;
+.blogMainInfo span {
+  color: #1e313b;
   font-size: 16px;
   line-height: 24px;
 }
-.bloggerInfo{
+.bloggerInfo {
   display: flex;
   margin: 16px 0 0 0;
 }
-.bloggerInfo div{
+.bloggerInfo div {
   font-size: 14px;
-margin: 0 0 0 16px;
+  margin: 0 0 0 16px;
 }
-.blogerResponseStatus span{
+.blogerResponseStatus span {
   margin: 0 0 0 22px;
   font-size: 14px;
 }
-.blogerResponseStatus span::before{
+.blogerResponseStatus span::before {
   content: "";
   display: flex;
-  position: absolute;  
+  position: absolute;
   width: 3px;
   border-radius: 100%;
   margin: -18px 0px 0 115px;
   height: 3px;
   background-color: black;
 }
-.startDesigh{
+.startDesigh {
   background-color: #794eff;
   height: 256px;
   width: 100%;
 }
-.startDesigh > div{
+.startDesigh > div {
   display: flex;
-  padding: 91px 0 0;
+  padding: 60px 80px 0;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1280px;
-
 }
-.startDesigh span{
+.startDesigh span {
   color: #fff;
   font-size: 18px;
 }
-.startDesigh h3{
+.startDesigh h3 {
   color: #fff;
   font-size: 56px;
   margin: 0 0 14px 0;
 }
-.startDesigh button{
+.startDesigh button {
   width: 154px;
   height: 55px;
-  margin: 51px  0 21px 0;
+  margin: 51px 0 21px 0;
   border-radius: 6px;
   border: none;
   font-size: 18px;
   color: #1e313b;
 }
-.footerSection{
-  height: 182px;
+.startDesigh button:hover {
+  @include lightButtonHover;
+}
+.footerSection {
+  height: 263px;
   width: 100%;
+  padding: 0 80px;
 }
-.footerBody{
-  width: 1280px;
-  margin: 80px auto 0;
-
+.footerBody {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 90px 0 0;
 }
 
-.footerBody > div{
+.footerBody > div {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
-.footerLinks{
+.footerLinks {
   display: flex;
   align-items: center;
 }
-.footerLinks span{
+.footerLinks span {
   font-size: 16px;
   color: #794eff;
-  margin:0 24px 0 0;
+  margin: 0 24px 0 0;
 }
-.footerLinks span:last-child{
+.footerLinks span:last-child {
   margin: 0;
 }
-.socialMediaIcons{
+.socialMediaIcons {
   display: flex;
   align-items: center;
 }
-.socialMediaIcons img{
-margin: 0 0 0 15px ;
+.socialMediaIcons img {
+  margin: 0 0 0 15px;
 }
-.socialMediaIcons img:first-child{
+.socialMediaIcons img:first-child {
   margin: 0;
 }
-.footerBottom{
+.footerBottom {
   display: flex;
-  margin: 32px auto 0 ;
+  margin: 32px auto 0;
 }
-.footerBottom div{
+.footerBottom div {
   font-size: 14px;
 }
-.footerBottom span{
+.footerBottom span {
   margin: 0 0 0 20px;
   color: #794eff;
 }
-.politicsEtc span{
+.politicsEtc span {
   margin: 0 0 0 16px;
+}
+
+@media screen and (max-width: 1024px) {
+  .mainContent {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 0 20px;
+  }
+  .leftBlocDiscr {
+    width: 50%;
+  }
+  .mainContentRightBlock {
+    grid-row: 1/1;
+    width: 100%;
+  }
+  .mainContentLeftBlock {
+    // align-items: center;
+  }
+  .sponsorImgBlock {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sponsorImgBlock img {
+    width: 100px;
+    margin: 15px;
+  }
+  .secondBlockMainContent {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    grid-template-rows: 1fr 1fr;
+  }
+  .teamStats {
+    display: flex;
+    flex-direction: column;
+  }
+  .stats {
+    width: fit-content;
+    display: flex;
+  }
+  .statsContent {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 10px 20px;
+  }
+  .teamInfo{
+    padding: 0 20px;
+    margin: 40px 0;
+    grid-gap: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .stepsToBuild{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0;
+    padding: 0 20px;
+    margin: 40px 0;
+  }
+  .blogerResponseStatus span::before {
+    display: none;
+  }
+  .nonMissMessage{
+    padding: 0 20px;
+  }
+  .nonMissBlock{
+    grid-template-columns: 1fr;
+    padding: 20px 20px;
+  }
+  .blogBody{
+    padding: 0 20px;
+  }
+  .startDesigh > div {
+  padding: 60px 20px;
+  }
+  .footerSection{
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+.mainContentRightBlock{
+  width: 50%;
+  align-self: center;
+  margin: 0 auto;
+}
+.mainContentLeftBlock{
+  width: 100%;
+}
+.mainContent{
+  grid-template-rows: 1fr;
+grid-gap: 80px;
+}
+.secondContentBlock{
+  padding: 0;
+}
+
+.secBlockRightBottom{
+  display: flex;
+  flex-direction: column;
+}
+.secondBlockMainContent{
+  grid-gap: 0;
+  grid-template-rows: 1fr;
+}
+.secondContRightBlock{
+  grid-template-rows: 1fr;
+  padding: 0 0 40px 0;
+}
+.teamImages{
+  display: flex;
+  flex-direction: column;
+}
+.teamInfoLeftBlock{
+  padding: 0 0 30px;
+}
+.teamInfo{
+  grid-template-rows: 1fr;
+}
+.stepsToBuild{
+  display: flex;
+  flex-direction: column;
+}
+.rightBlockImage{
+  grid-template-columns: 10% 90%;
+}
+.bloggerInfo img{
+  width: 100%;
+  object-fit: contain;
+}
+.footerBody > div{
+  flex-direction: column;
+}
+.footerBody  div{
+  margin: 10px 0;
+}
+.nonMissBlock{
+  height: 415px;
+}
+.leftMissBlock{
+  width: 100%;
+}
+.blogMainInfo span{
+   overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+.bloggerInfo{
+  flex-direction: column;
+}
+.blogerResponseStatus span{
+  margin: 0 auto;
+
+}
+.bloggerInfo div{
+  margin: 0 auto;
+}
+.leftBlockInput input{
+  width: 265px;
+}
+.leftBlockInput{
+  margin: 40px 0;
+
+}
+.rightMissBlock input {
+  width: 265px
+}
+.startDesigh > div{
+  padding: 60px 10px;
+}
+.startDesigh button{
+  font-size: 14px;
+}
 }

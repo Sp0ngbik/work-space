@@ -9,6 +9,7 @@ import {
   FILTER_ELEMENTS,
   HIDE_SLIDER_IMAGE,
   LOADER_DIACTIVE,
+  REDUX_PRACTICE,
   SAGA_DECREMENT,
   SAGA_INCREMENT,
   SAGA_SLIDER_DECREMENT,
@@ -92,4 +93,8 @@ export function sliderIncrement() {
 }
 export function sliderDecrement() {
   return { type: SAGA_SLIDER_DECREMENT };
+}
+
+export function checkKnowledge() {
+  return { type: REDUX_PRACTICE, payload: "check - confirmed" };
 }

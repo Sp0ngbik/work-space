@@ -8,6 +8,7 @@ import { sagaReducer } from "../saga/sagaReducer";
 import { sagaUserReducer } from "../saga/sagaUserReducer";
 import { sagaSliderReducer } from "../saga/sagaSliderReducer";
 import { sagaSliderCounter } from "../saga/sagaSliderCounter";
+import { knowledgeCheck } from "./knowledgeCheck";
 export const reducer = combineReducers({
   addElement,
   filterElements,
@@ -18,4 +19,5 @@ export const reducer = combineReducers({
   sagaUserReducer,
   sagaSliderReducer,
   sagaSliderCounter,
+  knowledgeCheck,
 });

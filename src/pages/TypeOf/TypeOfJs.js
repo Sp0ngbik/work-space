@@ -1,7 +1,6 @@
 import { Input, Form, Button } from "antd";
 import { useState } from "react";
 import style from "./style.module.scss";
-//СДЕЛАТЬ НА РЕДАКСЕ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 const TypeOfJs = () => {
   const [answer, setAnswer] = useState();
   const [secAnswer, setSecAnswer] = useState();
