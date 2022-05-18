@@ -570,7 +570,7 @@
 }
 .blogSection {
   width: 100%;
-  height: 914px;
+  height: 1000px;
 }
 .blogBody {
   padding: 0 80px;
@@ -578,6 +578,7 @@
   max-width: 1280px;
   margin: 128px auto 113px;
 }
+
 .blogLabel {
   @include labelConainer;
   display: inline-block;
@@ -831,6 +832,10 @@
 .mainContentLeftBlock{
   width: 100%;
 }
+.mainContent{
+  grid-template-rows: 1fr;
+grid-gap: 80px;
+}
 .secondContentBlock{
   padding: 0;
 }
@@ -879,5 +884,38 @@
 }
 .leftMissBlock{
   width: 100%;
+}
+.blogMainInfo span{
+   overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+.bloggerInfo{
+  flex-direction: column;
+}
+.blogerResponseStatus span{
+  margin: 0 auto;
+
+}
+.bloggerInfo div{
+  margin: 0 auto;
+}
+.leftBlockInput input{
+  width: 265px;
+}
+.leftBlockInput{
+  margin: 40px 0;
+
+}
+.rightMissBlock input {
+  width: 265px
+}
+.startDesigh > div{
+  padding: 60px 10px;
+}
+.startDesigh button{
+  font-size: 14px;
 }
 }
