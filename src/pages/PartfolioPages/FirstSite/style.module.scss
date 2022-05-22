@@ -6,15 +6,18 @@
   flex-direction: column;
   padding: 0;
 }
+.headerMenu {
+  display: none;
+}
 .headerFirstSite {
   margin: 0 auto;
-  display: none;
+  display: flex;
+  // display: none;
   max-width: 1440px;
   padding: 0 80px;
   width: 100%;
-  // align-items: center;
-  // justify-items: center;
-  // align-content: center;
+  align-items: center;
+
   height: 72px;
   justify-content: space-between;
 }
@@ -442,11 +445,11 @@
 .rightBlockImage div {
   font-size: 16px;
 }
-.creators {
-  // width: 100%;
-  // height: 650px;
-  // background-color: #f6f6f6;
-}
+// .creators {
+//   // width: 100%;
+//   // height: 650px;
+//   // background-color: #f6f6f6;
+// }
 .creatorsDiscription {
   padding: 128px 80px 192px;
   text-align: center;
@@ -754,12 +757,16 @@
   .leftBlocDiscr {
     width: 50%;
   }
+
   .mainContentRightBlock {
     grid-row: 1/1;
     width: 100%;
   }
-  .mainContentLeftBlock {
-    // align-items: center;
+  .headerFirstSite {
+    padding: 0 10px;
+  }
+  .headerLinks h2 {
+    margin: 0 10px;
   }
   .sponsorImgBlock {
     flex-direction: column;
@@ -787,7 +794,7 @@
     grid-template-rows: 1fr 1fr;
     padding: 10px 20px;
   }
-  .teamInfo{
+  .teamInfo {
     padding: 0 20px;
     margin: 40px 0;
     grid-gap: 0;
@@ -795,7 +802,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   }
-  .stepsToBuild{
+  .stepsToBuild {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 0;
@@ -805,117 +812,144 @@
   .blogerResponseStatus span::before {
     display: none;
   }
-  .nonMissMessage{
+  .nonMissMessage {
     padding: 0 20px;
   }
-  .nonMissBlock{
+  .nonMissBlock {
     grid-template-columns: 1fr;
     padding: 20px 20px;
   }
-  .blogBody{
+  .blogBody {
     padding: 0 20px;
   }
   .startDesigh > div {
-  padding: 60px 20px;
+    padding: 60px 20px;
   }
-  .footerSection{
+  .footerSection {
     padding: 0 20px;
   }
 }
-
+@media screen and (max-width: 912px) {
+  //   .headerLinks{
+  //     display: none;
+  //   }
+  //   .headerMenu{
+  //     display: flex;
+  //   }
+  //   .headerFirstSite button{
+  //  margin: 0 0 0 20px;
+  //  width: 70px;
+  //  font-size: 12px;
+  //   }
+  //   .headerFirstSite{
+  //     padding: 0 10px 0;
+  //   }
+}
 @media screen and (max-width: 540px) {
-.mainContentRightBlock{
-  width: 50%;
-  align-self: center;
-  margin: 0 auto;
-}
-.mainContentLeftBlock{
-  width: 100%;
-}
-.mainContent{
-  grid-template-rows: 1fr;
-grid-gap: 80px;
-}
-.secondContentBlock{
-  padding: 0;
-}
+  .headerLinks {
+    display: none;
+  }
+  .headerMenu {
+    display: flex;
+  }
+  .headerFirstSite button {
+    margin: 0 0 0 20px;
+    width: 70px;
+    font-size: 12px;
+  }
+  .headerFirstSite {
+    padding: 0 10px 0;
+  }
+  .mainContentRightBlock {
+    width: 50%;
+    align-self: center;
+    margin: 0 auto;
+  }
+  .mainContentLeftBlock {
+    width: 100%;
+  }
+  .mainContent {
+    grid-template-rows: 1fr;
+    grid-gap: 80px;
+  }
+  .secondContentBlock {
+    padding: 0;
+  }
 
-.secBlockRightBottom{
-  display: flex;
-  flex-direction: column;
-}
-.secondBlockMainContent{
-  grid-gap: 0;
-  grid-template-rows: 1fr;
-}
-.secondContRightBlock{
-  grid-template-rows: 1fr;
-  padding: 0 0 40px 0;
-}
-.teamImages{
-  display: flex;
-  flex-direction: column;
-}
-.teamInfoLeftBlock{
-  padding: 0 0 30px;
-}
-.teamInfo{
-  grid-template-rows: 1fr;
-}
-.stepsToBuild{
-  display: flex;
-  flex-direction: column;
-}
-.rightBlockImage{
-  grid-template-columns: 10% 90%;
-}
-.bloggerInfo img{
-  width: 100%;
-  object-fit: contain;
-}
-.footerBody > div{
-  flex-direction: column;
-}
-.footerBody  div{
-  margin: 10px 0;
-}
-.nonMissBlock{
-  height: 415px;
-}
-.leftMissBlock{
-  width: 100%;
-}
-.blogMainInfo span{
-   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-}
-.bloggerInfo{
-  flex-direction: column;
-}
-.blogerResponseStatus span{
-  margin: 0 auto;
-
-}
-.bloggerInfo div{
-  margin: 0 auto;
-}
-.leftBlockInput input{
-  width: 265px;
-}
-.leftBlockInput{
-  margin: 40px 0;
-
-}
-.rightMissBlock input {
-  width: 265px
-}
-.startDesigh > div{
-  padding: 60px 10px;
-}
-.startDesigh button{
-  font-size: 14px;
-}
+  .secBlockRightBottom {
+    display: flex;
+    flex-direction: column;
+  }
+  .secondBlockMainContent {
+    grid-gap: 0;
+    grid-template-rows: 1fr;
+  }
+  .secondContRightBlock {
+    grid-template-rows: 1fr;
+    padding: 0 0 40px 0;
+  }
+  .teamImages {
+    display: flex;
+    flex-direction: column;
+  }
+  .teamInfoLeftBlock {
+    padding: 0 0 30px;
+  }
+  .teamInfo {
+    grid-template-rows: 1fr;
+  }
+  .stepsToBuild {
+    display: flex;
+    flex-direction: column;
+  }
+  .rightBlockImage {
+    grid-template-columns: 10% 90%;
+  }
+  .bloggerInfo img {
+    width: 100%;
+    object-fit: contain;
+  }
+  .footerBody > div {
+    flex-direction: column;
+  }
+  .footerBody div {
+    margin: 10px 0;
+  }
+  .nonMissBlock {
+    height: 415px;
+  }
+  .leftMissBlock {
+    width: 100%;
+  }
+  .blogMainInfo span {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+  .bloggerInfo {
+    flex-direction: column;
+  }
+  .blogerResponseStatus span {
+    margin: 0 auto;
+  }
+  .bloggerInfo div {
+    margin: 0 auto;
+  }
+  .leftBlockInput input {
+    width: 265px;
+  }
+  .leftBlockInput {
+    margin: 40px 0;
+  }
+  .rightMissBlock input {
+    width: 265px;
+  }
+  .startDesigh > div {
+    padding: 60px 10px;
+  }
+  .startDesigh button {
+    font-size: 14px;
+  }
 }
