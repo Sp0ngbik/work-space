@@ -1,7 +1,17 @@
 import style from "./style.module.scss";
 import { firstSiteConfig } from "./firstSiteConfig";
 import { useState } from "react";
+import { Drawer, Button } from "antd";
+
 const FirstSite = () => {
+  //sideBar
+  const [visible, setVisible] = useState(false);
+  const showDrawer = () => {
+    setVisible(true);
+  };
+  const onClose = () => {
+    setVisible(false);
+  };
   let [sliderState, setSliderState] = useState(1);
   const sliderCounter = 2;
   function sliderSelection() {
@@ -102,6 +112,25 @@ const FirstSite = () => {
       <header className={style.headerFirstSite}>
         <img src={firstSiteConfig.logoImg} alt="logoImg not found"></img>
         <div>
+          <div className={style.headerMenu}>
+            <Button type="primary" onClick={showDrawer}>
+              Open
+            </Button>
+            <Drawer
+              title="Molecule Menu"
+              placement="right"
+              onClose={onClose}
+              visible={visible}
+              width="240px"
+            >
+              <h2>Home</h2>
+              <h2>About</h2>
+              <h2>Pricing</h2>
+              <h2>Open positions</h2>
+              <h2>Blog</h2>
+              <h2>Templete</h2>
+            </Drawer>
+          </div>
           <div className={style.headerLinks}>
             <h2>Home</h2>
             <h2>About</h2>

@@ -12,7 +12,6 @@ import AxiosPost from "./AxiosPost";
 import RemoteDispatch from "./RemoteDispatch";
 import style from "../style.module.scss";
 import SliderSagas from "./SliderSagas";
-import { toHaveStyle } from "@testing-library/jest-dom/dist/matchers";
 class ReduxIndex extends Component {
   addElement() {
     if (this.addElementInput.value.trim() === "") {
