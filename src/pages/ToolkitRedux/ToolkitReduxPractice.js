@@ -1,10 +1,21 @@
 import { useDispatch, useSelector } from "react-redux";
-import { decrement, increment } from "./toolkitReducer";
+import { addTodo, decrement, increment, removeLastTodo } from "./toolkitSlice";
 
-const ToolkitReduxPractice = () => {
-  const count = useSelector((state) => state.toolkit.count);
-
+const asyncTestTodo = () => {
+  return async (dispatch) => {
+    setTimeout(() => {
+      dispatch(addTodo("Async"));
+    }, 2000);
+  };
+};
+const ToolkitReducPractice = () => {
   const dispatch = useDispatch();
+  const count = useSelector((state) => {
+    return state.toolkit.count;
+  });
+  const todo = useSelector((state) => {
+    return state.toolkit.todo;
+  });
   return (
     <div>
       <button
@@ -12,18 +23,44 @@ const ToolkitReduxPractice = () => {
           dispatch(increment());
         }}
       >
-        INCREMENT
+        increment
       </button>
       <button
         onClick={() => {
           dispatch(decrement());
         }}
       >
-        DECREMENT
+        decrement
       </button>
-      <div> Счетчик : {count}</div>
+      <button
+        onClick={() => {
+          dispatch(addTodo(prompt()));
+        }}
+      >
+        Add todo
+      </button>
+      <button
+        onClick={() => {
+          dispatch(asyncTestTodo());
+        }}
+      >
+        Async todo
+      </button>
+      <button
+        onClick={() => {
+          dispatch(removeLastTodo());
+        }}
+      >
+        Remove last todo
+      </button>
+      <div>{count}</div>
+      <div>
+        {todo.map((el) => {
+          return <p>{el}</p>;
+        })}
+      </div>
     </div>
   );
 };
 
-export default ToolkitReduxPractice;
+export default ToolkitReducPractice;
