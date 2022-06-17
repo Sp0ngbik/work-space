@@ -4,7 +4,7 @@ const toolkitSlicer = createSlice({
   name: "toolkit",
   initialState: {
     count: 0,
-    todo: ["vlad", "lol"],
+    todo: ["try todo"],
   },
   reducers: {
     increment(state) {
@@ -19,10 +19,21 @@ const toolkitSlicer = createSlice({
     removeLastTodo(state) {
       state.todo.pop();
     },
+    filter(state, action) {
+      state.todo = state.todo.filter((word) => {
+        return word.includes(action.payload);
+      });
+    },
   },
 });
 
 export default toolkitSlicer.reducer;
 //export экшенов
-export const { increment, decrement, addTodo, removeLastTodo } =
-  toolkitSlicer.actions;
+export const {
+  increment,
+  decrement,
+  addTodo,
+  removeLastTodo,
+  filteredTodos,
+  filter,
+} = toolkitSlicer.actions;
