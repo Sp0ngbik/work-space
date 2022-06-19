@@ -19,21 +19,10 @@ const toolkitSlicer = createSlice({
     removeLastTodo(state) {
       state.todo.pop();
     },
-    filter(state, action) {
-      state.todo = state.todo.filter((word) => {
-        return word.includes(action.payload);
-      });
-    },
   },
 });
 
 export default toolkitSlicer.reducer;
 //export экшенов
-export const {
-  increment,
-  decrement,
-  addTodo,
-  removeLastTodo,
-  filteredTodos,
-  filter,
-} = toolkitSlicer.actions;
+export const { increment, decrement, addTodo, removeLastTodo, filteredTodos } =
+  toolkitSlicer.actions;
