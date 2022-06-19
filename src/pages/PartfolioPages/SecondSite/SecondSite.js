@@ -33,6 +33,20 @@ const SecondSite = () => {
               </div>
             </div>
           </nav>
+          <div className={style.ourGroupInfo}>
+            <div className={style.leftBlockOurGroup}>
+              <img src={secondSiteImages.miniLogo} alt="mini logo not found" />
+              <h5>We're Group Of Certified Law Professionals</h5>
+              <h3>
+                we have helped countless maritime workers and their families go
+                up against the largest offshore companies and win.
+              </h3>
+              <button>Get In Touch</button>
+            </div>
+            <div className={style.rightBlockOurGroup}>
+              <img src={secondSiteImages.mate} alt="mate not found" />
+            </div>
+          </div>
         </div>
       </header>
     </div>

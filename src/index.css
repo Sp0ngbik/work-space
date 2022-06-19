@@ -1,4 +1,5 @@
 @import "antd/dist/antd.css";
+@import url("./variables/fonts.scss");
 /* * {
   color: rgb(255, 0, 0);
   text-shadow: 1px 0 6px;
