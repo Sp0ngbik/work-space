@@ -10,7 +10,7 @@ import Welcome from "./pages/Welcome/Welcome";
 import ReduxIndex from "./pages/ReduxPractice/redux/ReduxIndex";
 import style from "./style.module.scss";
 import SecondSite from "./pages/PartfolioPages/SecondSite/SecondSite";
-
+//для изменений
 function App() {
   return (
     <div className={style.page}>
