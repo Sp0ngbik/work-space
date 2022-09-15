@@ -103,3 +103,93 @@
   display: flex;
   justify-content: flex-end;
 }
+.mainBlock {
+  width: 100%;
+  height: 100%;
+  background-color: #161d27;
+}
+.mainBlockDiscription {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  padding: 140px 40px 110px;
+}
+.mainBlockImageSection {
+  margin: 0 auto;
+  display: grid;
+}
+.mainBlockImageSection img {
+  margin: 0 0 30px 0;
+}
+.mainBLockTextColumn {
+  margin: 0 auto;
+}
+.mainBLockTextColumn h3 {
+  margin: 0 0 11px 0;
+  line-height: 60px;
+  color: #fff;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 45px;
+  font-weight: 400;
+}
+.mainBLockTextColumn > p {
+  margin: 40px 0 35px 0;
+  width: 825px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+}
+.smallMateBlock {
+  display: flex;
+  align-items: center;
+}
+.smallMateBlock img {
+  width: 90px;
+  margin: 0 20px 45px 0;
+  height: 90px;
+}
+.smallMateBlock h2 {
+  color: #fff;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 40px;
+}
+.mainBlockButtons {
+  display: flex;
+}
+.succesButton {
+  width: 315px;
+  height: 126px;
+  background-color: #3b434e;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 35px 50px;
+  margin: 0 30px 0 0;
+}
+.succesButton img {
+  width: 58px;
+  height: 56px;
+}
+.succesButton p {
+  font-size: 22px;
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  color: #fff;
+}
+.experienceButton {
+  width: 315px;
+  height: 126px;
+  background-color: #d1b06b;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 35px 50px;
+}
+.experienceButton p {
+  font-size: 22px;
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  color: #000;
+}

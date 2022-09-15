@@ -49,6 +49,58 @@ const SecondSite = () => {
           </div>
         </div>
       </header>
+      <main className={style.mainBlock}>
+        <div className={style.mainBlockDiscription}>
+          <div className={style.mainBlockImageSection}>
+            <img src={secondSiteImages.mainFirst} alt="first not found" />
+            <img src={secondSiteImages.mainSec} alt="second img not found" />
+          </div>
+          <div className={style.mainBLockTextColumn}>
+            <h3>
+              Welcome to Attorney Law - <br /> Lawyer and Law Firm Company
+            </h3>
+            <img
+              src={secondSiteImages.miniLogo}
+              alt="minilogo discr not found"
+            />
+            <p>
+              Although we are located in Brooklyn, our maritime lawyers are
+              proud to help the injured throughout the nation, including workers
+              who were working in foreign waters at the time of the incident go
+              up against the largest offshore companies and win.
+            </p>
+            <div className={style.smallMateBlock}>
+              <img
+                src={secondSiteImages.smallMate}
+                alt="small mate not found ;C"
+              />
+              <h2>Peter Parker</h2>
+            </div>
+            <div className={style.mainBlockButtons}>
+              <div className={style.succesButton}>
+                <img
+                  src={secondSiteImages.successCount}
+                  alt="sucess count not found"
+                />
+                <div>
+                  <p>95%</p>
+                  <p>Case sucess</p>
+                </div>
+              </div>
+              <div className={style.experienceButton}>
+                <img
+                  src={secondSiteImages.experienceCount}
+                  alt="exp count not found"
+                />
+                <div>
+                  <p>Years</p>
+                  <p>Experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   );
 };
