@@ -113,12 +113,10 @@
   width: 100%;
   margin: 0 auto;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
   padding: 140px 40px 110px;
 }
-.mainBlockImageSection {
-  margin: 0 auto;
-  display: grid;
-}
+
 .mainBlockImageSection img {
   margin: 0 0 30px 0;
 }
@@ -192,4 +190,67 @@
   font-family: "Outfit", sans-serif;
   margin: 0;
   color: #000;
+}
+.mainDiscriptionSecondBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 40px 0;
+  margin: 230px 0 0 0;
+}
+.secondBlockContent > h2 {
+  font-size: 45px;
+  margin: 0 0 11px 0;
+  font-family: "Cormorant Garamond", serif;
+  color: #fff;
+}
+.mainDiscriptionSecondBlock > p {
+  color: #fff;
+  width: 660px;
+  display: flex;
+
+  align-items: center;
+  font-weight: 400;
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+}
+.secondBlockSelectSection {
+  margin: 60px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 30px;
+  padding: 0 45px;
+}
+.secondBlockSelectSection > div {
+  padding: 55px 50px 70px;
+  background-color: #1f2732;
+}
+.secondBlockSelectSection h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 35px;
+  color: #fff;
+}
+
+.secondBlockSelectSection p {
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  margin: 0;
+  color: #fff;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid #4e555f;
+}
+.buttonSectionDiscr {
+  display: flex;
+  justify-content: space-between;
+  margin: 38px 0 0 0;
+}
+.buttonSectionDiscr button {
+  width: 187px;
+  height: 58px;
+  background-color: #161d27;
+  color: #fff;
+  border: none;
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 }

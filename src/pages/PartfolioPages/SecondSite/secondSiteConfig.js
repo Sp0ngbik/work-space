@@ -8,6 +8,12 @@ import mainSec from "./secondPageImage/mainSecImg.png";
 import smallMate from "./secondPageImage/small_mate.png";
 import experienceCount from "./secondPageImage/experienceButton.svg";
 import successCount from "./secondPageImage/buttonNote.svg";
+import firstDisrcLogo from "./secondPageImage/selectSectionFirst.svg";
+import secDiscrLogo from "./secondPageImage/selectSectionSecond.svg";
+import thirdDiscrLogo from "./secondPageImage/selectSectionThird.svg";
+import fourthDiscrLogo from "./secondPageImage/selectSectionFourth.svg";
+import fifthDiscrLogo from "./secondPageImage/selectSectionFifth.svg";
+import sixDiscrLogo from "./secondPageImage/selectSectionSix.svg";
 export const secondSiteImages = {
   siteLogo,
   callImage,
@@ -19,4 +25,10 @@ export const secondSiteImages = {
   smallMate,
   experienceCount,
   successCount,
+  firstDisrcLogo,
+  secDiscrLogo,
+  thirdDiscrLogo,
+  fourthDiscrLogo,
+  fifthDiscrLogo,
+  sixDiscrLogo,
 };
