@@ -49,157 +49,176 @@ const SecondSite = () => {
           </div>
         </div>
       </header>
-      <main className={style.mainBlock}>
-        <div className={style.mainBlockDiscription}>
-          <div className={style.mainBlockImageSection}>
-            <img src={secondSiteImages.mainFirst} alt="first not found" />
-            <img src={secondSiteImages.mainSec} alt="second img not found" />
-          </div>
-          <div className={style.mainBLockTextColumn}>
-            <h3>
-              Welcome to Attorney Law - <br /> Lawyer and Law Firm Company
-            </h3>
-            <img
-              src={secondSiteImages.miniLogo}
-              alt="minilogo discr not found"
-            />
-            <p>
-              Although we are located in Brooklyn, our maritime lawyers are
-              proud to help the injured throughout the nation, including workers
-              who were working in foreign waters at the time of the incident go
-              up against the largest offshore companies and win.
-            </p>
-            <div className={style.smallMateBlock}>
-              <img
-                src={secondSiteImages.smallMate}
-                alt="small mate not found ;C"
-              />
-              <h2>Peter Parker</h2>
+      <main>
+        <div className={style.mainBlockUpperContent}>
+          <div className={style.mainBlockDiscription}>
+            <div className={style.mainBlockImageSection}>
+              <img src={secondSiteImages.mainFirst} alt="first not found" />
+              <img src={secondSiteImages.mainSec} alt="second img not found" />
             </div>
-            <div className={style.mainBlockButtons}>
-              <div className={style.succesButton}>
+            <div className={style.mainBLockTextColumn}>
+              <h3>
+                Welcome to Attorney Law - <br /> Lawyer and Law Firm Company
+              </h3>
+              <img
+                src={secondSiteImages.miniLogo}
+                alt="minilogo discr not found"
+              />
+              <p>
+                Although we are located in Brooklyn, our maritime lawyers are
+                proud to help the injured throughout the nation, including
+                workers who were working in foreign waters at the time of the
+                incident go up against the largest offshore companies and win.
+              </p>
+              <div className={style.smallMateBlock}>
                 <img
-                  src={secondSiteImages.successCount}
-                  alt="sucess count not found"
+                  src={secondSiteImages.smallMate}
+                  alt="small mate not found ;C"
                 />
-                <div>
-                  <p>95%</p>
-                  <p>Case sucess</p>
+                <h2>Peter Parker</h2>
+              </div>
+              <div className={style.mainBlockButtons}>
+                <div className={style.succesButton}>
+                  <img
+                    src={secondSiteImages.successCount}
+                    alt="sucess count not found"
+                  />
+                  <div>
+                    <p>95%</p>
+                    <p>Case sucess</p>
+                  </div>
+                </div>
+                <div className={style.experienceButton}>
+                  <img
+                    src={secondSiteImages.experienceCount}
+                    alt="exp count not found"
+                  />
+                  <div>
+                    <p>Years</p>
+                    <p>Experience</p>
+                  </div>
                 </div>
               </div>
-              <div className={style.experienceButton}>
+            </div>
+          </div>
+          <div className={style.mainDiscriptionSecondBlock}>
+            <div className={style.secondBlockContent}>
+              <h2>
+                Explore The Perfect <br /> Out Practice Areas
+              </h2>
+              <img
+                src={secondSiteImages.miniLogo}
+                alt="mini logo on content not found"
+              />
+            </div>
+            <p>
+              We are a group of civil litigation/trial attorneys who focus on
+              providing a justice based on the issues relating to insurance
+              defense, insurance coverage, bad faith, insurance fraud and
+              criminal litigation.
+            </p>
+          </div>
+          <div className={style.secondBlockSelectSection}>
+            <div>
+              <h2>Business Law</h2>
+              <p>
+                Be aware of new developments, as laws and rules often change
+                based on the situation.
+              </p>
+              <div className={style.buttonSectionDiscr}>
                 <img
-                  src={secondSiteImages.experienceCount}
-                  alt="exp count not found"
+                  src={secondSiteImages.firstDisrcLogo}
+                  alt="first discr logo not found"
                 />
-                <div>
-                  <p>Years</p>
-                  <p>Experience</p>
-                </div>
+                <button>View More</button>
+              </div>
+            </div>
+            <div>
+              <h2>Construction Law</h2>
+              <p>
+                Never judge, just listen and advise. Even if your client has
+                made a bad decision in the case.
+              </p>
+              <div className={style.buttonSectionDiscr}>
+                <img
+                  src={secondSiteImages.secDiscrLogo}
+                  alt="sec discr logo not found"
+                />
+                <button>View More</button>
+              </div>
+            </div>
+            <div>
+              <h2>Car Accident</h2>
+              <p>
+                Being untruthful will get you nowhere and give you a reputation
+                of the dishonesty in law.
+              </p>
+              <div className={style.buttonSectionDiscr}>
+                <img
+                  src={secondSiteImages.thirdDiscrLogo}
+                  alt="third discr logo not found"
+                />
+                <button>View More</button>
+              </div>
+            </div>
+            <div>
+              <h2>Wrongful Death</h2>
+              <p>
+                Keep yourself up-to-date on your area of law. Be aware of new
+                justice, as laws and rules.
+              </p>
+              <div className={style.buttonSectionDiscr}>
+                <img
+                  src={secondSiteImages.fourthDiscrLogo}
+                  alt="first discr logo not found"
+                />
+                <button>View More</button>
+              </div>
+            </div>
+            <div>
+              <h2>Criminal Law</h2>
+              <p>
+                Our attorneys are fully committed to providing you with the
+                support and attention that you deserve.
+              </p>
+              <div className={style.buttonSectionDiscr}>
+                <img
+                  src={secondSiteImages.fifthDiscrLogo}
+                  alt="first discr logo not found"
+                />
+                <button>View More</button>
+              </div>
+            </div>
+            <div>
+              <h2>Family Law</h2>
+              <p>
+                You may find yourself unable to work or complete work-related
+                responsibilities safely.
+              </p>
+              <div className={style.buttonSectionDiscr}>
+                <img
+                  src={secondSiteImages.sixDiscrLogo}
+                  alt="first discr logo not found"
+                />
+                <button>View More</button>
               </div>
             </div>
           </div>
         </div>
-        <div className={style.mainDiscriptionSecondBlock}>
-          <div className={style.secondBlockContent}>
-            <h2>
-              Explore The Perfect <br /> Out Practice Areas
-            </h2>
-            <img
-              src={secondSiteImages.miniLogo}
-              alt="mini logo on content not found"
-            />
-          </div>
+        <div className={style.mainBlockSecondContent}>
+          <h2>
+            Fighting To Get What <br />
+            You Deserve
+          </h2>
+          <img src={secondSiteImages.equalMiniLogo} alt="mini logo not found" />
           <p>
-            We are a group of civil litigation/trial attorneys who focus on
-            providing a justice based on the issues relating to insurance
-            defense, insurance coverage, bad faith, insurance fraud and criminal
-            litigation.
+            Our board-certified family law attorneys work to achieve a fair and
+            <br />
+            timely resolution of the legal issues in your case.
           </p>
-        </div>
-        <div className={style.secondBlockSelectSection}>
-          <div>
-            <h2>Business Law</h2>
-            <p>
-              Be aware of new developments, as laws and rules often change based
-              on the situation.
-            </p>
-            <div className={style.buttonSectionDiscr}>
-              <img
-                src={secondSiteImages.firstDisrcLogo}
-                alt="first discr logo not found"
-              />
-              <button>View More</button>
-            </div>
-          </div>
-          <div>
-            <h2>Construction Law</h2>
-            <p>
-              Never judge, just listen and advise. Even if your client has made
-              a bad decision in the case.
-            </p>
-            <div className={style.buttonSectionDiscr}>
-              <img
-                src={secondSiteImages.secDiscrLogo}
-                alt="sec discr logo not found"
-              />
-              <button>View More</button>
-            </div>
-          </div>
-          <div>
-            <h2>Car Accident</h2>
-            <p>
-              Being untruthful will get you nowhere and give you a reputation of
-              the dishonesty in law.
-            </p>
-            <div className={style.buttonSectionDiscr}>
-              <img
-                src={secondSiteImages.thirdDiscrLogo}
-                alt="third discr logo not found"
-              />
-              <button>View More</button>
-            </div>
-          </div>
-          <div>
-            <h2>Wrongful Death</h2>
-            <p>
-              Keep yourself up-to-date on your area of law. Be aware of new
-              justice, as laws and rules.
-            </p>
-            <div className={style.buttonSectionDiscr}>
-              <img
-                src={secondSiteImages.fourthDiscrLogo}
-                alt="first discr logo not found"
-              />
-              <button>View More</button>
-            </div>
-          </div>
-          <div>
-            <h2>Criminal Law</h2>
-            <p>
-              Our attorneys are fully committed to providing you with the
-              support and attention that you deserve.
-            </p>
-            <div className={style.buttonSectionDiscr}>
-              <img
-                src={secondSiteImages.fifthDiscrLogo}
-                alt="first discr logo not found"
-              />
-              <button>View More</button>
-            </div>
-          </div>
-          <div>
-            <h2>Family Law</h2>
-            <p>
-              You may find yourself unable to work or complete work-related
-              responsibilities safely.
-            </p>
-            <div className={style.buttonSectionDiscr}>
-              <img
-                src={secondSiteImages.sixDiscrLogo}
-                alt="first discr logo not found"
-              />
-              <button>View More</button>
+          <div className={style.companyStats}>
+            <div>
+              <div></div>
             </div>
           </div>
         </div>

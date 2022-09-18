@@ -14,6 +14,7 @@ import thirdDiscrLogo from "./secondPageImage/selectSectionThird.svg";
 import fourthDiscrLogo from "./secondPageImage/selectSectionFourth.svg";
 import fifthDiscrLogo from "./secondPageImage/selectSectionFifth.svg";
 import sixDiscrLogo from "./secondPageImage/selectSectionSix.svg";
+import equalMiniLogo from "./secondPageImage/mini_logo_equal.svg";
 export const secondSiteImages = {
   siteLogo,
   callImage,
@@ -31,4 +32,5 @@ export const secondSiteImages = {
   fourthDiscrLogo,
   fifthDiscrLogo,
   sixDiscrLogo,
+  equalMiniLogo,
 };
