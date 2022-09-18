@@ -103,10 +103,11 @@
   display: flex;
   justify-content: flex-end;
 }
-.mainBlock {
+.mainBlockUpperContent {
   width: 100%;
   height: 100%;
   background-color: #161d27;
+  padding: 0 0 140px 0;
 }
 .mainBlockDiscription {
   display: grid;
@@ -253,4 +254,26 @@
   font-family: "Outfit", sans-serif;
   font-size: 20px;
   font-weight: 400;
+}
+.mainBlockSecondContent {
+  text-align: center;
+  margin: 125px 0 0 0;
+}
+
+.mainBlockSecondContent > h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 45px;
+  margin: 0 0 11px;
+}
+
+.mainBlockSecondContent > img {
+  margin: 0 0 40px 0;
+}
+
+.mainBlockSecondContent > p {
+  font-size: 20px;
+  font-family: "Outfit", sans-serif;
+  color: #909090;
+  letter-spacing: 0.4px;
+  line-height: 32px;
 }
