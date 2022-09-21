@@ -5,6 +5,7 @@ import {
   asyncGetSagaUsers,
   asyncIncrementAction,
   checkKnowledge,
+  knowledgeCheckFunction,
   onAddElement,
   onFilterElements,
 } from "../actions/actions";
@@ -98,6 +99,14 @@ class ReduxIndex extends Component {
           </button>
           <div>{this.props.knowledgeWords}</div>
         </div>
+        <button
+          onClick={() => {
+            this.props.onSecCheckKnowledge();
+          }}
+        >
+          know
+        </button>
+        <div>{this.props.secKnowl}</div>
       </div>
     );
   }
@@ -108,6 +117,7 @@ export default connect(
     elements: state.addElement.filter((word) =>
       word.inputValue.includes(state.filterElements)
     ),
+    secKnowl: state.secCheckFunc,
     knowledgeWords: state.knowledgeCheck,
     axiosElements: state.axiosRequest,
     sagaReducer: state.sagaReducer,
@@ -120,6 +130,9 @@ export default connect(
         inputValue,
       };
       dispatch(onAddElement(payload));
+    },
+    onSecCheckKnowledge: () => {
+      dispatch(knowledgeCheckFunction());
     },
     onCheckKnowledge: () => {
       dispatch(checkKnowledge());
