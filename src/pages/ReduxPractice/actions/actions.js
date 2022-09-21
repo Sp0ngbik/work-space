@@ -15,6 +15,7 @@ import {
   SAGA_SLIDER_DECREMENT,
   SAGA_SLIDER_INCREMENT,
   SAGA_USERS,
+  SEC_CHECK,
   SHOW_SLIDER_IMAGE,
 } from "../types/types";
 
@@ -97,4 +98,8 @@ export function sliderDecrement() {
 
 export function checkKnowledge() {
   return { type: REDUX_PRACTICE, payload: "check - confirmed" };
+}
+
+export function knowledgeCheckFunction() {
+  return { type: SEC_CHECK, payload: [1, 2, 3] };
 }
