@@ -7,6 +7,8 @@ import {
   ASYNC_SAGA_USERS,
   AXIOS_ADD,
   FILTER_ELEMENTS,
+  FUNC_REDUX_ADD_ELEMENT,
+  FUNC_REDUX_FILTER_ELEMENT,
   HIDE_SLIDER_IMAGE,
   LOADER_DIACTIVE,
   REDUX_PRACTICE,
@@ -102,4 +104,14 @@ export function checkKnowledge() {
 
 export function knowledgeCheckFunction() {
   return { type: SEC_CHECK, payload: [1, 2, 3] };
+}
+
+//func redux actions
+
+export function onAddFuncElement(payload) {
+  return { type: FUNC_REDUX_ADD_ELEMENT, payload: payload };
+}
+
+export function onFilterFuncWords(payload) {
+  return { type: FUNC_REDUX_FILTER_ELEMENT, payload: payload };
 }

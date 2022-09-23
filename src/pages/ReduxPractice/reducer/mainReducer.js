@@ -10,6 +10,8 @@ import { sagaSliderReducer } from "../saga/sagaSliderReducer";
 import { sagaSliderCounter } from "../saga/sagaSliderCounter";
 import { knowledgeCheck } from "./knowledgeCheck";
 import { secCheckFunc } from "./secCheckFunc";
+import { funcAddElement } from "./funcAddElement";
+import { funcFilterWords } from "./funcFilterWords";
 export const reducer = combineReducers({
   addElement,
   filterElements,
@@ -22,4 +24,6 @@ export const reducer = combineReducers({
   sagaSliderCounter,
   knowledgeCheck,
   secCheckFunc,
+  funcAddElement,
+  funcFilterWords,
 });
