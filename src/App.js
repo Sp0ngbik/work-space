@@ -10,6 +10,7 @@ import Welcome from "./pages/Welcome/Welcome";
 import ReduxIndex from "./pages/ReduxPractice/redux/ReduxIndex";
 import style from "./style.module.scss";
 import SecondSite from "./pages/PartfolioPages/SecondSite/SecondSite";
+import FuncRedux from "./pages/ReduxPractice/redux/FuncRedux";
 //для изменений
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/about/partfolio" element={<Partfolio />}></Route>
         <Route path="/about/type-of" element={<TypeOfJs />}></Route>
         <Route path="/redux" element={<ReduxIndex />}></Route>
+        <Route path="/func_redux" element={<FuncRedux />}></Route>
         <Route path="/about/array-practice" element={<Arrays />}></Route>
         <Route path="/partfolio/first" element={<FirstSite />}></Route>
         <Route path="/partfolio/second" element={<SecondSite />}></Route>

@@ -31,6 +31,9 @@ const About = () => {
         <Link to="/redux">
           <Button>Redux</Button>
         </Link>
+        <Link to="/func_redux">
+          <Button>Func_redux</Button>
+        </Link>
         <Button
           onClick={() => {
             alert(
