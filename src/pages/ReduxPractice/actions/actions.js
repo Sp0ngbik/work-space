@@ -8,7 +8,10 @@ import {
   AXIOS_ADD,
   FILTER_ELEMENTS,
   FUNC_REDUX_ADD_ELEMENT,
+  FUNC_REDUX_DECREMENT,
+  FUNC_REDUX_DOWNLOAD_USERS,
   FUNC_REDUX_FILTER_ELEMENT,
+  FUNC_REDUX_INCREMENT,
   HIDE_SLIDER_IMAGE,
   LOADER_DIACTIVE,
   REDUX_PRACTICE,
@@ -114,4 +117,25 @@ export function onAddFuncElement(payload) {
 
 export function onFilterFuncWords(payload) {
   return { type: FUNC_REDUX_FILTER_ELEMENT, payload: payload };
+}
+
+export function funcAsyncPosts() {
+  return async (dispatch) => {
+    try {
+      const response = await axios.get(
+        "https://jsonplaceholder.typicode.com/posts?_limit=5"
+      );
+      const baseTabs = await response.data;
+      dispatch({ type: FUNC_REDUX_DOWNLOAD_USERS, payload: baseTabs });
+    } catch (e) {
+      alert("Something went wrong");
+    }
+  };
+}
+
+export function asyncIncrement() {
+  return { type: FUNC_REDUX_INCREMENT };
+}
+export function asyncDecrement() {
+  return { type: FUNC_REDUX_DECREMENT };
 }

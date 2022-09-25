@@ -12,6 +12,8 @@ import { knowledgeCheck } from "./knowledgeCheck";
 import { secCheckFunc } from "./secCheckFunc";
 import { funcAddElement } from "./funcAddElement";
 import { funcFilterWords } from "./funcFilterWords";
+import { funcUserData } from "./funcUserData";
+import { funcAsyncCounter } from "./funcAsyncCounter";
 export const reducer = combineReducers({
   addElement,
   filterElements,
@@ -26,4 +28,6 @@ export const reducer = combineReducers({
   secCheckFunc,
   funcAddElement,
   funcFilterWords,
+  funcUserData,
+  funcAsyncCounter,
 });

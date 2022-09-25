@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { onAddFuncElement, onFilterFuncWords } from "../actions/actions";
+import {
+  asyncDecrement,
+  asyncIncrement,
+  funcAsyncPosts,
+  onAddFuncElement,
+  onFilterFuncWords,
+} from "../actions/actions";
 
 const FuncRedux = () => {
   const dispatch = useDispatch();
@@ -18,6 +24,13 @@ const FuncRedux = () => {
       return word.includes(filterElementState);
     });
   });
+  const userAsyncData = useSelector((state) => {
+    return state.funcUserData;
+  });
+  const counterState = useSelector((state) => {
+    return state.funcAsyncCounter;
+  });
+  //funcWorkers
   const onAddedElement = (inputValue) => {
     const payload = inputValue;
     dispatch(onAddFuncElement(payload));
@@ -64,6 +77,38 @@ const FuncRedux = () => {
         {addElementState.map((el, index) => {
           return <li key={index}>{el}</li>;
         })}
+      </div>
+      <div>Check filtered Value : {filterElementState} </div>
+      <div>
+        <button
+          onClick={() => {
+            dispatch(funcAsyncPosts());
+          }}
+        >
+          Загрузить данные
+        </button>
+        <div>
+          {userAsyncData.map((el) => {
+            return <div key={el.id}>{`${el.id + " " + el.title}`}</div>;
+          })}
+        </div>
+      </div>
+      <div>
+        <button
+          onClick={() => {
+            dispatch(asyncIncrement());
+          }}
+        >
+          Increment
+        </button>
+        <button
+          onClick={() => {
+            dispatch(asyncDecrement());
+          }}
+        >
+          Decrement
+        </button>
+        <div>{counterState}</div>
       </div>
     </div>
   );
