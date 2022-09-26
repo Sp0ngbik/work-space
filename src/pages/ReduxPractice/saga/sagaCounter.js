@@ -44,6 +44,8 @@ function* sagaSliderWorker() {
   ];
   yield put(sliderAction(payload));
 }
+
+//все в rootWacher
 export function* sagaWatcher() {
   yield takeEvery(ASYNC_SAGA_INCREMENT, incrementWorker);
   yield takeEvery(ASYNC_SAGA_DECREMENT, decrementWorker);
