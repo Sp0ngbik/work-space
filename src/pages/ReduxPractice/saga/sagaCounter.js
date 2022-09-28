@@ -4,6 +4,7 @@ import {
   decrementAction,
   getSagaUsers,
   incrementAction,
+  sagaVlad,
   sliderAction,
 } from "../actions/actions";
 import {
@@ -11,12 +12,18 @@ import {
   ASYNC_SAGA_INCREMENT,
   ASYNC_SAGA_USERS,
   ASYNC_SAGA_SLIDER,
+  SAGA_ASYNC_VLAD,
 } from "../types/types";
 //put своего рода диспатч для синхронных экшн
 //call возвращает данные которые прилетают в промисе(подобие async,await)
 const delay = (ms) => {
   return new Promise((res) => setTimeout(res, ms));
 };
+
+export function* vladNameWorker() {
+  yield delay(1000);
+  yield put(sagaVlad("Vlad"));
+}
 
 export function* incrementWorker() {
   yield delay(1000);
@@ -57,4 +64,8 @@ export function* sliderWatcher() {
 
 export function* userWatcher() {
   yield takeEvery(ASYNC_SAGA_USERS, axiosUserWorker);
+}
+
+export function* vladNameWatcher() {
+  yield takeEvery(SAGA_ASYNC_VLAD, vladNameWorker);
 }

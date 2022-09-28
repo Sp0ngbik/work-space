@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   asyncDecrement,
   asyncIncrement,
+  asyncSagaVlad,
   funcAsyncPosts,
   onAddFuncElement,
   onFilterFuncWords,
@@ -16,6 +17,9 @@ const FuncRedux = () => {
     onAddedElement(element);
   };
   //selectors
+  const vladState = useSelector((state) => {
+    return state.vladName;
+  });
   const filterElementState = useSelector((state) => {
     return state.funcFilterWords;
   });
@@ -110,6 +114,14 @@ const FuncRedux = () => {
         </button>
         <div>{counterState}</div>
       </div>
+      <button
+        onClick={() => {
+          dispatch(asyncSagaVlad());
+        }}
+      >
+        Vlad
+      </button>
+      <div>{vladState}</div>
     </div>
   );
 };

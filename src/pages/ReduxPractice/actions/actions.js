@@ -15,11 +15,13 @@ import {
   HIDE_SLIDER_IMAGE,
   LOADER_DIACTIVE,
   REDUX_PRACTICE,
+  SAGA_ASYNC_VLAD,
   SAGA_DECREMENT,
   SAGA_INCREMENT,
   SAGA_SLIDER_DECREMENT,
   SAGA_SLIDER_INCREMENT,
   SAGA_USERS,
+  SAGA_VLAD,
   SEC_CHECK,
   SHOW_SLIDER_IMAGE,
 } from "../types/types";
@@ -141,3 +143,10 @@ export function asyncDecrement() {
 }
 
 //try
+export function sagaVlad(payload) {
+  return { type: SAGA_VLAD, payload: payload };
+}
+
+export function asyncSagaVlad() {
+  return { type: SAGA_ASYNC_VLAD };
+}
