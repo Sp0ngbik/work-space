@@ -14,7 +14,6 @@ import {
   FUNC_REDUX_INCREMENT,
   HIDE_SLIDER_IMAGE,
   LOADER_DIACTIVE,
-  REDUX_PRACTICE,
   SAGA_ASYNC_VLAD,
   SAGA_DECREMENT,
   SAGA_INCREMENT,
@@ -101,10 +100,6 @@ export function sliderIncrement() {
 }
 export function sliderDecrement() {
   return { type: SAGA_SLIDER_DECREMENT };
-}
-
-export function checkKnowledge() {
-  return { type: REDUX_PRACTICE, payload: "check - confirmed" };
 }
 
 export function knowledgeCheckFunction() {

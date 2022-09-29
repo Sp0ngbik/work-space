@@ -1,9 +1,9 @@
 import { useState } from "react";
+import style from "../style.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import {
   asyncDecrement,
   asyncIncrement,
-  asyncSagaVlad,
   funcAsyncPosts,
   onAddFuncElement,
   onFilterFuncWords,
@@ -17,9 +17,7 @@ const FuncRedux = () => {
     onAddedElement(element);
   };
   //selectors
-  const vladState = useSelector((state) => {
-    return state.vladName;
-  });
+
   const filterElementState = useSelector((state) => {
     return state.funcFilterWords;
   });
@@ -46,7 +44,7 @@ const FuncRedux = () => {
     dispatch(onFilterFuncWords(payload));
   };
   return (
-    <div>
+    <div className={style.funcReduxContainer}>
       <div>
         <input
           id="input_value"
@@ -63,20 +61,22 @@ const FuncRedux = () => {
           Add element
         </button>
       </div>
-      <input
-        id="filter_input_value"
-        type="text"
-        onChange={(event) => {
-          setFilterInputValue(event.target.value);
-        }}
-      />
-      <button
-        onClick={() => {
-          onFilterElement(filterInputValue);
-        }}
-      >
-        Filter button
-      </button>
+      <div>
+        <input
+          id="filter_input_value"
+          type="text"
+          onChange={(event) => {
+            setFilterInputValue(event.target.value);
+          }}
+        />
+        <button
+          onClick={() => {
+            onFilterElement(filterInputValue);
+          }}
+        >
+          Filter button
+        </button>
+      </div>
       <div>
         {addElementState.map((el, index) => {
           return <li key={index}>{el}</li>;
@@ -114,14 +114,6 @@ const FuncRedux = () => {
         </button>
         <div>{counterState}</div>
       </div>
-      <button
-        onClick={() => {
-          dispatch(asyncSagaVlad());
-        }}
-      >
-        Vlad
-      </button>
-      <div>{vladState}</div>
     </div>
   );
 };

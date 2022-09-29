@@ -4,7 +4,6 @@ import {
   asyncDecrementAction,
   asyncGetSagaUsers,
   asyncIncrementAction,
-  checkKnowledge,
   knowledgeCheckFunction,
   onAddElement,
   onFilterElements,
@@ -89,16 +88,7 @@ class ReduxIndex extends Component {
           </div>
           <SliderSagas />
         </div>
-        <div>
-          <button
-            onClick={() => {
-              this.props.onCheckKnowledge();
-            }}
-          >
-            Check knowledge
-          </button>
-          <div>{this.props.knowledgeWords}</div>
-        </div>
+
         <button
           onClick={() => {
             this.props.onSecCheckKnowledge();
@@ -134,9 +124,7 @@ export default connect(
     onSecCheckKnowledge: () => {
       dispatch(knowledgeCheckFunction());
     },
-    onCheckKnowledge: () => {
-      dispatch(checkKnowledge());
-    },
+
     onFilterElements: (filterValue) => {
       dispatch(onFilterElements(filterValue));
     },

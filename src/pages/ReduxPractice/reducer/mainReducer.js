@@ -8,13 +8,11 @@ import { sagaReducer } from "../saga/sagaReducer";
 import { sagaUserReducer } from "../saga/sagaUserReducer";
 import { sagaSliderReducer } from "../saga/sagaSliderReducer";
 import { sagaSliderCounter } from "../saga/sagaSliderCounter";
-import { knowledgeCheck } from "./knowledgeCheck";
 import { secCheckFunc } from "./secCheckFunc";
 import { funcAddElement } from "./funcAddElement";
 import { funcFilterWords } from "./funcFilterWords";
 import { funcUserData } from "./funcUserData";
 import { funcAsyncCounter } from "./funcAsyncCounter";
-import { vladName } from "./vladName";
 export const reducer = combineReducers({
   addElement,
   filterElements,
@@ -25,11 +23,9 @@ export const reducer = combineReducers({
   sagaUserReducer,
   sagaSliderReducer,
   sagaSliderCounter,
-  knowledgeCheck,
   secCheckFunc,
   funcAddElement,
   funcFilterWords,
   funcUserData,
   funcAsyncCounter,
-  vladName,
 });
