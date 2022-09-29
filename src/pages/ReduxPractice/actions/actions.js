@@ -5,6 +5,7 @@ import {
   ASYNC_SAGA_INCREMENT,
   ASYNC_SAGA_SLIDER,
   ASYNC_SAGA_USERS,
+  ASYNC_TODO_ARRAY,
   AXIOS_ADD,
   FILTER_ELEMENTS,
   FUNC_REDUX_ADD_ELEMENT,
@@ -14,13 +15,12 @@ import {
   FUNC_REDUX_INCREMENT,
   HIDE_SLIDER_IMAGE,
   LOADER_DIACTIVE,
-  SAGA_ASYNC_VLAD,
   SAGA_DECREMENT,
   SAGA_INCREMENT,
   SAGA_SLIDER_DECREMENT,
   SAGA_SLIDER_INCREMENT,
+  SAGA_TODO_ARRAY,
   SAGA_USERS,
-  SAGA_VLAD,
   SEC_CHECK,
   SHOW_SLIDER_IMAGE,
 } from "../types/types";
@@ -137,11 +137,10 @@ export function asyncDecrement() {
   return { type: FUNC_REDUX_DECREMENT };
 }
 
-//try
-export function sagaVlad(payload) {
-  return { type: SAGA_VLAD, payload: payload };
+//saga-todo
+export function asyncTodoAction() {
+  return { type: ASYNC_TODO_ARRAY };
 }
-
-export function asyncSagaVlad() {
-  return { type: SAGA_ASYNC_VLAD };
+export function todoArrayAction() {
+  return { type: SAGA_TODO_ARRAY, payload: { dispatched: true } };
 }

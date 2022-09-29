@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   asyncDecrement,
   asyncIncrement,
+  asyncTodoAction,
   funcAsyncPosts,
   onAddFuncElement,
   onFilterFuncWords,
@@ -21,6 +22,7 @@ const FuncRedux = () => {
   const filterElementState = useSelector((state) => {
     return state.funcFilterWords;
   });
+
   const addElementState = useSelector((state) => {
     return state.funcAddElement.filter((word) => {
       return word.includes(filterElementState);
@@ -31,6 +33,12 @@ const FuncRedux = () => {
   });
   const counterState = useSelector((state) => {
     return state.funcAsyncCounter;
+  });
+  const todoArrayIndicator = useSelector((state) => {
+    return state.todoListIndicator;
+  });
+  const todoArrayList = useSelector((state) => {
+    return state.funcAddElement;
   });
   //funcWorkers
   const onAddedElement = (inputValue) => {
@@ -113,6 +121,22 @@ const FuncRedux = () => {
           Decrement
         </button>
         <div>{counterState}</div>
+      </div>
+      <div>
+        <button
+          onClick={() => {
+            dispatch(asyncTodoAction());
+          }}
+        >
+          Full array on list elements
+        </button>
+        <div className={style.todoListFuncRedux}>
+          {todoArrayIndicator.dispatched === true
+            ? todoArrayList.map((el, index) => {
+                return <li key={index}>{el}</li>;
+              })
+            : null}
+        </div>
       </div>
     </div>
   );

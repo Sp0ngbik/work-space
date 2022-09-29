@@ -5,12 +5,14 @@ import {
   getSagaUsers,
   incrementAction,
   sliderAction,
+  todoArrayAction,
 } from "../actions/actions";
 import {
   ASYNC_SAGA_DECREMENT,
   ASYNC_SAGA_INCREMENT,
   ASYNC_SAGA_USERS,
   ASYNC_SAGA_SLIDER,
+  ASYNC_TODO_ARRAY,
 } from "../types/types";
 //put своего рода диспатч для синхронных экшн
 //call возвращает данные которые прилетают в промисе(подобие async,await)
@@ -18,6 +20,7 @@ const delay = (ms) => {
   return new Promise((res) => setTimeout(res, ms));
 };
 
+//WORKERS!!!!!!!!!!!!!!!!!!
 export function* incrementWorker() {
   yield delay(1000);
   yield put(incrementAction());
@@ -45,7 +48,12 @@ function* sagaSliderWorker() {
   yield put(sliderAction(payload));
 }
 
+function* sagaTodoArrayWorker() {
+  yield delay(1000);
+  yield put(todoArrayAction());
+}
 //все в rootWacher
+//WATCHERS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 export function* sagaWatcher() {
   yield takeEvery(ASYNC_SAGA_INCREMENT, incrementWorker);
   yield takeEvery(ASYNC_SAGA_DECREMENT, decrementWorker);
@@ -57,4 +65,8 @@ export function* sliderWatcher() {
 
 export function* userWatcher() {
   yield takeEvery(ASYNC_SAGA_USERS, axiosUserWorker);
+}
+
+export function* sagaTodoArrayWatcher() {
+  yield takeEvery(ASYNC_TODO_ARRAY, sagaTodoArrayWorker);
 }
