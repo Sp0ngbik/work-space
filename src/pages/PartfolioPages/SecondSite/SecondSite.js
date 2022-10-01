@@ -70,6 +70,7 @@ const SecondSite = () => {
                 workers who were working in foreign waters at the time of the
                 incident go up against the largest offshore companies and win.
               </p>
+              {/* need to change picture cuz background */}
               <div className={style.smallMateBlock}>
                 <img
                   src={secondSiteImages.smallMate}
@@ -217,8 +218,18 @@ const SecondSite = () => {
             timely resolution of the legal issues in your case.
           </p>
           <div className={style.companyStats}>
-            <div>
-              <div></div>
+            <div className={style.statsSection}>
+              <div className={style.upperStatsBlock}>
+                <img
+                  src={secondSiteImages.heartStats}
+                  alt="heart stats not found"
+                />
+                <h2>7230</h2>
+              </div>
+              <div className={style.bottomStatsBlock}>
+                <h3>Trusted clients</h3>
+                <p>Number Of Clients We've</p>
+              </div>
             </div>
           </div>
         </div>
