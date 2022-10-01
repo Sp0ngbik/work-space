@@ -5,6 +5,7 @@ import {
   ASYNC_SAGA_INCREMENT,
   ASYNC_SAGA_SLIDER,
   ASYNC_SAGA_USERS,
+  ASYNC_TODO_ARRAY,
   AXIOS_ADD,
   FILTER_ELEMENTS,
   FUNC_REDUX_ADD_ELEMENT,
@@ -14,11 +15,12 @@ import {
   FUNC_REDUX_INCREMENT,
   HIDE_SLIDER_IMAGE,
   LOADER_DIACTIVE,
-  REDUX_PRACTICE,
   SAGA_DECREMENT,
+  SAGA_HIDE_ARRAY,
   SAGA_INCREMENT,
   SAGA_SLIDER_DECREMENT,
   SAGA_SLIDER_INCREMENT,
+  SAGA_TODO_ARRAY,
   SAGA_USERS,
   SEC_CHECK,
   SHOW_SLIDER_IMAGE,
@@ -101,10 +103,6 @@ export function sliderDecrement() {
   return { type: SAGA_SLIDER_DECREMENT };
 }
 
-export function checkKnowledge() {
-  return { type: REDUX_PRACTICE, payload: "check - confirmed" };
-}
-
 export function knowledgeCheckFunction() {
   return { type: SEC_CHECK, payload: [1, 2, 3] };
 }
@@ -138,4 +136,16 @@ export function asyncIncrement() {
 }
 export function asyncDecrement() {
   return { type: FUNC_REDUX_DECREMENT };
+}
+
+//saga-todo
+export function asyncTodoAction() {
+  return { type: ASYNC_TODO_ARRAY };
+}
+export function todoArrayAction() {
+  return { type: SAGA_TODO_ARRAY, payload: { dispatched: true } };
+}
+
+export function hideArrayAction() {
+  return { type: SAGA_HIDE_ARRAY, payload: { dispatched: false } };
 }

@@ -1,9 +1,27 @@
-.reduxContainer{
-    display: flex; 
-    padding: 20px 0 0 40%;
-    flex-direction: column;
+// styles for class and func redux components
+
+.reduxContainer {
+  display: flex;
+  padding: 20px 0 0 40%;
+  flex-direction: column;
 }
-.reduxContainer button{
-    width: 200px;
+.reduxContainer button {
+  width: 200px;
 }
-.reduxContainer img{width: 200px;}
+.reduxContainer img {
+  width: 200px;
+}
+.funcReduxContainer {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  margin: 0 auto;
+}
+.funcReduxContainer div:first-child {
+  padding: 0px 0 10px 0;
+  margin: 20px 0 0 0;
+}
+.todoListFuncRedux {
+  display: flex;
+  flex-direction: column;
+}
