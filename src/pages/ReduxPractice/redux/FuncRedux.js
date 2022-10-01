@@ -6,6 +6,7 @@ import {
   asyncIncrement,
   asyncTodoAction,
   funcAsyncPosts,
+  hideArrayAction,
   onAddFuncElement,
   onFilterFuncWords,
 } from "../actions/actions";
@@ -129,6 +130,13 @@ const FuncRedux = () => {
           }}
         >
           Full array on list elements
+        </button>
+        <button
+          onClick={() => {
+            dispatch(hideArrayAction());
+          }}
+        >
+          Hide array of elements
         </button>
         <div className={style.todoListFuncRedux}>
           {todoArrayIndicator.dispatched === true

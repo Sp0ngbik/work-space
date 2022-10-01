@@ -42,7 +42,7 @@ function* axiosUserWorker() {
 function* sagaSliderWorker() {
   const payload = [
     "https://cdn3.iconfinder.com/data/icons/feather-5/24/file-text-512.png",
-    "https://cdn3.iconfinder.com/data/icons/feather-5/24/chrome-256.png",
+    "https://cdn3.iconfinder.com/data/icon-s/feather-5/24/chrome-256.png",
     "https://cdn3.iconfinder.com/data/icons/feather-5/24/repeat-128.png",
   ];
   yield put(sliderAction(payload));
@@ -52,6 +52,7 @@ function* sagaTodoArrayWorker() {
   yield delay(1000);
   yield put(todoArrayAction());
 }
+
 //все в rootWacher
 //WATCHERS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 export function* sagaWatcher() {

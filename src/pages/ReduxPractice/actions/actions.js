@@ -16,6 +16,7 @@ import {
   HIDE_SLIDER_IMAGE,
   LOADER_DIACTIVE,
   SAGA_DECREMENT,
+  SAGA_HIDE_ARRAY,
   SAGA_INCREMENT,
   SAGA_SLIDER_DECREMENT,
   SAGA_SLIDER_INCREMENT,
@@ -143,4 +144,8 @@ export function asyncTodoAction() {
 }
 export function todoArrayAction() {
   return { type: SAGA_TODO_ARRAY, payload: { dispatched: true } };
+}
+
+export function hideArrayAction() {
+  return { type: SAGA_HIDE_ARRAY, payload: { dispatched: false } };
 }
