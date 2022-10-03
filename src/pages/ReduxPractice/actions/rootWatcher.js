@@ -1,5 +1,7 @@
 import { all } from "redux-saga/effects";
 import {
+  sagaFirstLvlWathcer,
+  sagaSecondLvlWatcher,
   sagaTodoArrayWatcher,
   sagaWatcher,
   sliderWatcher,
@@ -12,6 +14,8 @@ function* rootWatcher() {
     userWatcher(),
     sliderWatcher(),
     sagaTodoArrayWatcher(),
+    sagaFirstLvlWathcer(),
+    sagaSecondLvlWatcher(),
   ]);
 }
 

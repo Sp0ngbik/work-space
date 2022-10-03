@@ -3,6 +3,7 @@ import style from "../style.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import {
   asyncDecrement,
+  asyncFirstLvlAction,
   asyncIncrement,
   asyncTodoAction,
   funcAsyncPosts,
@@ -40,6 +41,9 @@ const FuncRedux = () => {
   });
   const todoArrayList = useSelector((state) => {
     return state.funcAddElement;
+  });
+  const manyLvlSagaState = useSelector((state) => {
+    return state.manyLvlsReducer;
   });
   //funcWorkers
   const onAddedElement = (inputValue) => {
@@ -146,6 +150,14 @@ const FuncRedux = () => {
             : null}
         </div>
       </div>
+      <button
+        onClick={() => {
+          dispatch(asyncFirstLvlAction());
+        }}
+      >
+        Many lvl's saga
+      </button>
+      <div>{manyLvlSagaState}</div>
     </div>
   );
 };

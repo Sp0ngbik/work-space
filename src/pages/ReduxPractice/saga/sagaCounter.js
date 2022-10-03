@@ -2,8 +2,10 @@ import axios from "axios";
 import { put, takeEvery, call } from "redux-saga/effects";
 import {
   decrementAction,
+  firstLvlAction,
   getSagaUsers,
   incrementAction,
+  secondLvlAction,
   sliderAction,
   todoArrayAction,
 } from "../actions/actions";
@@ -13,6 +15,8 @@ import {
   ASYNC_SAGA_USERS,
   ASYNC_SAGA_SLIDER,
   ASYNC_TODO_ARRAY,
+  ASYNC_SAGA_FIRST_LVL,
+  SAGA_FIRST_LVL,
 } from "../types/types";
 //put своего рода диспатч для синхронных экшн
 //call возвращает данные которые прилетают в промисе(подобие async,await)
@@ -53,6 +57,14 @@ function* sagaTodoArrayWorker() {
   yield put(todoArrayAction());
 }
 
+function* sagaFirstLvlWorker() {
+  yield delay(1000);
+  yield put(firstLvlAction());
+}
+function* sagaSecondLvlWorker() {
+  yield delay(2000);
+  yield put(secondLvlAction());
+}
 //все в rootWacher
 //WATCHERS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 export function* sagaWatcher() {
@@ -70,4 +82,12 @@ export function* userWatcher() {
 
 export function* sagaTodoArrayWatcher() {
   yield takeEvery(ASYNC_TODO_ARRAY, sagaTodoArrayWorker);
+}
+
+export function* sagaFirstLvlWathcer() {
+  yield takeEvery(ASYNC_SAGA_FIRST_LVL, sagaFirstLvlWorker);
+}
+
+export function* sagaSecondLvlWatcher() {
+  yield takeEvery(SAGA_FIRST_LVL, sagaSecondLvlWorker);
 }

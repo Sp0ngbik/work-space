@@ -14,6 +14,7 @@ import { funcFilterWords } from "./funcFilterWords";
 import { funcUserData } from "./funcUserData";
 import { funcAsyncCounter } from "./funcAsyncCounter";
 import { todoListIndicator } from "./todoListIndicator";
+import { manyLvlsReducer } from "./manyLvlsReducer";
 export const reducer = combineReducers({
   addElement,
   filterElements,
@@ -30,4 +31,5 @@ export const reducer = combineReducers({
   funcUserData,
   funcAsyncCounter,
   todoListIndicator,
+  manyLvlsReducer,
 });

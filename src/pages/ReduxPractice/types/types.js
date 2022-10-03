@@ -26,3 +26,9 @@ export const FUNC_REDUX_DECREMENT = "FUNC_SAGA_REDUX_DECREMENT";
 export const SAGA_TODO_ARRAY = "SAGA_TODO_ARRAY";
 export const ASYNC_TODO_ARRAY = "ASYNC_TODO_ARRAY";
 export const SAGA_HIDE_ARRAY = "SAGA_HIDE_ARRAY";
+
+//many lvl's saga try
+
+export const SAGA_FIRST_LVL = "SAGA_FIRST_LVL";
+export const ASYNC_SAGA_FIRST_LVL = "ASYNC_SAGA_FIRST_LVL";
+export const SAGA_SECOND_LVL = "SAGA_SECOND_LVL";

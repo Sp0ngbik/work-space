@@ -2,6 +2,7 @@ import axios from "axios";
 import {
   ADD_ELEMENT,
   ASYNC_SAGA_DECREMENT,
+  ASYNC_SAGA_FIRST_LVL,
   ASYNC_SAGA_INCREMENT,
   ASYNC_SAGA_SLIDER,
   ASYNC_SAGA_USERS,
@@ -16,8 +17,10 @@ import {
   HIDE_SLIDER_IMAGE,
   LOADER_DIACTIVE,
   SAGA_DECREMENT,
+  SAGA_FIRST_LVL,
   SAGA_HIDE_ARRAY,
   SAGA_INCREMENT,
+  SAGA_SECOND_LVL,
   SAGA_SLIDER_DECREMENT,
   SAGA_SLIDER_INCREMENT,
   SAGA_TODO_ARRAY,
@@ -148,4 +151,24 @@ export function todoArrayAction() {
 
 export function hideArrayAction() {
   return { type: SAGA_HIDE_ARRAY, payload: { dispatched: false } };
+}
+
+//many lvl's saga
+
+export function asyncFirstLvlAction() {
+  return { type: ASYNC_SAGA_FIRST_LVL };
+}
+
+export function firstLvlAction() {
+  return {
+    type: SAGA_FIRST_LVL,
+    payload: "first lvl",
+  };
+}
+
+export function secondLvlAction() {
+  return {
+    type: SAGA_SECOND_LVL,
+    payload: "second lvl",
+  };
 }
