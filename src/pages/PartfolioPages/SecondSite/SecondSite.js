@@ -1,5 +1,6 @@
 import style from "./style.module.scss";
 import { secondSiteImages } from "./secondSiteConfig";
+import { Link } from "react-router-dom";
 
 const SecondSite = () => {
   return (
@@ -70,6 +71,7 @@ const SecondSite = () => {
                 workers who were working in foreign waters at the time of the
                 incident go up against the largest offshore companies and win.
               </p>
+              {/* need to change picture cuz background */}
               <div className={style.smallMateBlock}>
                 <img
                   src={secondSiteImages.smallMate}
@@ -217,8 +219,78 @@ const SecondSite = () => {
             timely resolution of the legal issues in your case.
           </p>
           <div className={style.companyStats}>
-            <div>
-              <div></div>
+            <div className={style.statsSection}>
+              <div className={style.upperStatsBlock}>
+                <img
+                  src={secondSiteImages.heartStats}
+                  alt="heart stats not found"
+                />
+                <h2>7230</h2>
+              </div>
+              <div className={style.bottomStatsBlock}>
+                <h3>Trusted clients</h3>
+                <p>Number Of Clients We've</p>
+              </div>
+            </div>
+            <div className={style.statsSection}>
+              <div className={style.upperStatsBlock}>
+                <img
+                  className={style.starStatsImg}
+                  src={secondSiteImages.starStats}
+                  alt="star stats not found"
+                />
+                <h2>98%</h2>
+              </div>
+              <div className={style.bottomStatsBlock}>
+                <h3>Successful Cases</h3>
+                <p>Largest winning value</p>
+              </div>
+            </div>
+            <div className={style.statsSection_judge}>
+              <div className={style.bottomStatsBlock_judge}>
+                <h4>15,890+</h4>
+                <span>Criminal Defense</span>
+                <span>Case Served</span>
+              </div>
+            </div>
+          </div>
+          <div className={style.pathnersBlock}>
+            <div className={style.headerPathners}>
+              <img
+                src={secondSiteImages.parthnersSymbols}
+                alt="symbol_1 not found"
+              />
+              <h2>Meet the Partners</h2>
+              <img
+                src={secondSiteImages.parthnersSymbols}
+                alt="symbol_2 not found"
+              />
+            </div>
+            <div className={style.parthnersBrand}>
+              <Link to="/modernHomeParthner">
+                <img
+                  src={secondSiteImages.modernHomeParthner}
+                  alt="modernHome pathner not found"
+                />
+              </Link>
+              <Link to="/vsParthner">
+                <img
+                  src={secondSiteImages.vsParthner}
+                  alt="vsPathner pathner not found"
+                />
+              </Link>
+              <Link to="/brandPathner">
+                <img
+                  src={secondSiteImages.brandParthner}
+                  alt="brandPathner pathner not found"
+                />
+              </Link>
+              <Link to="/natureHomeParthner">
+                <img
+                  src={secondSiteImages.natureHomeParthner}
+                  alt="natureHomeParthner pathner not found"
+                />
+              </Link>
             </div>
           </div>
         </div>

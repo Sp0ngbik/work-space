@@ -15,6 +15,13 @@ import fourthDiscrLogo from "./secondPageImage/selectSectionFourth.svg";
 import fifthDiscrLogo from "./secondPageImage/selectSectionFifth.svg";
 import sixDiscrLogo from "./secondPageImage/selectSectionSix.svg";
 import equalMiniLogo from "./secondPageImage/mini_logo_equal.svg";
+import heartStats from "./secondPageImage/heartStats.svg";
+import starStats from "./secondPageImage/star_stats.svg";
+import parthnersSymbols from "./secondPageImage/parthnersSymbols.svg";
+import modernHomeParthner from "./secondPageImage/modernHomeParthner.svg";
+import vsParthner from "./secondPageImage/vsParthner.svg";
+import brandParthner from "./secondPageImage/brandParthner.svg";
+import natureHomeParthner from "./secondPageImage/natureHomeParthner.svg";
 export const secondSiteImages = {
   siteLogo,
   callImage,
@@ -33,4 +40,11 @@ export const secondSiteImages = {
   fifthDiscrLogo,
   sixDiscrLogo,
   equalMiniLogo,
+  heartStats,
+  starStats,
+  parthnersSymbols,
+  modernHomeParthner,
+  vsParthner,
+  brandParthner,
+  natureHomeParthner,
 };
