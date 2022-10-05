@@ -373,3 +373,123 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.historyBlock {
+  width: 100%;
+  height: 1440px;
+  background-image: url("./secondPageImage/backgroundHistory.png");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  padding: 140px 40px;
+  background-size: 100%;
+}
+.historyContent {
+  background-color: rgba(31, 39, 50, 0.85);
+  width: 100%;
+  height: 100%;
+}
+.historyContent {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 80px 60px 70px;
+}
+
+.historyContent h2 {
+  margin: 0;
+  font-size: 45px;
+  color: #fff;
+  line-height: 58px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.leftHistory {
+  width: 418px;
+}
+.leftHistory img {
+  margin: 11px 0 50px;
+}
+.leftHistory h5 {
+  font-family: "Outfit";
+  color: #d1b06b;
+  font-size: 20px;
+}
+.leftHistory h6 {
+  font-family: "Outfit";
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  margin: 13px 0 35px;
+}
+.rightHistory img {
+  margin: 11px 0 43px;
+}
+.rightBlockMainContent {
+  width: 382px;
+}
+.rightBlockMainContent h5 {
+  font-family: "Outfit";
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.historyCases {
+  font-family: "Outfit";
+  font-size: 20px;
+  color: #fff;
+  margin: 39px 0 50px;
+}
+
+.historyCases div {
+  display: flex;
+  margin: 0 0 30px;
+  justify-content: space-between;
+}
+
+.divorceCase:after {
+  content: "";
+  position: absolute;
+  margin: 42px 0 0 0;
+  width: 383px;
+  display: flex;
+  height: 5px;
+  background: linear-gradient(to right, #d1b06b 75%, #fff 25%);
+}
+.propertyCase:after {
+  content: "";
+  position: absolute;
+  margin: 42px 0 0 0;
+  width: 383px;
+  display: flex;
+  height: 5px;
+  background: linear-gradient(to right, #d1b06b 80%, #fff 20%);
+}
+
+.bankingCases:after {
+  content: "";
+  position: absolute;
+  margin: 42px 0 0 0;
+  width: 383px;
+  display: flex;
+  height: 5px;
+  background: linear-gradient(to right, #d1b06b 75%, #fff 25%);
+}
+
+.accidentCases:after {
+  content: "";
+  position: absolute;
+  margin: 42px 0 0 0;
+  width: 383px;
+  display: flex;
+  height: 5px;
+  background: linear-gradient(to right, #d1b06b 90%, #fff 10%);
+}
+
+.rightBlockMainContent button {
+  width: 302px;
+  height: 85px;
+  background-color: #d1b06b;
+  font-size: 22px;
+}
