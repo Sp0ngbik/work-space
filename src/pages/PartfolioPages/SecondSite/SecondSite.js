@@ -359,9 +359,127 @@ const SecondSite = () => {
                     <span>90%</span>
                   </div>
                 </div>
-                <button>Free Consulting</button>
+                <Link to="/consulting">
+                  <button>Free Consulting</button>
+                </Link>
               </div>
             </div>
+          </div>
+        </div>
+        <div className={style.clientReviews}>
+          <div className={style.headerClientReviews}>
+            <h2>Client Opinions & Reviews</h2>
+            <img
+              src={secondSiteImages.widthLogo}
+              alt="width logo on reviews logo not found"
+            />
+          </div>
+          <div className={style.reviewsExamples}>
+            <div>
+              <div className={style.reviewContent}>
+                <img
+                  src={secondSiteImages.reviewsDotsLogo}
+                  alt="reviewsDots1 not found"
+                />
+                <p>
+                  Could you please thank Paul personally for me, the stars are
+                  for his forehead. The perfect way of handling the case based
+                  on the situation.
+                </p>
+              </div>
+              <div className={style.feedBackSender}>
+                <img
+                  src={secondSiteImages.feedbackPerson1}
+                  alt="feedback person 1 not found"
+                />
+                <div>
+                  <p>Natasha</p>
+                  <p>Private Employee</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className={style.feedBackSenderInTop}>
+                <img
+                  src={secondSiteImages.feedbackPerson2}
+                  alt="feedback person 2 not found"
+                />
+                <div>
+                  <p>Hannah Butler</p>
+                  <p>Business Sector</p>
+                </div>
+              </div>
+              <div className={style.reviewContentInBottom}>
+                <img
+                  src={secondSiteImages.reviewsDotsLogo}
+                  alt="reviewsDots1 not found"
+                />
+                <p>
+                  Attorney law firm really helped me with all my family law and
+                  custody issues at the right time. Words are not enough to
+                  thank the firm.
+                </p>
+              </div>
+            </div>
+            <div>
+              <div className={style.reviewContent}>
+                <img
+                  src={secondSiteImages.reviewsDotsLogo}
+                  alt="reviewsDots1 not found"
+                />
+                <p>
+                  Attorney law firm really helped me with all my family law and
+                  custody issues at the right time. Words are not enough to
+                  thank the firm.
+                </p>
+              </div>
+              <div className={style.feedBackSender}>
+                <img
+                  src={secondSiteImages.feedbackPerson3}
+                  alt="feedback person 3 not found"
+                />
+                <div>
+                  <p>Phillip Arnold</p>
+                  <p>Bus Driver</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className={style.feedBackSenderInTop}>
+                <img
+                  src={secondSiteImages.feedbackPerson4}
+                  alt="feedback person 4 not found"
+                />
+                <div>
+                  <p>Joshua Warren</p>
+                  <p>Private Engineer</p>
+                </div>
+              </div>
+              <div className={style.reviewContentInBottom}>
+                <img
+                  src={secondSiteImages.reviewsDotsLogo}
+                  alt="reviewsDots1 not found"
+                />
+                <p>
+                  I frequently check the Best Lawyers list to select an attorney
+                  in areas too familiar with at the end they came and lead to
+                  achive the justice.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={style.workersBlock}>
+          <h3>
+            Our Experienced Attorney Are Ready
+            <br />
+            To Answer Any Questions
+          </h3>
+          <img src={secondSiteImages.widthLogo} alt="width logo not founc" />
+          <div className={style.workersPhoto}>
+            <img src={secondSiteImages.worker1} alt="worker 1 not found" />
+            <img src={secondSiteImages.worker2} alt="worker 2 not found" />
+            <img src={secondSiteImages.worker3} alt="worker 3 not found" />
           </div>
         </div>
       </main>

@@ -23,6 +23,15 @@ import vsParthner from "./secondPageImage/vsParthner.svg";
 import brandParthner from "./secondPageImage/brandParthner.svg";
 import natureHomeParthner from "./secondPageImage/natureHomeParthner.svg";
 import historyJudge from "./secondPageImage/historyMidJudge.png";
+import widthLogo from "./secondPageImage/reviewsLogo.svg";
+import reviewsDotsLogo from "./secondPageImage/reviewsDots.svg";
+import feedbackPerson1 from "./secondPageImage/feedback1.png";
+import feedbackPerson2 from "./secondPageImage/feedback2.png";
+import feedbackPerson3 from "./secondPageImage/feedback3.png";
+import feedbackPerson4 from "./secondPageImage/feedback4.png";
+import worker1 from "./secondPageImage/worker1.png";
+import worker2 from "./secondPageImage/worker2.png";
+import worker3 from "./secondPageImage/worker3.png";
 export const secondSiteImages = {
   siteLogo,
   callImage,
@@ -49,4 +58,13 @@ export const secondSiteImages = {
   brandParthner,
   natureHomeParthner,
   historyJudge,
+  widthLogo,
+  reviewsDotsLogo,
+  feedbackPerson1,
+  feedbackPerson2,
+  feedbackPerson3,
+  feedbackPerson4,
+  worker1,
+  worker2,
+  worker3,
 };
