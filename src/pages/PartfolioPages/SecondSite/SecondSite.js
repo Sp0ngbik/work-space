@@ -477,9 +477,43 @@ const SecondSite = () => {
           </h3>
           <img src={secondSiteImages.widthLogo} alt="width logo not founc" />
           <div className={style.workersPhoto}>
-            <img src={secondSiteImages.worker1} alt="worker 1 not found" />
-            <img src={secondSiteImages.worker2} alt="worker 2 not found" />
-            <img src={secondSiteImages.worker3} alt="worker 3 not found" />
+            <div>
+              <img src={secondSiteImages.worker1} alt="worker 1 not found" />
+              <div>
+                <h4>John Turner</h4>
+                <p>Civil Attorney</p>
+              </div>
+            </div>
+            <div>
+              <div className={style.middleWorkerContainer}>
+                <img src={secondSiteImages.worker2} alt="worker 2 not found" />
+                <div className={style.workersContacts}>
+                  <img
+                    src={secondSiteImages.facebookLogo}
+                    alt="facebook logo not found"
+                  />
+                  <img
+                    src={secondSiteImages.twitterLogo}
+                    alt="twitterLogo logo not found"
+                  />
+                  <img
+                    src={secondSiteImages.instagramLogo}
+                    alt="instagramLogo logo not found"
+                  />
+                  <img
+                    src={secondSiteImages.pinterestLogo}
+                    alt="pinterestLogo logo not found"
+                  />
+                </div>
+              </div>
+              <h4>Martha Black</h4>
+              <p>Associate Attorney</p>
+            </div>
+            <div>
+              <img src={secondSiteImages.worker3} alt="worker 3 not found" />
+              <h4>Brian Gomez</h4>
+              <p>Titular Attorney</p>
+            </div>
           </div>
         </div>
       </main>

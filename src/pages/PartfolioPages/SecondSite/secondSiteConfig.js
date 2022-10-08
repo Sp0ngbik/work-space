@@ -32,6 +32,10 @@ import feedbackPerson4 from "./secondPageImage/feedback4.png";
 import worker1 from "./secondPageImage/worker1.png";
 import worker2 from "./secondPageImage/worker2.png";
 import worker3 from "./secondPageImage/worker3.png";
+import facebookLogo from "./secondPageImage/facebook.svg";
+import twitterLogo from "./secondPageImage/twitter.svg";
+import instagramLogo from "./secondPageImage/instagram.svg";
+import pinterestLogo from "./secondPageImage/pinter.svg";
 export const secondSiteImages = {
   siteLogo,
   callImage,
@@ -67,4 +71,8 @@ export const secondSiteImages = {
   worker1,
   worker2,
   worker3,
+  facebookLogo,
+  twitterLogo,
+  instagramLogo,
+  pinterestLogo,
 };
