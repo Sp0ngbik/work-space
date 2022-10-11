@@ -516,6 +516,46 @@ const SecondSite = () => {
             </div>
           </div>
         </div>
+        <div className={style.contactInformation}>
+          <div className={style.conatactDiscription}>
+            <h2>
+              Our Professional Expert Law
+              <br /> Team Is Always Ready To Serve <br />
+              You
+            </h2>
+            <img
+              src={secondSiteImages.miniLogo}
+              alt="mini logo contant info not found"
+            />
+            <p>
+              We’re always available for new cases big or small. Send us an
+              email and we’ll get in touch shortly, or phone between 8:00 am and
+              7:00 pm Monday to Saturday.
+            </p>
+            <button>Contact Us</button>
+          </div>
+          <div className={style.consultationInfo}>
+            <div>
+              <h3>Get a Free Consultation</h3>
+              <p>
+                You can get free consultation and case evaluation from us via
+                the following contact number
+              </p>
+              <div className={style.callContacts}>
+                <button>
+                  <img
+                    src={secondSiteImages.phoneIco}
+                    alt="phoneIco not found"
+                  />
+                </button>
+                <p>
+                  Call Us On: <br />
+                  <span>911-987654321</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   );

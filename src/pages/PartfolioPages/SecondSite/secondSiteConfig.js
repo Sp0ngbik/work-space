@@ -36,6 +36,7 @@ import facebookLogo from "./secondPageImage/facebook.svg";
 import twitterLogo from "./secondPageImage/twitter.svg";
 import instagramLogo from "./secondPageImage/instagram.svg";
 import pinterestLogo from "./secondPageImage/pinter.svg";
+import phoneIco from "./secondPageImage/phoneIco.svg";
 export const secondSiteImages = {
   siteLogo,
   callImage,
@@ -75,4 +76,5 @@ export const secondSiteImages = {
   twitterLogo,
   instagramLogo,
   pinterestLogo,
+  phoneIco,
 };
