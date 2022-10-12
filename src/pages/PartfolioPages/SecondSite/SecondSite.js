@@ -556,6 +556,16 @@ const SecondSite = () => {
             </div>
           </div>
         </div>
+        <div className={style.userInfoBlock}>
+          <div className={style.inputBlockInfo}>
+            <input placeholder="Full Name*" />
+            <input placeholder="Email Adress*" />
+            <input placeholder="Phone Number" />
+            <input placeholder="Subject" />
+            <input className={style.userMessage} placeholder="Your Message" />
+            <button>Get An Appointment</button>
+          </div>
+        </div>
       </main>
     </div>
   );
