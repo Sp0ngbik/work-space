@@ -287,7 +287,18 @@ const SecondSite = () => {
                   alt="brandPathner pathner not found"
                 />
               </Link>
-              <Link to="/natureHomeParthner"></Link>
+              <Link to="/natureHomeParthner">
+                <img
+                  src={secondSiteImages.natureHomeParthner}
+                  alt="natureHome parthner not found"
+                />
+              </Link>
+              <Link to="/classicParthener">
+                <img
+                  src={secondSiteImages.classicParthner}
+                  alt="classic parthner not found"
+                />
+              </Link>
             </div>
           </div>
         </div>
@@ -373,7 +384,7 @@ const SecondSite = () => {
             <h2>Client Opinions & Reviews</h2>
             <img
               src={secondSiteImages.widthLogo}
-              alt="width logo on reviews logo not found"
+              alt="width logo on reviews  not found"
             />
           </div>
           <div className={style.reviewsExamples}>
@@ -600,6 +611,38 @@ const SecondSite = () => {
               Get An Appointment
             </Button>
           </Form>
+        </div>
+        <div className={style.recentBlogs}>
+          <div className={style.recentBlogHeader}>
+            <h2>Recent Blogs</h2>
+            <img
+              src={secondSiteImages.widthLogo}
+              alt="width logo on recent blog - not found"
+            />
+          </div>
+          <div className={style.recentBlogContent}>
+            <img
+              src={secondSiteImages.recentBlogImg}
+              alt="recent blog img not found"
+            />
+            <div className={style.recentBlockRight}>
+              <div className={style.recentBlogRightHeader}>
+                <span>Corporate Law</span>
+                <span className={style.dateSeparator}>|</span>
+                <span>Friday February 4, 2022</span>
+              </div>
+              <h3>
+                The Difference between <br /> Information & Legal Advice
+              </h3>
+              <span>
+                Collaborative on low-hanging fruit to identify a ballpark value
+                added
+                <br /> activity to beta matrix economically test override the
+                digital.
+              </span>
+              <p>View more</p>
+            </div>
+          </div>
         </div>
       </main>
     </div>

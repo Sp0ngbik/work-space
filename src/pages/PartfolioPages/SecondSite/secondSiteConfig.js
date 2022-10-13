@@ -22,6 +22,7 @@ import modernHomeParthner from "./secondPageImage/modernHomeParthner.svg";
 import vsParthner from "./secondPageImage/vsParthner.svg";
 import brandParthner from "./secondPageImage/brandParthner.svg";
 import natureHomeParthner from "./secondPageImage/natureHomeParthner.svg";
+import classicParthner from "./secondPageImage/classicParthner.svg";
 import historyJudge from "./secondPageImage/historyMidJudge.png";
 import widthLogo from "./secondPageImage/reviewsLogo.svg";
 import reviewsDotsLogo from "./secondPageImage/reviewsDots.svg";
@@ -37,6 +38,7 @@ import twitterLogo from "./secondPageImage/twitter.svg";
 import instagramLogo from "./secondPageImage/instagram.svg";
 import pinterestLogo from "./secondPageImage/pinter.svg";
 import phoneIco from "./secondPageImage/phoneIco.svg";
+import recentBlogImg from "./secondPageImage/recentBlogImg.png";
 export const secondSiteImages = {
   siteLogo,
   callImage,
@@ -62,6 +64,7 @@ export const secondSiteImages = {
   vsParthner,
   brandParthner,
   natureHomeParthner,
+  classicParthner,
   historyJudge,
   widthLogo,
   reviewsDotsLogo,
@@ -77,4 +80,5 @@ export const secondSiteImages = {
   instagramLogo,
   pinterestLogo,
   phoneIco,
+  recentBlogImg,
 };
