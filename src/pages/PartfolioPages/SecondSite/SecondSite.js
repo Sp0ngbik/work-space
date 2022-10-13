@@ -1,6 +1,8 @@
 import style from "./style.module.scss";
 import { secondSiteImages } from "./secondSiteConfig";
 import { Link } from "react-router-dom";
+import { Button, Form, Input } from "antd";
+import TextArea from "antd/lib/input/TextArea";
 
 const SecondSite = () => {
   return (
@@ -557,14 +559,47 @@ const SecondSite = () => {
           </div>
         </div>
         <div className={style.userInfoBlock}>
-          <div className={style.inputBlockInfo}>
-            <input placeholder="Full Name*" />
-            <input placeholder="Email Adress*" />
-            <input placeholder="Phone Number" />
-            <input placeholder="Subject" />
-            <input className={style.userMessage} placeholder="Your Message" />
-            <button>Get An Appointment</button>
-          </div>
+          <Form
+            onFinish={(value) => {
+              const userObjInfo = {
+                name: value.userName,
+                email: value.email,
+                userPhone: value.userPhone,
+                subject: value.userMessageSubject,
+                message: value.userMessageText,
+              };
+              console.log(userObjInfo);
+            }}
+            className={style.inputBlockInfo}
+          >
+            <Form.Item name="userName">
+              <Input type="useername" placeholder="Full Name*" />
+            </Form.Item>
+            <Form.Item name="email">
+              <Input type="email" placeholder="Email Adress*" />
+            </Form.Item>
+            <Form.Item name="userPhone">
+              <Input type="tel" placeholder="Phone Number" />
+            </Form.Item>
+            <Form.Item name="userMessageSubject">
+              <Input type="message" placeholder="Subject" />
+            </Form.Item>
+            <Form.Item className={style.textAreaItem} name="userMessageText">
+              <TextArea
+                name="userMessageText"
+                type="Input.TextArea"
+                className={style.userMessage}
+                placeholder="Your Message"
+              />
+            </Form.Item>
+            <Button
+              className={style.subButtonUserInfo}
+              htmlType="submit"
+              type="submit"
+            >
+              Get An Appointment
+            </Button>
+          </Form>
         </div>
       </main>
     </div>
