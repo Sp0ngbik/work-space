@@ -32,3 +32,6 @@ export const SAGA_HIDE_ARRAY = "SAGA_HIDE_ARRAY";
 export const SAGA_FIRST_LVL = "SAGA_FIRST_LVL";
 export const ASYNC_SAGA_FIRST_LVL = "ASYNC_SAGA_FIRST_LVL";
 export const SAGA_SECOND_LVL = "SAGA_SECOND_LVL";
+
+//object sagas
+export const SAGA_OBJECT = "SAGA_OBJECT";

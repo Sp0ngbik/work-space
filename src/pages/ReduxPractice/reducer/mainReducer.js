@@ -15,6 +15,7 @@ import { funcUserData } from "./funcUserData";
 import { funcAsyncCounter } from "./funcAsyncCounter";
 import { todoListIndicator } from "./todoListIndicator";
 import { manyLvlsReducer } from "./manyLvlsReducer";
+import { formObjectReducer } from "./formObjectReducer";
 export const reducer = combineReducers({
   addElement,
   filterElements,
@@ -32,4 +33,5 @@ export const reducer = combineReducers({
   funcAsyncCounter,
   todoListIndicator,
   manyLvlsReducer,
+  formObjectReducer,
 });

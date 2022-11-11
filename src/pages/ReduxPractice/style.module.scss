@@ -25,3 +25,15 @@
   display: flex;
   flex-direction: column;
 }
+
+.formRedux input {
+  width: 300px;
+}
+.formRedux div:first-child {
+  margin: 5px 0 0 0;
+}
+.formRedux {
+  display: grid;
+  margin: 0;
+  padding: 0;
+}

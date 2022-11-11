@@ -20,6 +20,7 @@ import {
   SAGA_FIRST_LVL,
   SAGA_HIDE_ARRAY,
   SAGA_INCREMENT,
+  SAGA_OBJECT,
   SAGA_SECOND_LVL,
   SAGA_SLIDER_DECREMENT,
   SAGA_SLIDER_INCREMENT,
@@ -170,5 +171,13 @@ export function secondLvlAction() {
   return {
     type: SAGA_SECOND_LVL,
     payload: "second lvl",
+  };
+}
+
+//form redux
+export function reduxFormAction(formData) {
+  return {
+    type: SAGA_OBJECT,
+    payload: formData,
   };
 }

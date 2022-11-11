@@ -606,7 +606,7 @@ const SecondSite = () => {
             <Button
               className={style.subButtonUserInfo}
               htmlType="submit"
-              type="submit"
+              // type="submit"
             >
               Get An Appointment
             </Button>

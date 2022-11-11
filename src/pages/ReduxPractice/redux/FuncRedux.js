@@ -10,7 +10,9 @@ import {
   hideArrayAction,
   onAddFuncElement,
   onFilterFuncWords,
+  reduxFormAction,
 } from "../actions/actions";
+import { Button, Form, Input } from "antd";
 
 const FuncRedux = () => {
   const dispatch = useDispatch();
@@ -45,6 +47,9 @@ const FuncRedux = () => {
   const manyLvlSagaState = useSelector((state) => {
     return state.manyLvlsReducer;
   });
+  const formReduxSelector = useSelector((state) => {
+    return state.formObjectReducer;
+  });
   //funcWorkers
   const onAddedElement = (inputValue) => {
     const payload = inputValue;
@@ -55,6 +60,23 @@ const FuncRedux = () => {
   const onFilterElement = (filterValue) => {
     const payload = filterValue;
     dispatch(onFilterFuncWords(payload));
+  };
+  const userGreetForm = (userDataForm) => {
+    if (
+      userDataForm.reduxName &&
+      userDataForm.reduxLastName &&
+      userDataForm.reduxTele
+    ) {
+      return (
+        <div>
+          Hello user {userDataForm.reduxName + " " + userDataForm.reduxLastName}
+          , we got your info and we will recall you at your phone{" "}
+          {userDataForm.reduxTele}
+        </div>
+      );
+    } else {
+      return <div>Please enter your username, lastname and phone</div>;
+    }
   };
   return (
     <div className={style.funcReduxContainer}>
@@ -158,6 +180,26 @@ const FuncRedux = () => {
         Many lvl's saga
       </button>
       <div>{manyLvlSagaState}</div>
+      <Form
+        onFinish={(reduxData) => {
+          dispatch(reduxFormAction(reduxData));
+        }}
+        className={style.formRedux}
+      >
+        <Form.Item name="reduxName">
+          <Input placeholder="Ваше имя" type="username" />
+        </Form.Item>
+        <Form.Item name="reduxLastName">
+          <Input placeholder="Ваша фамилия" type="lastname" />
+        </Form.Item>
+        <Form.Item name="reduxTele">
+          <Input placeholder="Ваш телефон" type="tel" />
+        </Form.Item>
+        <Form.Item>
+          <Button htmlType="submit">Отправить данные</Button>
+        </Form.Item>
+      </Form>
+      <div>{userGreetForm(formReduxSelector)}</div>
     </div>
   );
 };

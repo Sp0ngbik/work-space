@@ -88,7 +88,6 @@ class ReduxIndex extends Component {
           </div>
           <SliderSagas />
         </div>
-
         <button
           onClick={() => {
             this.props.onSecCheckKnowledge();
