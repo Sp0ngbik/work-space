@@ -782,8 +782,7 @@
 }
 .recentBlogs {
   background-color: #161d27;
-  margin: 0 0 100px;
-  padding: 139px 40px 0 40px;
+  padding: 139px 40px 100px 40px;
 }
 .recentBlogHeader {
   display: flex;
@@ -803,6 +802,7 @@
 .recentBlogContent {
   display: grid;
   margin: 70px 0 0 0;
+  border-bottom: 2px #4e555f;
   grid-gap: 50px;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -847,4 +847,17 @@
 }
 .recentBlockRight p:hover {
   cursor: pointer;
+}
+.corporationLawsBlock {
+  background-color: #161d27;
+}
+.corporationLawsContent {
+  display: grid;
+  width: 96%;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #4e555f;
+  padding: 100px 0 0;
+  grid-gap: 40px;
+  justify-items: center;
 }

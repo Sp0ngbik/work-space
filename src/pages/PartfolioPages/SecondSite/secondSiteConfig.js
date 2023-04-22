@@ -39,6 +39,12 @@ import instagramLogo from "./secondPageImage/instagram.svg";
 import pinterestLogo from "./secondPageImage/pinter.svg";
 import phoneIco from "./secondPageImage/phoneIco.svg";
 import recentBlogImg from "./secondPageImage/recentBlogImg.png";
+import law1 from "./secondPageImage/law1.png";
+import law2 from "./secondPageImage/law2.png";
+import law3 from "./secondPageImage/law3.png";
+import law4 from "./secondPageImage/law4.png";
+import law5 from "./secondPageImage/law5.png";
+import law6 from "./secondPageImage/law6.png";
 export const secondSiteImages = {
   siteLogo,
   callImage,
@@ -81,4 +87,10 @@ export const secondSiteImages = {
   pinterestLogo,
   phoneIco,
   recentBlogImg,
+  law1,
+  law2,
+  law3,
+  law4,
+  law5,
+  law6,
 };

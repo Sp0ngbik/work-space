@@ -644,6 +644,28 @@ const SecondSite = () => {
             </div>
           </div>
         </div>
+        <div className={style.corporationLawsBlock}>
+          <div className={style.corporationLawsContent}>
+            <div>
+              <img src={secondSiteImages.law1} alt="law1 not found" />
+            </div>
+            <div>
+              <img src={secondSiteImages.law2} alt="law2 not found" />
+            </div>
+            <div>
+              <img src={secondSiteImages.law3} alt="law3 not found" />
+            </div>
+            <div>
+              <img src={secondSiteImages.law4} alt="law4 not found" />
+            </div>
+            <div>
+              <img src={secondSiteImages.law5} alt="law5 not found" />
+            </div>
+            <div>
+              <img src={secondSiteImages.law6} alt="law6 not found" />
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   );
