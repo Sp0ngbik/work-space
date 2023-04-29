@@ -820,7 +820,6 @@
 }
 .recentBlogRightHeader {
   padding: 0 0 28px;
-
   border-bottom: 1px solid #4e555f;
 }
 .recentBlogRightHeader span {
@@ -860,4 +859,94 @@
   padding: 100px 0 0;
   grid-gap: 40px;
   justify-items: center;
+}
+.headerCorporateLaw {
+  margin: 24px 0 0 0;
+  padding: 0 0 22px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #4e555f;
+}
+.headerCorporateLaw span {
+  font-size: 20px;
+  font-family: "Outfit", sans-serif;
+  color: #d1b06b;
+}
+.headerCorporateLaw span:first-child {
+  border-right: 1px solid #d1b06b;
+  width: 40%;
+}
+.discriptionCorporateLaw > h3 {
+  width: 397px;
+  font-size: 30px;
+  color: #fff;
+  margin: 26px 0 22px 0;
+  font-weight: 400;
+  font-family: "Cormorant Garamond";
+}
+.discriptionCorporateLaw span {
+  font-family: "Outfit", sans-serif;
+  width: 410px;
+  font-size: 20px;
+  display: flex;
+  font-weight: 400;
+  color: #d7d7d7;
+  padding: 0 0 19px 0;
+}
+.discriptionCorporateLaw a {
+  font-size: 22px;
+  color: #d1b06b;
+  text-decoration: underline;
+}
+.footerBlock {
+  padding: 140px 0 0 0;
+  background-color: #161d27;
+}
+
+.footerBlock > img {
+  width: 100%;
+  display: flex;
+}
+.footerHeadBlock {
+  padding: 130px 40px 95px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+.footerLinks {
+  font-size: 30px;
+  padding: 0 40px 30px;
+  display: grid;
+  color: #fff;
+  grid-gap: 100px;
+  grid-template-columns: repeat(4, 1fr);
+  font-family: "Cormorant Garamond";
+}
+.footerLinks span {
+  width: 100%;
+  display: block;
+  border-top: 1px solid #3b434e;
+  border-bottom: 1px solid #3b434e;
+  padding: 21px 0;
+}
+.linkColumnDuo > div {
+  display: grid;
+  margin: 30px 0 0 0;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  grid-gap: 75px;
+}
+.linkColumnDuo p {
+  font-size: 20px;
+  font-family: "Outfit", sans-serif;
+}
+.linkColumn > div {
+  margin: 30px 0 0 0;
+}
+.linkColumn p {
+  font-size: 20px;
+  font-family: "Outfit", sans-serif;
 }

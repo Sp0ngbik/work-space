@@ -648,25 +648,166 @@ const SecondSite = () => {
           <div className={style.corporationLawsContent}>
             <div>
               <img src={secondSiteImages.law1} alt="law1 not found" />
+              <div className={style.headerCorporateLaw}>
+                <span>Corporate Law</span>
+                <span>Friday, February 4,2022</span>
+              </div>
+              <div className={style.discriptionCorporateLaw}>
+                <h3>How to Tell Who Is at Fault in a Car Accident</h3>
+                <span>
+                  Capitalize on low-hanging fruit to identify a ballpark value
+                  added matrix economically activity to beta test override the
+                  digital.
+                </span>
+                <a href="*">View more</a>
+              </div>
             </div>
             <div>
               <img src={secondSiteImages.law2} alt="law2 not found" />
+              <div className={style.headerCorporateLaw}>
+                <span>Legal Advice</span>
+                <span>Friday, February 4,2022</span>
+              </div>
+              <div className={style.discriptionCorporateLaw}>
+                <h3>When Sue Outside of Workers’ Compensation</h3>
+                <span>
+                  Strategies on low-hanging fruit to identify a ballpark value
+                  added activity matrix economically to beta test override the
+                  digital.
+                </span>
+                <a href="*">View more</a>
+              </div>
             </div>
             <div>
               <img src={secondSiteImages.law3} alt="law3 not found" />
+              <div className={style.headerCorporateLaw}>
+                <span>Social Justice</span>
+                <span>Friday, February 4,2022</span>
+              </div>
+              <div className={style.discriptionCorporateLaw}>
+                <h3>Social Media Postings Lead to Defense Verdict</h3>
+                <span>
+                  Collaborative on low-hanging fruit to identify a ballpark
+                  value added activity to beta matrix economically test override
+                  the digital.
+                </span>
+                <a href="*">View more</a>
+              </div>
             </div>
             <div>
               <img src={secondSiteImages.law4} alt="law4 not found" />
+              <div className={style.headerCorporateLaw}>
+                <span>Corporate Law</span>
+                <span>Friday, February 4,2022</span>
+              </div>
+              <div className={style.discriptionCorporateLaw}>
+                <h3>Riding solo to the rescue of her beloved nonprofits</h3>
+                <span>
+                  Podcasting on low-hanging fruit to identify a ballpark value
+                  added activity to beta test override matrix economically the
+                  digital.
+                </span>
+                <a href="*">View more</a>
+              </div>
             </div>
             <div>
               <img src={secondSiteImages.law5} alt="law5 not found" />
+              <div className={style.headerCorporateLaw}>
+                <span>Legal Advice</span>
+                <span>Friday, February 4,2022</span>
+              </div>
+              <div className={style.discriptionCorporateLaw}>
+                <h3>Case Filed on Behalf of Injured Tugboat Worker</h3>
+                <span>
+                  Efficiently on low-hanging fruit to identify a ballpark value
+                  added activity to beta test matrix economically override the
+                  digital.
+                </span>
+                <a href="*">View more</a>
+              </div>
             </div>
             <div>
               <img src={secondSiteImages.law6} alt="law6 not found" />
+              <div className={style.headerCorporateLaw}>
+                <span>Social Justice</span>
+                <span>Friday, February 4,2022</span>
+              </div>
+              <div className={style.discriptionCorporateLaw}>
+                <h3>How Companies Choose Legal Representation</h3>
+                <span>
+                  Objectively on low-hanging fruit to identify a ballpark value
+                  added activity to beta matrix economically test override the
+                  digital.
+                </span>
+                <a href="*">View more</a>
+              </div>
             </div>
           </div>
         </div>
       </main>
+      <footer className={style.footerBlock}>
+        <img src={secondSiteImages.footerStart} alt="footerStart not found" />
+        <div className={style.footerHeadBlock}>
+          <img src={secondSiteImages.footerLeft} alt="leftFooter not found" />
+          <img
+            className={style.logoFooter}
+            src={secondSiteImages.siteLogo}
+            alt="siteFooterLogo not found"
+          />
+          <img src={secondSiteImages.footerRight} alt="rightFooter not found" />
+        </div>
+        <div className={style.footerLinks}>
+          <div className={style.linkColumnDuo}>
+            <span>Quick Link</span>
+            <div>
+              <div>
+                <p>Home</p>
+                <p>About Us</p>
+                <p>Pricing</p>
+                <p>Testimonial</p>
+                <p>Contact Us</p>
+              </div>
+              <div>
+                <p>Blog</p>
+                <p>Blog Single</p>
+                <p>Cases</p>
+                <p>Cases Single</p>
+                <p>Practice Areas</p>
+              </div>
+            </div>
+          </div>
+          <div className={style.linkColumn}>
+            <span>Utility Pages</span>
+            <div>
+              <p>Style guide</p>
+              <p>Licenses</p>
+              <p>Protected</p>
+              <p>Changelog</p>
+              <p>Error Page</p>
+            </div>
+          </div>
+          <di className={style.linkColumn}>
+            <span>Practice Area</span>
+            <div>
+              <p>Business Law</p>
+              <p>Construction Law</p>
+              <p>Car Accident</p>
+              <p>Criminal Law</p>
+              <p>Family Law</p>
+            </div>
+          </di>
+          <div className={style.linkColumn}>
+            <span>Contact Us</span>
+            <div>
+              <p>Attorney Law Office, 121 King Street,</p>
+              <p>Las Vegas 90027,USA.</p>
+              <p>Phone: (011) 9876 54321</p>
+              <p>Email: info@example.com</p>
+            </div>
+          </div>
+        </div>
+        <div className={style.footerLinksHead}></div>
+      </footer>
     </div>
   );
 };

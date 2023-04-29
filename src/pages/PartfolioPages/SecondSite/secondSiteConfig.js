@@ -45,6 +45,9 @@ import law3 from "./secondPageImage/law3.png";
 import law4 from "./secondPageImage/law4.png";
 import law5 from "./secondPageImage/law5.png";
 import law6 from "./secondPageImage/law6.png";
+import footerStart from "./secondPageImage/footerStart.png";
+import footerLeft from "./secondPageImage/footerLeft.png";
+import footerRight from "./secondPageImage/footerRight.png";
 export const secondSiteImages = {
   siteLogo,
   callImage,
@@ -93,4 +96,7 @@ export const secondSiteImages = {
   law4,
   law5,
   law6,
+  footerStart,
+  footerLeft,
+  footerRight,
 };
