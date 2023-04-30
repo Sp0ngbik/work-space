@@ -733,7 +733,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 46px;
   padding: 89px 100px;
-  width: 1360px;
+  width: 60%;
   background-color: #1f2732;
   position: absolute;
   top: 50%;
@@ -899,7 +899,7 @@
   text-decoration: underline;
 }
 .footerBlock {
-  padding: 140px 0 0 0;
+  padding: 140px 0 110px 0;
   background-color: #161d27;
 }
 
@@ -949,4 +949,27 @@
 .linkColumn p {
   font-size: 20px;
   font-family: "Outfit", sans-serif;
+}
+.contactColumn {
+  display: grid;
+  justify-content: space-between;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 50px;
+}
+.footerLinksHead {
+  color: #d7d7d7;
+  border-top: 1px solid #4e555f;
+  border-bottom: 1px solid #4e555f;
+  display: flex;
+  padding: 40px 0;
+  margin: 0 40px;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.footerLinksHead a {
+  color: #d1b06b;
+}
+.footerLinksHead img {
+  margin: 0 20px;
 }

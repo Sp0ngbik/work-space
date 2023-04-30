@@ -48,6 +48,10 @@ import law6 from "./secondPageImage/law6.png";
 import footerStart from "./secondPageImage/footerStart.png";
 import footerLeft from "./secondPageImage/footerLeft.png";
 import footerRight from "./secondPageImage/footerRight.png";
+import whiteInsta from "./secondPageImage/InstaWhite.png";
+import whiteTwitter from "./secondPageImage/twitterWhite.png";
+import whitePint from "./secondPageImage/PintWhite.png";
+import whiteFacebook from "./secondPageImage/facebookWhite.png";
 export const secondSiteImages = {
   siteLogo,
   callImage,
@@ -99,4 +103,8 @@ export const secondSiteImages = {
   footerStart,
   footerLeft,
   footerRight,
+  whiteInsta,
+  whiteTwitter,
+  whitePint,
+  whiteFacebook,
 };

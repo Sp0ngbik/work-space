@@ -798,15 +798,44 @@ const SecondSite = () => {
           </di>
           <div className={style.linkColumn}>
             <span>Contact Us</span>
-            <div>
-              <p>Attorney Law Office, 121 King Street,</p>
-              <p>Las Vegas 90027,USA.</p>
-              <p>Phone: (011) 9876 54321</p>
-              <p>Email: info@example.com</p>
+            <div className={style.contactColumn}>
+              <div>
+                <p>Attorney Law Office, 121 King Street,</p>
+                <p>Las Vegas 90027,USA.</p>
+              </div>
+              <div>
+                <p>Phone: (011) 9876 54321</p>
+                <p>Email: info@example.com</p>
+              </div>
             </div>
           </div>
         </div>
-        <div className={style.footerLinksHead}></div>
+        <div className={style.footerLinksHead}>
+          <span>
+            Copyright © Attorney Law | Designed by
+            <a href="https://vk.com/snaiperyga"> Uladzislau Astapuk</a> -
+            Powered by <a href="*">Webflow</a>
+          </span>
+          <span>
+            <a href="*">Follow :</a>
+            <img
+              src={secondSiteImages.whiteFacebook}
+              alt="facebook logo not found"
+            />
+            <img
+              src={secondSiteImages.whiteTwitter}
+              alt="twitterLogo logo not found"
+            />
+            <img
+              src={secondSiteImages.whiteInsta}
+              alt="instagramLogo logo not found"
+            />
+            <img
+              src={secondSiteImages.whitePint}
+              alt="pinterestLogo logo not found"
+            />
+          </span>
+        </div>
       </footer>
     </div>
   );
