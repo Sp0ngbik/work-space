@@ -10,12 +10,6 @@ const About = () => {
         this links
       </div>
       <div className={style.links}>
-        <Link to="/about/type-of">
-          <Button>Types of js</Button>
-        </Link>
-        <Link to="/about/array-practice">
-          <Button>Arrays</Button>
-        </Link>
         <Link to="/about/classes">
           <Button>Classes</Button>
         </Link>
