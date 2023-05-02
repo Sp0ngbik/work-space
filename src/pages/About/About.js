@@ -22,12 +22,6 @@ const About = () => {
         <Link to="/about/partfolio">
           <Button>Partfolio</Button>
         </Link>
-        <Link to="/redux">
-          <Button>Redux</Button>
-        </Link>
-        <Link to="/func_redux">
-          <Button>Func_redux</Button>
-        </Link>
         <Button
           onClick={() => {
             alert(
