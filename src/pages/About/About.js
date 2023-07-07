@@ -10,7 +10,7 @@ const About = () => {
         this links
       </div>
       <div className={style.links}>
-        <Link to="/about/classes">
+        {/* <Link to="/about/classes">
           <Button>Classes</Button>
         </Link>
         <Link to="/about/promises">
@@ -18,11 +18,12 @@ const About = () => {
         </Link>
         <Link to="/about/tryes-text">
           <Button>Tryes</Button>
-        </Link>
+        </Link> */}
         <Link to="/about/partfolio">
           <Button>Partfolio</Button>
         </Link>
-        <Button
+
+        {/* <Button
           onClick={() => {
             alert(
               "Must be name here)  you already see this buttons, and you will see more by using my links ;D"
@@ -30,7 +31,7 @@ const About = () => {
           }}
         >
           antd design
-        </Button>
+        </Button> */}
       </div>
     </div>
   );

@@ -40,7 +40,7 @@ console.log(writerWood.tree);
 // }
 class TsComponents {
   render(): void {}
-  info(): string {
+  info(): any {
     return;
   }
 }

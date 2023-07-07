@@ -103,7 +103,7 @@ interface funcInter {
   y: number | undefined;
 }
 
-function tsNumberCheck(x: number, y: number) {
+function tsNumberCheck(x: number|undefined, y: number|undefined) {
   if (!x && !y) {
     return "nothing on enter";
   }

@@ -11,12 +11,12 @@ const Partfolio = () => {
       <Link to="/partfolio/second">
         <Button>Second site</Button>
       </Link>
-      <Link to="/partfolio/third">
+      {/* <Link to="/partfolio/third">
         <Button>Third site</Button>
       </Link>
       <Link to="/partfolio/fourth">
         <Button>Fourth site</Button>
-      </Link>
+      </Link> */}
     </div>
   );
 };

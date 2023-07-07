@@ -1,4 +1,3 @@
-import { Spin } from "antd";
 import { useState } from "react";
 
 const TryesText = () => {
@@ -8,7 +7,7 @@ const TryesText = () => {
     return setTodo([...todo, textOfInput]);
   };
   const removeTodo = (indexOfTodo) => {
-    const arr = todo.splice(indexOfTodo, 1);
+    todo.splice(indexOfTodo, 1);
     setTodo([...todo]);
   };
   return (

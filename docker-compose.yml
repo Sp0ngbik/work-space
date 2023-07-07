@@ -1,0 +1,18 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+  backend:
+    build:
+      context: ../work-spaceBE # Путь к директории с бекендом
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    volumes:
+      - ../work-spaceBE  # Монтируем директорию с бекендом
